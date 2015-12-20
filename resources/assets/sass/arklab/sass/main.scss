@@ -1,0 +1,95 @@
+@import "compass/css3";
+@import "animated/animated";
+
+@include animation(fade-in);
+
+html, body {
+	font-family: "微軟正黑體", "微软雅黑", Helvetica, Arial, "メイリオ", "맑은 고딕", sans-serif !important;
+	height: 100%;
+	width: 100%;
+}
+
+.fadeIn {
+	@include animate(fade-in, 1s, 500ms);
+}
+
+.pageOne {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background: url(/images/home-background.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+	text-align: center;
+}
+
+.page-mask {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background-color: rgba(0,0,0,0.2);
+}
+
+@media (min-width: 1200px) {
+	.center {
+		position: absolute;
+		width: 1170px;
+		height: 220px;
+		margin-top: -150px;
+		margin-left: -585px;
+		top: 50%;
+		left: 50%;
+	}
+
+	.mobile br{
+		display: none;
+	}
+}
+
+@media (min-width: 992px) {
+	.center {
+		position: absolute;
+		width: 970px;
+		height: 220px;
+		margin-top: -150px;
+		margin-left: -485px;
+		top: 50%;
+		left: 50%;
+	}
+
+	.mobile br{
+		display: none;
+	}
+}
+
+@media (min-width: 758px) {
+	.center {
+		position: absolute;
+		width: 750px;
+		height: 220px;
+		margin-top: -150px;
+		margin-left: -375px;
+		top: 50%;
+		left: 50%;
+	}
+
+	.mobile br{
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.center {
+		position: absolute;
+		width: 80%;
+		height: 320px;
+		margin-top: -160px;
+		margin-left: -40%;
+		top: 50%;
+		left: 50%;
+	}
+
+	.mobile br{
+		display: block;
+	}
+}
