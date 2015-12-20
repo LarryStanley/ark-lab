@@ -4,11 +4,13 @@
 	<div class="pageOne">
 		<div class="page-mask">
 			<div class="center">
-				<h3>開放原始碼｜自造多旋翼<br>拉近天空與你我的距離</h3>
+				<h3>開放原始碼｜自造多旋翼</h3>
+				<h4>拉近天空與你我的距離</h4>
 				<hr>
-				<img src="/images/mark.png" width="200px" alt="">		
+				<img src="/images/mark.png" width="200px" alt="" style="margin-top: 5px;">		
+				<br>下拉查看更多
 			</div>
-			<nav class="cyan darken-1">
+			<nav class="transparent">
 				<div class="nav-wrapper">
 					<ul class="right hide-on-med-and-down">
 						<li><a href="about">關於我們</a></li>
