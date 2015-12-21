@@ -15,19 +15,123 @@
     opacity: 1;
   }
 }
-/* line 6, ../../resources/assets/sass/arklab/sass/main.scss */
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/* line 10, ../../resources/assets/sass/arklab/sass/main.scss */
 html, body {
   font-family: "微軟正黑體", "微软雅黑", Helvetica, Arial, "メイリオ", "맑은 고딕", sans-serif !important;
   height: 100%;
   width: 100%;
 }
 
-/* line 12, ../../resources/assets/sass/arklab/sass/main.scss */
+/* line 16, ../../resources/assets/sass/arklab/sass/main.scss */
 .fadeIn {
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 500ms;
+  -moz-animation-duration: 500ms;
+  -o-animation-duration: 500ms;
+  animation-duration: 500ms;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   -o-animation-fill-mode: both;
@@ -42,21 +146,209 @@ html, body {
   animation-name: fadeIn;
 }
 
-/* line 16, ../../resources/assets/sass/arklab/sass/main.scss */
+/* line 20, ../../resources/assets/sass/arklab/sass/main.scss */
+.fadeInDown {
+  -webkit-animation-duration: 500ms;
+  -moz-animation-duration: 500ms;
+  -o-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -o-animation-delay: 500ms;
+  animation-delay: 500ms;
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+/* line 24, ../../resources/assets/sass/arklab/sass/main.scss */
+.fadeInRight {
+  -webkit-animation-duration: 500ms;
+  -moz-animation-duration: 500ms;
+  -o-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -o-animation-delay: 500ms;
+  animation-delay: 500ms;
+  -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
+  -o-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+/* line 28, ../../resources/assets/sass/arklab/sass/main.scss */
+.fadeInFast {
+  -webkit-animation-duration: 300ms;
+  -moz-animation-duration: 300ms;
+  -o-animation-duration: 300ms;
+  animation-duration: 300ms;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 300ms;
+  -moz-animation-delay: 300ms;
+  -o-animation-delay: 300ms;
+  animation-delay: 300ms;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/* line 32, ../../resources/assets/sass/arklab/sass/main.scss */
+.fadeInLeft {
+  -webkit-animation-duration: 500ms;
+  -moz-animation-duration: 500ms;
+  -o-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -o-animation-delay: 500ms;
+  animation-delay: 500ms;
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+/* line 36, ../../resources/assets/sass/arklab/sass/main.scss */
+.fadeInLeftBig {
+  -webkit-animation-duration: 500ms;
+  -moz-animation-duration: 500ms;
+  -o-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -o-animation-delay: 500ms;
+  animation-delay: 500ms;
+  -webkit-animation-name: fadeInLeftBig;
+  -moz-animation-name: fadeInLeftBig;
+  -o-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+}
+
+/* line 40, ../../resources/assets/sass/arklab/sass/main.scss */
 .pageOne {
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: relative;
   background: url(/images/home-background.jpg) no-repeat center center fixed;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
   color: white;
-  text-align: center;
+  min-width: 100%;
+  min-height: 100%;
+  background-attachment: scroll;
 }
 
-/* line 26, ../../resources/assets/sass/arklab/sass/main.scss */
+/* line 53, ../../resources/assets/sass/arklab/sass/main.scss */
+.aboutPage {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(/images/about.jpg) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  background-attachment: scroll;
+}
+
+/* line 65, ../../resources/assets/sass/arklab/sass/main.scss */
+.eduPage {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(/images/coscup.jpg) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  background-attachment: scroll;
+}
+
+/* line 77, ../../resources/assets/sass/arklab/sass/main.scss */
+.productsPage {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(/images/butterfly.jpg) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+
+/* line 88, ../../resources/assets/sass/arklab/sass/main.scss */
+.flyProjectPage {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(/images/fly.jpg) no-repeat center top fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+
+/* line 99, ../../resources/assets/sass/arklab/sass/main.scss */
+.envirnmentPage {
+  height: 60%;
+  width: 100%;
+  position: relative;
+  background: url(/images/envirnment.jpg) no-repeat center top fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+
+/* line 110, ../../resources/assets/sass/arklab/sass/main.scss */
+.documentsPage {
+  height: 40%;
+  width: 100%;
+  position: relative;
+  background: url(/images/documents.jpg) no-repeat center top fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+
+/* line 121, ../../resources/assets/sass/arklab/sass/main.scss */
 .page-mask {
   height: 100%;
   width: 100%;
@@ -64,8 +356,14 @@ html, body {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* line 128, ../../resources/assets/sass/arklab/sass/main.scss */
+#mark {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
 @media (min-width: 1200px) {
-  /* line 34, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 134, ../../resources/assets/sass/arklab/sass/main.scss */
   .center {
     position: absolute;
     width: 1170px;
@@ -76,13 +374,13 @@ html, body {
     left: 50%;
   }
 
-  /* line 44, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 144, ../../resources/assets/sass/arklab/sass/main.scss */
   .mobile br {
     display: none;
   }
 }
 @media (min-width: 992px) {
-  /* line 50, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 150, ../../resources/assets/sass/arklab/sass/main.scss */
   .center {
     position: absolute;
     width: 970px;
@@ -93,13 +391,13 @@ html, body {
     left: 50%;
   }
 
-  /* line 60, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 160, ../../resources/assets/sass/arklab/sass/main.scss */
   .mobile br {
     display: none;
   }
 }
 @media (min-width: 758px) {
-  /* line 66, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 166, ../../resources/assets/sass/arklab/sass/main.scss */
   .center {
     position: absolute;
     width: 750px;
@@ -110,13 +408,13 @@ html, body {
     left: 50%;
   }
 
-  /* line 76, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 176, ../../resources/assets/sass/arklab/sass/main.scss */
   .mobile br {
     display: none;
   }
 }
 @media (max-width: 768px) {
-  /* line 82, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 182, ../../resources/assets/sass/arklab/sass/main.scss */
   .center {
     position: absolute;
     width: 80%;
@@ -127,7 +425,7 @@ html, body {
     left: 50%;
   }
 
-  /* line 92, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 192, ../../resources/assets/sass/arklab/sass/main.scss */
   .mobile br {
     display: block;
   }

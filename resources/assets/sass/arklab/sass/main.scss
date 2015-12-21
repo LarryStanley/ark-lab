@@ -2,6 +2,10 @@
 @import "animated/animated";
 
 @include animation(fade-in);
+@include animation(fade-in-left);
+@include animation(fade-in-left-big);
+@include animation(fade-in-right);
+@include animation(fade-in-down);
 
 html, body {
 	font-family: "微軟正黑體", "微软雅黑", Helvetica, Arial, "メイリオ", "맑은 고딕", sans-serif !important;
@@ -10,24 +14,120 @@ html, body {
 }
 
 .fadeIn {
-	@include animate(fade-in, 1s, 500ms);
+	@include animate(fade-in, 500ms, 500ms);
+}
+
+.fadeInDown {
+	@include animate(fade-in-down, 500ms, 500ms);
+}
+
+.fadeInRight {
+	@include animate(fade-in-right, 500ms, 500ms);
+}
+
+.fadeInFast {
+	@include animate(fade-in, 300ms, 300ms);
+}
+
+.fadeInLeft {
+	@include animate(fade-in-left, 500ms, 500ms);
+}
+
+.fadeInLeftBig {
+	@include animate(fade-in-left-big, 500ms, 500ms);
 }
 
 .pageOne {
 	height: 100%;
 	width: 100%;
-	position: absolute;
+	position: relative;
 	background: url(/images/home-background.jpg) no-repeat center center fixed;
 	@include background-size(cover);
 	color: white;
-	text-align: center;
+
+	min-width: 100%;
+	min-height: 100%;
+    background-attachment: scroll;
 }
+
+.aboutPage {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background: url(/images/about.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+	text-align: center;
+
+    background-attachment: scroll;
+}
+
+.eduPage {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background: url(/images/coscup.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+	text-align: center;
+
+    background-attachment: scroll;
+}
+
+.productsPage {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background: url(/images/butterfly.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+}
+
+.flyProjectPage {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background: url(/images/fly.jpg) no-repeat center top fixed;
+	@include background-size(cover);
+	color: white;
+
+    background-attachment: scroll;
+}
+
+.envirnmentPage {
+	height: 60%;
+	width: 100%;
+	position: relative;
+	background: url(/images/envirnment.jpg) no-repeat center top fixed;
+	@include background-size(cover);
+	color: white;
+
+    background-attachment: scroll;
+}
+
+.documentsPage {
+	height: 40%;
+	width: 100%;
+	position: relative;
+	background: url(/images/documents.jpg) no-repeat center top fixed;
+	@include background-size(cover);
+	color: white;
+    background-attachment: scroll;
+}
+
 
 .page-mask {
 	height: 100%;
 	width: 100%;
 	position: relative;
 	background-color: rgba(0,0,0,0.2);
+}
+
+#mark {
+	padding-left: 10px;
+	padding-top: 10px;
 }
 
 @media (min-width: 1200px) {
