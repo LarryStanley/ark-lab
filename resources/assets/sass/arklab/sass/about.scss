@@ -1,0 +1,22 @@
+@import "compass/css3";
+@import "animated/animated";
+
+ #aboutCover {
+ 	height: 300px;
+ 	width: 100%;
+
+	position: relative;
+	background: url(/images/about.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+
+ }
+
+ .bottom {
+ 	position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px 10px 10px 10px;
+ }

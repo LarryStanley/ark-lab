@@ -11,9 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/about', function() {
-	return "yes";
-});
+Route::get('/', "MainController@index");
+Route::get('/about', "MainController@about");

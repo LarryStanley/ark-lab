@@ -1,0 +1,21 @@
+/* line 4, ../../resources/assets/sass/arklab/sass/about.scss */
+#aboutCover {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  background: url(/images/about.jpg) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+
+/* line 17, ../../resources/assets/sass/arklab/sass/about.scss */
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 10px 10px 10px;
+}
