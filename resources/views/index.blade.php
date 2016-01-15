@@ -15,7 +15,7 @@
 				<br><a href="#about" class="blue-grey-text text-lighten-4" id="downButton">下拉查看更多<br><i class="fa fa-angle-double-down"></i></a>
 			</div>
 			<div class="navbar-fixed">
-				<nav class="transparent">
+				<nav class="red darken-4">
 					<div class="nav-wrapper">
 						<div class="brand-logo fadeInFast" id="mark" style="display: none">
 							<a href="#top" id="topButton">
@@ -81,6 +81,7 @@
 					<div class="col m12 s12 l12">
 						<div class="right">
 							<h2>奶油蒼蠅 2.0</h2>
+							<hr>
 							<ul>
 								<li>可插拔核心：機身可更換，豐富多變化。</li>
 								<li>手機遙控器：手機藍芽遙控，人人都是飛手。</li>
@@ -100,20 +101,17 @@
 				<div class="row">
 					<div class="col m4 l4 s12">
 						<h2>飛行業務</h2>
+
 					</div>
 					<div class="col m8 l8 s12">
-						<div class="card blue-grey darken-1">
-				            <div class="card-content white-text">
-								<p>
-									飛行器讓我們以嶄新的視角，探索這片土地。<br>	
-									透過安裝不同儀器，飛行器能有許多變化。<br>
-									裝上鏡頭，我們能夠紀錄世界的美麗。<br>
-									搭配感測器，飛行器替我們監測環境，守護家園。<br>
-									使用蜂鳴器，嚇跑偷吃稻麥的鳥兒。<br>
-									你有什麼新奇的主意嗎？我們一起來發掘飛行器的新用途。<br>
-								</p>
-							</div>
-						</div>
+						<p>
+							飛行器讓我們以嶄新的視角，探索這片土地。<br>	
+							透過安裝不同儀器，飛行器能有許多變化。<br>
+							裝上鏡頭，我們能夠紀錄世界的美麗。<br>
+							搭配感測器，飛行器替我們監測環境，守護家園。<br>
+							使用蜂鳴器，嚇跑偷吃稻麥的鳥兒。<br>
+							你有什麼新奇的主意嗎？我們一起來發掘飛行器的新用途。<br>
+						</p>
 						<a href="fly" style="margin-top: 10px;" class="waves-effect waves-light btn deep-purple lighten-2">瞭解更多</a>
 					</div>
 				</div>
@@ -126,6 +124,7 @@
 				<div class="row">
 					<div class="col m8 l8 s12 right right-align">
 						<h2>環境計畫</h2>
+						<hr>
 						<p>
 							曾經，我們用飛行器守護河川。<br>
 							透過飛行器檢採水體，運用軟體與網路整合，<br>
