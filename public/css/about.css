@@ -1,4 +1,10 @@
-/* line 4, ../../resources/assets/sass/arklab/sass/about.scss */
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+/* line 6, ../../resources/assets/sass/arklab/sass/about.scss */
+* {
+  font-family: 'cwTeXHei', sans-serif;
+}
+
+/* line 10, ../../resources/assets/sass/arklab/sass/about.scss */
 #aboutCover {
   height: 300px;
   width: 100%;
@@ -12,10 +18,15 @@
   background-attachment: scroll;
 }
 
-/* line 17, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 23, ../../resources/assets/sass/arklab/sass/about.scss */
 .bottom {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 10px 10px 10px 10px;
+}
+
+/* line 30, ../../resources/assets/sass/arklab/sass/about.scss */
+.container {
+  color: #455A64;
 }

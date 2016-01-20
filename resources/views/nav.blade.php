@@ -1,4 +1,4 @@
-<div class="navbar-fixed blue darken-1">
+<div class="navbar-fixed red darken-2">
 	<nav class="transparent">
 		<div class="nav-wrapper">
 			<div class="brand-logo fadeInFast" id="mark">
@@ -6,7 +6,7 @@
 					<img src="/images/mark.png" width="150px" alt="" style="margin-top: 5px;">		
 				</a>
 			</div>
-			<a href="#" data-activates="mobile-bar" class="button-collapse"><i class="fa fa-bars" style="margin-left: 5px;"></i></a>
+			<a href="#" data-activates="mobile-bar" class="button-collapse"><i class="ion-navicon" style="margin-left: 5px;"></i></a>
 			<ul class="right hide-on-med-and-down">
 				<li><a href="/about" name="about" id="aboutButton">關於我們</a></li>
 				<li><a href="/education" name="education" id="educationButton">教育推廣</a></li>
