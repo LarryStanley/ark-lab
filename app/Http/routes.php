@@ -13,3 +13,6 @@
 
 Route::get('/', "MainController@index");
 Route::get('/about', "MainController@about");
+Route::get('/design', function() {
+	return view("design");
+});

@@ -6,6 +6,7 @@
 @include animation(fade-in-left-big);
 @include animation(fade-in-right);
 @include animation(fade-in-down);
+@include animation(zoom-in);
 
 html, body {
 	font-family: "微軟正黑體", "微软雅黑", Helvetica, Arial, "メイリオ", "맑은 고딕", sans-serif !important;
@@ -13,6 +14,12 @@ html, body {
 	width: 100%;
 
 	color: #37474F;
+}
+
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+
+* {
+	font-family: 'cwTeXHei', sans-serif;
 }
 
 .fadeIn {
@@ -127,6 +134,85 @@ html, body {
 	background-color: rgba(0,0,0,0.2);
 }
 
+.unslider-arrow {
+	color: #FFFFFF;
+	font-size: 48px;
+	top: 30%;
+}
+
+.slider {
+	height: 60%;
+	position: absolute;
+	min-height: 300px;
+	color: white;
+}
+
+.block {
+	position: relative;
+	top: 60%;
+	width: 100%;
+	height: calc(40% - 64px);
+}
+
+.block-content {
+	height: 100%;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	background: black;
+
+	img {
+		position: absolute;
+
+		height: 100%;
+		width: auto;
+		margin: auto;
+
+		min-height: 100%;
+	    min-width: 100%;
+	    left: -100%;
+	    right: -100%;
+	    top: -100%;
+	    bottom: -100%;
+	
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: .3s ease-in-out;
+		transition: .3s ease-in-out;
+	}
+
+	.title {
+		font-size: 18px;
+		position: absolute;
+		z-index: 5;
+		color: white;
+		
+		padding: 10px 10px 10px 10px;
+	}
+}
+
+	.block-content .illustration {
+		color:white;
+		position:absolute;
+		visibility:hidden;
+	}
+
+	.block-content:hover .illustration{
+		visibility:visible;
+		color:white;
+		position:absolute;
+		top:0; bottom:0; left:0; right:0; margin:auto;
+		text-align:center; 
+		height: 150px; 
+		line-height: 150px;
+	}
+
+	.block-content:hover img {
+		-webkit-transform: scale(1.3);
+		transform: scale(1.3);
+		opacity: 0.7;
+	}
+
 #mark {
 	padding-left: 10px;
 	padding-top: 10px;
@@ -146,6 +232,10 @@ html, body {
 	.mobile br{
 		display: none;
 	}
+
+	.block-content {
+		width: 25%;
+	}
 }
 
 @media (min-width: 992px) {
@@ -161,6 +251,10 @@ html, body {
 
 	.mobile br{
 		display: none;
+	}
+
+	.block-content {
+		width: 25%;
 	}
 }
 
@@ -178,6 +272,10 @@ html, body {
 	.mobile br{
 		display: none;
 	}
+
+	.block-content {
+		width: 25%;
+	}
 }
 
 @media (max-width: 768px) {
@@ -193,5 +291,9 @@ html, body {
 
 	.mobile br{
 		display: block;
+	}
+
+	.block-content {
+		width: 50%;
 	}
 }
