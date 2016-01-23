@@ -45,6 +45,9 @@
 				</div>
 			</li>
 		</ul>
+ 			@if(Auth::check())
+				<button id='editIndexButton' data-target='editIndexModal' class='waves-effect waves-light btn modal-trigger cyan darken-2'>編輯首頁</button>
+			@endif
 	</div>
 	<div class="block">
 		<a href="">
@@ -77,6 +80,24 @@
 		</a>
 	</div>
 	
+	@if(Auth::check())
+	<div id="editIndexModal" class="modal modal-fixed-footer">
+	    <div class="modal-content">
+	      <h4>編輯首頁</h4>
+	      <hr>
+	      <h5>橫幅編輯</h5>
+	      <hr>
+	      <p>A bunch of text</p>
+	      <h5>下方區塊編輯</h5>
+	      <hr>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-action waves-effect waves-green btn-flat">儲存</a>
+	      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">取消</a>
+	    </div>
+  </div>
+  @endif
+          
 @stop
 
 @section("javascript")

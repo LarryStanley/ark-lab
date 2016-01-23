@@ -455,8 +455,15 @@ html, body {
   padding-top: 10px;
 }
 
+/* line 221, ../../resources/assets/sass/arklab/sass/main.scss */
+#editIndexButton {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
 @media (min-width: 1200px) {
-  /* line 222, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 228, ../../resources/assets/sass/arklab/sass/main.scss */
   .center {
     position: absolute;
     width: 1170px;
@@ -467,18 +474,18 @@ html, body {
     left: 50%;
   }
 
-  /* line 232, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 238, ../../resources/assets/sass/arklab/sass/main.scss */
   .mobile br {
     display: none;
   }
 
-  /* line 236, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 242, ../../resources/assets/sass/arklab/sass/main.scss */
   .block-content {
     width: 25%;
   }
 }
 @media (min-width: 992px) {
-  /* line 242, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 248, ../../resources/assets/sass/arklab/sass/main.scss */
   .center {
     position: absolute;
     width: 970px;
@@ -489,18 +496,18 @@ html, body {
     left: 50%;
   }
 
-  /* line 252, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 258, ../../resources/assets/sass/arklab/sass/main.scss */
   .mobile br {
     display: none;
   }
 
-  /* line 256, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 262, ../../resources/assets/sass/arklab/sass/main.scss */
   .block-content {
     width: 25%;
   }
 }
 @media (min-width: 758px) {
-  /* line 262, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 268, ../../resources/assets/sass/arklab/sass/main.scss */
   .center {
     position: absolute;
     width: 750px;
@@ -511,18 +518,18 @@ html, body {
     left: 50%;
   }
 
-  /* line 272, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 278, ../../resources/assets/sass/arklab/sass/main.scss */
   .mobile br {
     display: none;
   }
 
-  /* line 276, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 282, ../../resources/assets/sass/arklab/sass/main.scss */
   .block-content {
     width: 25%;
   }
 }
 @media (max-width: 768px) {
-  /* line 282, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 288, ../../resources/assets/sass/arklab/sass/main.scss */
   .center {
     position: absolute;
     width: 80%;
@@ -533,12 +540,12 @@ html, body {
     left: 50%;
   }
 
-  /* line 292, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 298, ../../resources/assets/sass/arklab/sass/main.scss */
   .mobile br {
     display: block;
   }
 
-  /* line 296, ../../resources/assets/sass/arklab/sass/main.scss */
+  /* line 302, ../../resources/assets/sass/arklab/sass/main.scss */
   .block-content {
     width: 50%;
   }

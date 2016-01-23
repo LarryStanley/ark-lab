@@ -19,6 +19,7 @@
 				並運用在不同層面上如水質監測、空氣品質監測等，<br>讓多旋翼飛行器融入生活之中。
 				自由開放與分享是我們的精神，<br>更希望能持續推波助瀾。<br>如同我們的名字 Aircraft Revolution Keep 一起來場天空革命吧！<br>	
 		    </p>
+		    <hr>
 		    <div class="row">
 		    	<div class="col m3"><h2 style="font-size: 36px;">創立紀實</h2></div>
 		    	<div class="col m6">

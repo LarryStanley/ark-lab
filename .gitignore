@@ -7,3 +7,5 @@ Homestead.json
 sftp-config.json
 
 *.scssc
+
+config/database.php

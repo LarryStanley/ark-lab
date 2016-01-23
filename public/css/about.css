@@ -19,6 +19,82 @@
 }
 
 /* line 23, ../../resources/assets/sass/arklab/sass/about.scss */
+#eduCover {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  background: url(/images/educover.JPG) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+
+/* line 36, ../../resources/assets/sass/arklab/sass/about.scss */
+#productsCover {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  background: url(/images/butterfly.jpg) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+
+/* line 49, ../../resources/assets/sass/arklab/sass/about.scss */
+#flyProjectCover {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  background: url(/images/fly.jpg) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+
+/* line 62, ../../resources/assets/sass/arklab/sass/about.scss */
+#envirnmentCover {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  background: url(/images/envirnment.jpg) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+
+/* line 75, ../../resources/assets/sass/arklab/sass/about.scss */
+#documentsCover {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  background: url(/images/documents.jpg) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+
+/* line 88, ../../resources/assets/sass/arklab/sass/about.scss */
+#mark {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+/* line 93, ../../resources/assets/sass/arklab/sass/about.scss */
 .bottom {
   position: absolute;
   bottom: 0;
@@ -26,7 +102,7 @@
   padding: 10px 10px 10px 10px;
 }
 
-/* line 30, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 100, ../../resources/assets/sass/arklab/sass/about.scss */
 .container {
   color: #455A64;
 }

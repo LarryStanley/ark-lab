@@ -20,6 +20,76 @@
 
  }
 
+ #eduCover {
+ 	height: 300px;
+ 	width: 100%;
+
+	position: relative;
+	background: url(/images/educover.JPG) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+
+ }
+
+ #productsCover {
+ 	height: 300px;
+ 	width: 100%;
+
+	position: relative;
+	background: url(/images/butterfly.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+
+ }
+
+ #flyProjectCover {
+ 	height: 300px;
+ 	width: 100%;
+
+	position: relative;
+	background: url(/images/fly.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+
+ }
+
+  #envirnmentCover {
+ 	height: 300px;
+ 	width: 100%;
+
+	position: relative;
+	background: url(/images/envirnment.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+
+ }
+
+  #documentsCover {
+ 	height: 300px;
+ 	width: 100%;
+
+	position: relative;
+	background: url(/images/documents.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+
+ }
+
+ #mark {
+	padding-left: 10px;
+	padding-top: 10px;
+ }
+
  .bottom {
  	position: absolute;
     bottom: 0;
