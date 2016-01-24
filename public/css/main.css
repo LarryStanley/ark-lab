@@ -456,7 +456,7 @@ html, body {
 }
 
 /* line 221, ../../resources/assets/sass/arklab/sass/main.scss */
-#editIndexButton {
+.editButton {
   position: absolute;
   right: 15px;
   bottom: 15px;

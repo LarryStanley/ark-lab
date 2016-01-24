@@ -34,3 +34,16 @@ Route::get('/home', function() {
 Route::get('/design', function() {
 	return view("design");
 });
+
+Route::get('/test', function() {
+	return view("test");
+});
+
+Route::group(['prefix' => 'api'], function() {
+	Route::group(['prefix' => 'index_block'], function() {
+		Route::get("/", "ApiController@index_block");
+		Route::post('/save', "ApiController@index_block_save");
+	});
+	Route::get("/index_slider", "ApiController@index_slider");
+	Route::post('/upload_image', "ApiController@upload_image");
+});

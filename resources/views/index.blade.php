@@ -37,71 +37,143 @@
 	</div>
 	<div class="slider">
 		<ul style="height: 100% !important; position: relative;">
-			<li style="background: url(/images/home-background.jpg) no-repeat center center fixed; background-size: cover; height: 100% !important; position: relative; ">
+			@foreach($sliders as $slider)
+			<li style="background: url(/images/{{ $slider->image }}) no-repeat center center fixed; background-size: cover; height: 100% !important; position: relative; ">
 				<div class="center">
-					<h2>Ark Lab 多旋翼工坊</h2>
-					<p style="font-size: 24px">開放原始碼｜自造多旋翼<br>
-	 				拉近天空與你我的距離</p>
+					<h2>{{ $slider->title }}</h2>
+					<hr>
+					<p style="font-size: 24px">{!! nl2br(e($slider->illustration)) !!}</p>
+					@if($slider->link)
+						<a href="{{ $slider->link }}" class="waves-effect waves-light btn cyan darken-2">閱讀更多</a>
+					@endif
 				</div>
 			</li>
+			@endforeach
 		</ul>
  			@if(Auth::check())
-				<button id='editIndexButton' data-target='editIndexModal' class='waves-effect waves-light btn modal-trigger cyan darken-2'>編輯首頁</button>
+				<button data-target='editSliderModal' class='editButton waves-effect waves-light btn modal-trigger cyan darken-2'>編輯橫幅</button>
 			@endif
 	</div>
 	<div class="block">
-		<a href="">
+		@foreach($blocks as $block)
+		<a href="{{ $block->link }}">
 			<div class="block-content">
-				<div class="title">教育推廣</div>
-				<img src="/images/quad.jpg" alt="">
-				<div class="illustration">透過有趣的多旋翼推廣Maker教育</div>
+				<div class="title">{{ $block->title }}</div>
+				<img src="/images/{{ $block->image }}" alt="">
+				<div class="illustration">{{ $block->illustration }}</div>
 			</div>
 		</a>
-		<a href="">
-			<div class="block-content">
-				<div class="title">環境計劃</div>
-				<img src="/images/envirnment.jpg" alt="">
-				<div class="illustration">守護這片蒼穹</div>
-			</div>
-		</a>
-		<a href="">
-			<div class="block-content">
-				<div class="title">奶油蒼蠅</div>
-				<img src="/images/butterfly.jpg" alt="">
-				<div class="illustration">2.0</div>
-			</div>
-		</a>
-		<a href="">
-			<div class="block-content">
-				<div class="title">技術討論</div>
-				<img src="/images/documents.jpg" alt="">
-				<div class="illustration">Maker 就是要爬文！！</div>
-			</div>
-		</a>
+		@endforeach
+		@if(Auth::check())
+			<button data-target='editBlockModal' class='editButton waves-effect waves-light btn modal-trigger red darken-2'>編輯區塊</button>
+		@endif
 	</div>
 	
 	@if(Auth::check())
-	<div id="editIndexModal" class="modal modal-fixed-footer">
-	    <div class="modal-content">
-	      <h4>編輯首頁</h4>
-	      <hr>
-	      <h5>橫幅編輯</h5>
-	      <hr>
-	      <p>A bunch of text</p>
-	      <h5>下方區塊編輯</h5>
-	      <hr>
-	    </div>
-	    <div class="modal-footer">
-	      <a href="#!" class="modal-action waves-effect waves-green btn-flat">儲存</a>
-	      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">取消</a>
-	    </div>
-  </div>
-  @endif
+	<div ng-app="indexApp" ng-controller="IndexController as index">
+		<div id="editSliderModal" class="modal modal-fixed-footer">
+		    <div class="modal-content">
+		      <h4>編輯橫幅</h4>
+		      <hr>	
+		      <table class="highlight">
+		      	<thead>
+		      		<tr>
+		      			<td>順序</td>
+		      			<td>背景圖片</td>
+		      			<td>標題</td>
+		      			<td>說明文字</td>
+		      			<td>閱讀更多連結</td>
+		      		</tr>
+		      	</thead>
+		      	<tbody>
+		      		@foreach($sliders as $slider)
+		      			<tr>
+		      				<td>{{ $slider->order }}</td>
+		      				<td><img src="/images/{{ $slider->image }}" alt="" style="height: 100px"></td>
+		      				<td>{{ $slider->title }}</td>
+		      				<td>{!! nl2br(e($slider->illustration)) !!}</td>
+		      				<td><a href="{{ $slider->link }}" target="_blank">{{ $slider->link }}</a></td>
+		      			</tr>
+		      		@endforeach
+		      	</tbody>
+		      </table>
+		    </div>
+		    <div class="modal-footer">
+		      <a href="#!" class="modal-action waves-effect waves-green btn-flat">確定</a>
+		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">取消</a>
+		    </div>
+	  	</div>
+		<div id="editBlockModal" class="modal modal-fixed-footer" style="width: 90%;">
+		    <div class="modal-content">
+		      <h4>編輯區塊</h4>
+		      <hr>	
+		      <table class="highlight">
+		      	<thead>
+		      		<tr>
+		      			<td>順序</td>
+		      			<td>背景圖片</td>
+		      			<td>標題</td>
+		      			<td>說明文字</td>
+		      			<td>連結</td>
+		      			<td>刪除</td>
+		      		</tr>
+		      	</thead>
+		      	<tbody>
+	      			<tr ng-repeat="(key,block) in index.blocks">
+	      				<td>[[ block.order ]]</td>
+	      				<td><img src="/images/[[ block.image ]]" alt="" style="height: 100px"></td>
+	      				<td>
+							<input placeholder="標題" type="text" class="validate" ng-model="block.title" style="width:100px;">
+	      				</td>
+	      				<td>
+				         	<textarea ng-model="block.illustration" class="materialize-textarea"></textarea>
+	      				</td>
+	      				<td>
+							<input placeholder="連結" type="text" class="validate" ng-model="block.link" style="width:100px;"><br>
+	      					<a href="[[ block.link ]]" target="_blank">預覽連結</a>
+	      				</td>
+	      				<td>
+	      					<button class="btn-floating waves-effect waves-light red darken-2" ng-click="index.deleteBlock(key)">
+		      					<i class="ion-ios-trash-outline"></i>
+		      				</button>
+		      			</td>
+	      			</tr>
+		      	</tbody>
+		      </table>
+		      <h5>新增區塊</h5>
+  		      <hr>
+		      <form ng-submit="index.newBlock()" enctype="multipart/form-data" id="blockForm">
+		      	<div class="row">
+		      		<div class="col m4 s12 input-field">
+						<input name="title" id="blockNewTitle" placeholder="標題" type="text" class="validate" ng-model="index.newTitle" >
+		      		</div>
+		      		<div class="col m4 s12 input-field">
+						<input placeholder="說明文字" type="text" class="validate" ng-model="index.newIllustration" ><br>
+		      		</div>
+		      		<div class="col m4 s12 input-field">
+						<input placeholder="連結" type="text" class="validate" ng-model="index.newLink"><br>
+		      		</div>
+		      		<h6>背景圖片</h6>
+		      		<div class="col m4 s12 input-field">
+		      			<input id="newBlockImage" type="file" name="photo">
+		      		</div>
+				    <button class="btn red darken-2 waves-effect" type="submit" style="float: right" >新增</button>
+		      	</div>
+		      </form>
+		    </div>
+		    <div class="modal-footer">
+		      <a href="#!" class="modal-action waves-effect waves-green btn-flat" ng-click="index.saveBlock()" onclick="Materialize.toast('儲存中', 4000)">確定</a>
+		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="index.cancelBlock()">取消</a>
+		    </div>
+	  </div>
+	</div>
+  	@endif
           
 @stop
 
 @section("javascript")
 	<script src="/js/unslider-min.js"></script>
+	<script src="/js/index.js"></script>
 	<script>
 		jQuery(document).ready(function($) {
 			$('.slider').unslider({

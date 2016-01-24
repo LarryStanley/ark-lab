@@ -2,11 +2,16 @@
 namespace App\Http\Controllers;
 use App\User;
 use App\Http\Controllers\Controller;
+use DB;
 
 class MainController extends Controller
 {
 	public function index() {
-	    return view('index');
+		$sliders = DB::table("index_slider")->orderBy("order", "asc")->get();
+		$blocks = DB::table("index_block")->orderBy("order", "asc")->get();
+
+	    return view('index', ["sliders" => $sliders,
+	    					  "blocks"	=> $blocks]);
 	}
 
 	public function about() {
