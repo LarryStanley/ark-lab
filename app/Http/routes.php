@@ -45,5 +45,11 @@ Route::group(['prefix' => 'api'], function() {
 		Route::post('/save', "ApiController@index_block_save");
 	});
 	Route::get("/index_slider", "ApiController@index_slider");
+	Route::post("/index_slider/save", "ApiController@index_slider_save");
+
+	Route::get('/about_us', "ApiController@show_about_us");
+	Route::post('/about_us/save', "ApiController@new_about_logs");
+	Route::post('/about_us/delete/{id}', "ApiController@delete_about_logs");
+
 	Route::post('/upload_image', "ApiController@upload_image");
 });

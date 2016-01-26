@@ -1,21 +1,65 @@
-angular.module('indexApp', [])
-	.controller('IndexController', function($scope, $http) {
+angular.module('indexApp', ["ngFileUpload", "ui.sortable"])
+	.controller('IndexController', ['$scope', '$http', 'Upload', '$timeout' , function($scope, $http, Upload, $timeout) {
 		var index = this;
+		index.type = "slider";
+
+		$scope.uploadFiles = function(file, errFiles) {
+	        $scope.f = file;
+	        $scope.errFile = errFiles && errFiles[0];
+	        if (file) {
+	            file.upload = Upload.upload({
+	                url: 'https://api.imgur.com/3/image',
+	                data: {image: file},
+	                headers: {
+				        'Content-Type':'application/x-www-form-urlencoded',
+				        'Authorization': 'Client-ID 0cabe1987d4fb3f'
+				    }
+	            });
+
+	            file.upload.then(function (response) {
+	                $timeout(function () {
+	                    file.result = response.data;
+	                });
+	                $("#previewLoading").hide();
+	                index.imageName = response.data.data.link;
+	                $(".preview img").show();	            
+	            }, function (response) {
+	                if (response.status > 0)
+	                    $scope.errorMsg = response.status + ': ' + response.data;
+	            }, function (evt) {
+	                file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+	                $("#previewLoading").show();
+	            });
+	        }   
+	    }
 
 		index.getBlockData = function() {
-			$http.get("/api/index_block").then(function(response) {
+			$http.get("/api/index_" + index.type).then(function(response) {
 				index.blocks = response.data;
 		    });
 		}
 
+		index.showSliderEditor = function() {
+			index.type = "slider";
+			index.getBlockData();
+		}
+
+		index.showBlockEditor = function() {
+			index.type = "block";
+			index.getBlockData();
+		}
+
 		index.saveBlock = function() {
+			for (var i = 0; i < index.blocks.length; i++) {
+				index.blocks[i].order = i;
+			}
+
 			$http({
-				url: '/api/index_block/save',
+				url: '/api/index_' + index.type + '/save',
 				method: 'POST',
 				headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') },
 				data: JSON.stringify(index.blocks)
 			}).then(function successCallback(response) {
-				console.log(response);
 				$(".toast").remove();
 				location.reload();
 			}, function errorCallback(response) {
@@ -44,30 +88,10 @@ angular.module('indexApp', [])
 	    		validate = false;
 	    	}
 
-	    	if (!index.newLink) {
+	    	if (!index.newLink || index.type != "slider") {
 	    		Materialize.toast('記得填寫連結', 4000);
 	    		validate = false;
 	    	}
-
-	    	var file = new FormData();
-	    	if ($("#newBlockImage").prop('files')) {
-	    		file.append('photo', $("#newBlockImage")[0].files[0]);
-				$http({
-					url: '/api/upload_image',
-					method: 'POST',
-					headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content'), 'Content-Type':'application/x-www-form-urlencoded'},
-					data: {"photo": $('#newBlockImage').val()}
-				}).then(function successCallback(response) {
-						console.log(response);
-					}, function errorCallback(response) {
-						console.log(response);
-					});
-			} else {
-				Materialize.toast('記得上傳圖片', 4000);
-	    		validate = false;
-			}
-
-
 
 	    	if (validate) {
 		    	var newBlock = {
@@ -75,7 +99,7 @@ angular.module('indexApp', [])
 		    		illustration: index.newIllustration,
 		    		link: index.newLink,
 		    		order: index.blocks.length,
-		    		image: "about.jpg"
+		    		image: index.imageName
 		    	}
 
 		    	index.blocks.push(newBlock);
@@ -88,7 +112,7 @@ angular.module('indexApp', [])
 	    }
 
     	index.getBlockData();
-	})
+	}])
 	.config(function($interpolateProvider){
 		$interpolateProvider.startSymbol('[[').endSymbol(']]');
 	})

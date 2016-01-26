@@ -8,19 +8,20 @@
 	<title><?php if(!empty($title)) echo $title." - ";?>Ark Lab 多旋翼工坊</title>
 
 	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.4/css/materialize.min.css">
 
 	
 	@yield("head")
 
 </head>
-<body>
+<body ng-app='<?php if(!empty($ngApp)) echo $ngApp;?>' ng-controller="<?php if(!empty($ngController)) echo $ngController;?>">
 	
 	@yield("body")
 
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js"></script>
 
 	<script>
 		$(document).ready(function() {

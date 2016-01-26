@@ -38,7 +38,7 @@
 	<div class="slider">
 		<ul style="height: 100% !important; position: relative;">
 			@foreach($sliders as $slider)
-			<li style="background: url(/images/{{ $slider->image }}) no-repeat center center fixed; background-size: cover; height: 100% !important; position: relative; ">
+			<li style="background: url({{ $slider->image }}) no-repeat center center fixed; background-size: cover; height: 100% !important; position: relative; ">
 				<div class="center">
 					<h2>{{ $slider->title }}</h2>
 					<hr>
@@ -51,7 +51,7 @@
 			@endforeach
 		</ul>
  			@if(Auth::check())
-				<button data-target='editSliderModal' class='editButton waves-effect waves-light btn modal-trigger cyan darken-2'>編輯橫幅</button>
+				<button data-target='editBlockModal' class='editButton waves-effect waves-light btn modal-trigger cyan darken-2' ng-click="index.showSliderEditor()">編輯橫幅</button>
 			@endif
 	</div>
 	<div class="block">
@@ -59,74 +59,41 @@
 		<a href="{{ $block->link }}">
 			<div class="block-content">
 				<div class="title">{{ $block->title }}</div>
-				<img src="/images/{{ $block->image }}" alt="">
+				<img src="{{ $block->image }}" alt="">
 				<div class="illustration">{{ $block->illustration }}</div>
 			</div>
 		</a>
 		@endforeach
 		@if(Auth::check())
-			<button data-target='editBlockModal' class='editButton waves-effect waves-light btn modal-trigger red darken-2'>編輯區塊</button>
+			<button data-target='editBlockModal' class='editButton waves-effect waves-light btn modal-trigger red darken-2' ng-click="index.showBlockEditor()">編輯區塊</button>
 		@endif
 	</div>
 	
 	@if(Auth::check())
-	<div ng-app="indexApp" ng-controller="IndexController as index">
-		<div id="editSliderModal" class="modal modal-fixed-footer">
-		    <div class="modal-content">
-		      <h4>編輯橫幅</h4>
-		      <hr>	
-		      <table class="highlight">
-		      	<thead>
-		      		<tr>
-		      			<td>順序</td>
-		      			<td>背景圖片</td>
-		      			<td>標題</td>
-		      			<td>說明文字</td>
-		      			<td>閱讀更多連結</td>
-		      		</tr>
-		      	</thead>
-		      	<tbody>
-		      		@foreach($sliders as $slider)
-		      			<tr>
-		      				<td>{{ $slider->order }}</td>
-		      				<td><img src="/images/{{ $slider->image }}" alt="" style="height: 100px"></td>
-		      				<td>{{ $slider->title }}</td>
-		      				<td>{!! nl2br(e($slider->illustration)) !!}</td>
-		      				<td><a href="{{ $slider->link }}" target="_blank">{{ $slider->link }}</a></td>
-		      			</tr>
-		      		@endforeach
-		      	</tbody>
-		      </table>
-		    </div>
-		    <div class="modal-footer">
-		      <a href="#!" class="modal-action waves-effect waves-green btn-flat">確定</a>
-		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">取消</a>
-		    </div>
-	  	</div>
 		<div id="editBlockModal" class="modal modal-fixed-footer" style="width: 90%;">
 		    <div class="modal-content">
 		      <h4>編輯區塊</h4>
 		      <hr>	
-		      <table class="highlight">
+		      <table class="highlight beSorted">
 		      	<thead>
 		      		<tr>
-		      			<td>順序</td>
-		      			<td>背景圖片</td>
 		      			<td>標題</td>
 		      			<td>說明文字</td>
+		      			<td>背景圖片</td>
 		      			<td>連結</td>
 		      			<td>刪除</td>
 		      		</tr>
 		      	</thead>
-		      	<tbody>
-	      			<tr ng-repeat="(key,block) in index.blocks">
-	      				<td>[[ block.order ]]</td>
-	      				<td><img src="/images/[[ block.image ]]" alt="" style="height: 100px"></td>
+		      	<tbody ui-sortable ng-model="index.blocks">
+	      			<tr ng-repeat="(key,block) in index.blocks" >
 	      				<td>
 							<input placeholder="標題" type="text" class="validate" ng-model="block.title" style="width:100px;">
 	      				</td>
 	      				<td>
-				         	<textarea ng-model="block.illustration" class="materialize-textarea"></textarea>
+				         	<textarea row="2" ng-model="block.illustration" class="materialize-textarea"></textarea>
+	      				</td>
+	      				<td>
+	      					<img src="[[ block.image ]]" alt="" style="height: 100px">
 	      				</td>
 	      				<td>
 							<input placeholder="連結" type="text" class="validate" ng-model="block.link" style="width:100px;"><br>
@@ -142,21 +109,54 @@
 		      </table>
 		      <h5>新增區塊</h5>
   		      <hr>
-		      <form ng-submit="index.newBlock()" enctype="multipart/form-data" id="blockForm">
+		      <form ng-submit="index.newBlock()" method="POST" enctype="multipart/form-data" id="blockForm">
 		      	<div class="row">
 		      		<div class="col m4 s12 input-field">
 						<input name="title" id="blockNewTitle" placeholder="標題" type="text" class="validate" ng-model="index.newTitle" >
 		      		</div>
 		      		<div class="col m4 s12 input-field">
-						<input placeholder="說明文字" type="text" class="validate" ng-model="index.newIllustration" ><br>
+						<textarea row="2" placeholder="說明文字" class="materialize-textarea" type="text" class="validate" ng-model="index.newIllustration" ></textarea>
 		      		</div>
 		      		<div class="col m4 s12 input-field">
 						<input placeholder="連結" type="text" class="validate" ng-model="index.newLink"><br>
 		      		</div>
-		      		<h6>背景圖片</h6>
-		      		<div class="col m4 s12 input-field">
-		      			<input id="newBlockImage" type="file" name="photo">
+		      		<div class="col m8 s12 input-field">
+			      		<h6>背景圖片</h6>
+		      			<div class="row">
+		      				<div class="col m4 s12">
+			      				<button class="btn waves-effect cyan darken-2" type="file" ngf-select="uploadFiles($file, $invalidFiles)" accept="image/*" ngf-max-height="6000" ngf-max-size="10MB">
+							    	選擇檔案
+							    </button>
+		      				</div>
+		      				<div class="col m4 s12">
+		      					<div style="font:smaller; display: inline-block;">[[f.name]] [[errFile.name]] [[errFile.$error]] [[errFile.$errorParam]]
+							    	<div class="progress" ng-show="f.progress >= 0">
+										<div class="determinate" style="width:[[f.progress]]%"></div>
+							        </div>
+							  	</div>     
+		      				</div>
+							[[errorMsg]]
+							<div class="col m12 s12">
+								<div class="preview fadeIn">
+									<div class="preloader-wrapper small active" id="previewLoading" style="display:none">
+									    <div class="spinner-layer spinner-green-only">
+									    	<div class="circle-clipper left">
+										        <div class="circle"></div>
+										    </div>
+										    <div class="gap-patch">
+										        <div class="circle"></div>
+									      	</div>
+									      	<div class="circle-clipper right">
+									        	<div class="circle"></div>
+									      	</div>
+									    </div>
+									  </div>
+									<img src="[[ index.imageName ]]" alt="" style="height: 100px; display: none">
+								</div>
+							</div>
+		      			</div>
 		      		</div>
+	      		    {!! csrf_field() !!}
 				    <button class="btn red darken-2 waves-effect" type="submit" style="float: right" >新增</button>
 		      	</div>
 		      </form>
@@ -166,13 +166,16 @@
 		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="index.cancelBlock()">取消</a>
 		    </div>
 	  </div>
-	</div>
   	@endif
           
 @stop
 
 @section("javascript")
 	<script src="/js/unslider-min.js"></script>
+	<script src="/js/ng-file-upload.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+	<script src="/js/sortable.js"></script>
 	<script src="/js/index.js"></script>
 	<script>
 		jQuery(document).ready(function($) {

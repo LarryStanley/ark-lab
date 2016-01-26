@@ -11,11 +11,15 @@ class MainController extends Controller
 		$blocks = DB::table("index_block")->orderBy("order", "asc")->get();
 
 	    return view('index', ["sliders" => $sliders,
-	    					  "blocks"	=> $blocks]);
+	    					  "blocks"	=> $blocks,
+	    					  "ngApp" 	=> "indexApp",
+	    					  "ngController" => "IndexController as index"]);
 	}
 
 	public function about() {
-		return view("about", ["title" => "關於我們"]);
+		return view("about", ["title" => "關於我們",
+							  "ngApp" => "aboutApp",
+							  "ngController" => "AboutController as about"]);
 	}
 
 	public function education() {

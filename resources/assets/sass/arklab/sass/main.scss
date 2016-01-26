@@ -8,18 +8,14 @@
 @include animation(fade-in-down);
 @include animation(zoom-in);
 
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+
 html, body {
-	font-family: "微軟正黑體", "微软雅黑", Helvetica, Arial, "メイリオ", "맑은 고딕", sans-serif !important;
+	font-family: 'cwTeXHei', sans-serif ,"微軟正黑體", "微软雅黑", Helvetica, Arial, "メイリオ", "맑은 고딕", sans-serif;
 	height: 100%;
 	width: 100%;
 
 	color: #37474F;
-}
-
-@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
-
-* {
-	font-family: 'cwTeXHei', sans-serif;
 }
 
 .fadeIn {
@@ -222,6 +218,22 @@ html, body {
 	position: absolute;
 	right: 15px;
 	bottom: 15px;
+}
+
+.beSorted {
+	tr{
+		cursor: move !important;
+	}
+}
+
+.dragged {
+	position: absolute;
+	opacity: 0.5;
+	z-index: 2000;
+}
+
+body.dragging, body.dragging * {
+  cursor: move !important;
 }
 
 @media (min-width: 1200px) {
