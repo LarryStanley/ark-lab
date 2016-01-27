@@ -29,12 +29,12 @@
 
                 <div>
                     Email
-                    <input type="email" name="email" value="{{ old('email') }}">
+                    <input type="email" name="email" autocomplete="off"  value="{{ old('email') }}">
                 </div>
 
                 <div>
                     密碼
-                    <input type="password" name="password" id="password">
+                    <input type="password" autocomplete="off"  name="password" id="password">
                 </div>
 
                 <div>
@@ -44,7 +44,7 @@
             </div>
             <div class="card-action">
                 <div>
-                    <button type="submit" class="btn cyan darken-2">登入</button>
+                    <button type="submit" class="btn waves-effect cyan darken-2">登入</button>
                 </div>
             </div>
         </form>
