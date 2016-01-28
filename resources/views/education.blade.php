@@ -21,14 +21,6 @@
 		    <hr>
 		    <div class="row center-align">
 		    	<div class="col m3 s6">
-		    		<a href="" class="waves-effect waves-light red-text text-darken-2">
-			    		<i class="ion-monitor" style="font-size: 64px;"></i>
-			    		<div style="font-size: 24px;">
-			    			線上課程
-			    		</div>
-		    		</a>
-		    	</div>
-		    	<div class="col m3 s6">
 		    		<a href="" class="waves-effect waves-light red-text text-darken">
 			    		<i class="ion-ios-calendar" style="font-size: 64px;"></i>
 			    		<div style="font-size: 24px;">
@@ -37,18 +29,18 @@
 		    		</a>
 		    	</div>
 		    	<div class="col m3 s6">
-		    		<a href="" class="waves-effect waves-light cyan-text text-darken-2">
-			    		<i class="ion-camera" style="font-size: 64px;"></i>
+		    		<a href="" class="waves-effect waves-light red-text text-darken">
+			    		<i class="ion-ios-book-outline" style="font-size: 64px;"></i>
 			    		<div style="font-size: 24px;">
-			    			活動實記
+			    			課程介紹
 			    		</div>
 		    		</a>
 		    	</div>
 		    	<div class="col m3 s6">
-		    		<a href="" class="waves-effect waves-light cyan-text text-darken">
-			    		<i class="ion-ios-book-outline" style="font-size: 64px;"></i>
+		    		<a href="" class="waves-effect waves-light blue-grey-text text-darken-2">
+			    		<i class="ion-camera" style="font-size: 64px;"></i>
 			    		<div style="font-size: 24px;">
-			    			課程介紹
+			    			活動實記
 			    		</div>
 		    		</a>
 		    	</div>
