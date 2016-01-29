@@ -132,12 +132,12 @@ html, body {
 
 .unslider-arrow {
 	color: #FFFFFF;
-	font-size: 48px;
+	font-size: 36px;
 	top: 30%;
 }
 
 .slider {
-	height: 60%;
+	height: 65%;
 	position: absolute;
 	min-height: 300px;
 	color: white;
@@ -145,9 +145,9 @@ html, body {
 
 .block {
 	position: relative;
-	top: 60%;
+	top: 65%;
 	width: 100%;
-	height: calc(40% - 64px);
+	height: 35%;
 }
 
 .block-content {
@@ -156,6 +156,9 @@ html, body {
 	float: left;
 	overflow: hidden;
 	background: black;
+	border-width:1.5px; 
+	border-style:solid;
+	border-color: white;
 
 	img {
 		position: absolute;

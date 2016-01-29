@@ -7,8 +7,8 @@
 @stop
 
 @section("body")
-	<div class="navbar-fixed">
-		<nav class="red darken-2">
+	<div class="navbar-fixed" style="position: absolute">
+		<nav class="transparent">
 			<div class="nav-wrapper">
 				<div class="brand-logo fadeInFast" id="mark">
 					<a href="#top" id="topButton">
