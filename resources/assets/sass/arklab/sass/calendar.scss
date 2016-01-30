@@ -1,0 +1,28 @@
+.fc-row {
+  .fc-bg {
+    display: none;
+  }
+  .fc-content-skeleton {
+    tbody {
+      display: none;
+    }
+  }
+}
+
+.fc-view-container {
+  table {
+    border-collapse: inherit;
+    td {
+      width: 50px;
+      text-align: center;
+    }
+  }
+}
+
+.fc-head {
+  table {
+    th {
+      text-align: center;
+    }
+  }
+}

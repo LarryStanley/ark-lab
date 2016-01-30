@@ -1,0 +1,6 @@
+{
+  "name": "ark-lab",
+  "dependencies": {
+    "angular-ui-calendar": "^1.0.1"
+  }
+}
