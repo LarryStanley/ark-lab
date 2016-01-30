@@ -21,14 +21,14 @@
 					<li><a href="education" name="education" id="educationButton">教育推廣</a></li>
 					<li><a href="products" name="products" id="productsButton">產品介紹</a></li>
 					<li><a href="flyProject" name="flyProject" id="flyProjectButton">飛行業務</a></li>
-					<li><a href="envirnment" name="envirnment" id="envirnmentButton">方舟計畫</a></li>
+					<li><a href="plans" name="plans" id="plansButton">方舟計畫</a></li>
 				</ul>
 				<ul class="side-nav" id="mobile-bar">
 			       	<li><a href="about" name="about" id="aboutButton">關於我們</a></li>
 					<li><a href="education" name="education" id="educationButton">教育推廣</a></li>
 					<li><a href="products" name="products" id="productsButton">產品介紹</a></li>
 					<li><a href="flyProject" name="flyProject" id="flyProjectButton">飛行業務</a></li>
-					<li><a href="envirnment" name="envirnment" id="envirnmentButton">方舟計畫</a></li>
+					<li><a href="plans" name="plans" id="planButton">方舟計畫</a></li>
 			    </ul>
 			</div>
 		</nav>

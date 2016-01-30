@@ -25,7 +25,7 @@
 								並運用在不同層面上如水質監測、空氣品質監測等，讓多旋翼飛行器融入生活之中。
 								自由開放與分享是我們的精神，更希望能持續推波助瀾。如同我們的名字 Aircraft Revolution Keep 一起來場天空革命吧！
 						    </p>	
-						    <div id="aboutButton" style="font-size: 14px;">
+						    <div id="f" style="font-size: 14px;">
 								<a class="btn waves-effect red darken-2 fadeIn" onclick="showContact()" href="#contactus">聯絡我們</a>							
 							</div>
 						</div>
@@ -34,20 +34,53 @@
 			</div>
 		</div>
 	</div>
-	<a name="contactus">
-		<div id="contacts">
-			<div class="valign-wrapper" style="width:100%; height: 100%;">
-				<div class="container">
-					<div class="row">
-						<div class="col m12" >
-							<h2 class="valign center-align fadeIn blue-grey-text text-lighten-5">聯絡我們</h2>
-							 
-						</div>
+	<a name="contactus"></a>	
+	<div id="contacts">
+		<div class="valign-wrapper" style="width:100%; height: 100%;">
+			<div class="container">
+				<div class="row">
+					<div class="col m3">.</div>
+					<div class="col m6 s12" >
+						<h2 class="valign center-align fadeIn blue-grey-text text-lighten-5">聯絡我們</h2>
+						<ul class="collapsible popout" data-collapsible="accordion" style="width: 100%">
+						    <li>
+						    	<div class="collapsible-header"><i class="ion-social-facebook"></i>社群</div>
+								<div class="collapsible-body">
+									<p>
+										<a href="https://www.facebook.com/ArkLab.OpenSkyler" target="_blank">Ark Lab 粉絲專頁</a> <br>
+										<a href="https://www.facebook.com/groups/1455968237985691/" target="_blank">Drone Maker 多旋翼開發討論區</a>
+									</p>
+								</div>
+						    </li>
+						    <li>
+						    	<div class="collapsible-header"><i class="ion-ios-cart"></i>購買</div>
+								<div class="collapsible-body">
+									<p>
+										<a href="http://goods.ruten.com.tw/item/show?21502259735494" target="_blank">露天拍賣 奶油蒼蠅</a> <br>
+									</p>
+								</div>
+						    </li>
+						    <li>
+						      	<div class="collapsible-header"><i class="ion-person-stalker"></i>合作</div>
+						      	<div class="collapsible-body">
+						      		<p>
+						      			各種合作請來信 <br>
+						      			contact@arklab.tw
+						      		</p>
+						      	</div>
+						    </li>
+						    <li>
+						      	<div class="collapsible-header"><i class="ion-videocamera"></i>媒體</div>
+						      	<div class="collapsible-body">
+						      		<p>媒體合作</p>
+						      	</div>
+						    </li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-	</a>	
+	</div>
 	@include("footer")
 	
 	@section("javascript")
@@ -57,7 +90,6 @@
 		<script src="/js/about.js"></script>
 		<script>
 			$(document).ready(function() {
-			    $('select').material_select();
 			    setTimeout(function(){ 
 			    	$("#aboutTitle").show();
 				    $("#aboutContent").show();

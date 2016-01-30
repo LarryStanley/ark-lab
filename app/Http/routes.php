@@ -15,9 +15,8 @@ Route::get('/', "MainController@index");
 Route::get('/about', "MainController@about");
 Route::get('/education', "MainController@education");
 Route::get('/products', "MainController@products");
-Route::get('/flyProject', "MainController@flyProject");
-Route::get('/envirnment', "MainController@envirnment");
 Route::get('/documents', "MainController@documents");
+Route::get('/plans', "MainController@plans");
 
 Route::get('login', 'Auth\AuthController@getLogin');
 Route::get('auth/login', 'Auth\AuthController@getLogin');

@@ -2,9 +2,7 @@ angular.module('eduApp', ["ui.calendar"])
 	.controller('EduController', ['$scope', '$http', function($scope, $http) {
 
 		$scope.eventSources = [
-			{
-	            url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic"
-		    }
+            [{title: 'Long Event',start: new Date(2016, 1, 30),end: new Date(2016, 1, 31)}]
 		];
 		$scope.uiConfig = {
 			calendar:

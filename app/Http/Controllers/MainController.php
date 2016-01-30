@@ -28,6 +28,10 @@ class MainController extends Controller
 								  "ngController" => "EduController as about"]);
 	}
 
+	public function plans() {
+		return view("plans", ["title" => "方舟計畫"]);
+	}
+
 	public function products() {
 		return view("products", ["title" => "產品介紹"]);
 	}

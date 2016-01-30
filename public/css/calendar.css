@@ -16,8 +16,12 @@
   width: 50px;
   text-align: center;
 }
+/* line 20, ../../resources/assets/sass/arklab/sass/calendar.scss */
+.fc-view-container .fc-other-month {
+  color: #b0bec5;
+}
 
-/* line 24, ../../resources/assets/sass/arklab/sass/calendar.scss */
+/* line 27, ../../resources/assets/sass/arklab/sass/calendar.scss */
 .fc-head table th {
   text-align: center;
 }
