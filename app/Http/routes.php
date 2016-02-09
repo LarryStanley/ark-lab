@@ -31,7 +31,7 @@ Route::get('/home', function() {
 });
 
 Route::get('/design', function() {
-	return view("design");
+	return view("design", ["title" => "網站規劃"]);
 });
 
 Route::get('/test', function() {
