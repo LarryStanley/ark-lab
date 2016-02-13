@@ -103,6 +103,12 @@ class ApiController extends Controller
 		return response()->json($data);
 	}
 
+	public function show_activity_record() {
+		$data = DB::table("activity_record")->orderBy("activity_time", "desc")->get();
+
+		return response()->json($data);
+	}
+
 	public function upload_image(Request $request) {
 		$file = Input::file('photo');
 		//if (Input::hasFile('photo')) {

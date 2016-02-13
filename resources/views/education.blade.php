@@ -80,6 +80,34 @@
 			</div>	
 		</div>
 	</div>
+	<a name="record"></a>
+	<div id="activityRecord">
+		<div class="container">
+			<h2>活動實記</h2>
+			<div class="row">
+				<div class="col m4 s6" ng-repeat="activity in edu.activityData">
+					 <div class="card">
+					    <div class="card-image waves-effect waves-block waves-light">
+					    	<div class="activity-image">
+						      	<img class="activator" src="[[ activity.cover ]]">					    		
+					    	</div>
+					    </div>
+					    <div class="card-content">
+					      <span class="card-title activator grey-text text-darken-4">[[ activity.name ]]<i class="material-icons right">more_vert</i></span>
+					      <p>
+					      	日期：[[ activity.activity_time ]] <br>
+					      	<a href="#">查看活動照片</a>
+					      </p>
+					    </div>
+					    <div class="card-reveal">
+					      <span class="card-title grey-text text-darken-4">[[ activity.name ]]<i class="material-icons right">close</i></span>
+					      <p>[[ activity.description ]]</p>
+					    </div>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
 	@include("footer")
 
 	@section("javascript")

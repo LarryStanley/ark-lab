@@ -51,5 +51,7 @@ Route::group(['prefix' => 'api'], function() {
 	Route::post('/about_us/save', "ApiController@new_about_logs");
 	Route::post('/about_us/delete/{id}', "ApiController@delete_about_logs");
 
+	Route::get('/activity_record', "ApiController@show_activity_record");
+
 	Route::post('/upload_image', "ApiController@upload_image");
 });

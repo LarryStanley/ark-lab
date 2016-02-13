@@ -22,6 +22,19 @@ angular.module('eduApp', ["ui.calendar"])
 			    dayNames: ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
 			}
 	    };
+
+	    var edu = this;
+	    $http({
+			url: '/api/activity_record/',
+			method: 'GET',
+			headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+		}).then(function successCallback(response) {
+			edu.activityData = response.data;
+	    	console.log(response);
+		}, function errorCallback(response) {
+			console.log(response.data);
+		});
+
 	}])
 	.config(function($interpolateProvider){
 		$interpolateProvider.startSymbol('[[').endSymbol(']]');

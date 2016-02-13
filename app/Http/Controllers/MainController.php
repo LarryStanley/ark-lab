@@ -25,7 +25,7 @@ class MainController extends Controller
 	public function education() {
 		return view("education", ["title" => "教育推廣",
 								  "ngApp" => "eduApp",
-								  "ngController" => "EduController as about"]);
+								  "ngController" => "EduController as edu"]);
 	}
 
 	public function plans() {
