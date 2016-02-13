@@ -66,7 +66,7 @@
 			<button data-target='editBlockModal' class='editButton waves-effect waves-light btn modal-trigger red darken-2' ng-click="index.showBlockEditor()">編輯區塊</button>
 		@endif
 	</div>
-	<footer class="page-footer blue-grey darken-1" style="margin-top: 0; position: absolute; top: 100%; width: 100%">
+	<!--<footer class="page-footer blue-grey darken-1" style="margin-top: 0; position: absolute; top: 100%; width: 100%">
 	  <div class="container">
 	      <div class="row">
 	        <div class="col l6 s12">
@@ -89,7 +89,7 @@
 	       Ark Lab © 2015 Copyright
 	    </div>
 	  </div>
-	</footer>
+	</footer>!-->
 	
 	@if(Auth::check())
 		<div id="editBlockModal" class="modal modal-fixed-footer" style="width: 90%;">
