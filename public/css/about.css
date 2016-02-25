@@ -72,9 +72,51 @@ html, body {
 }
 
 /* line 43, ../../resources/assets/sass/arklab/sass/about.scss */
-#contacts {
+#ark90Cover {
   height: 100%;
   width: 100%;
+  position: relative;
+  background: #283048;
+  background: -moz-linear-gradient(top, #283048 0%, #859398 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #283048), color-stop(100%, #859398));
+  background: -webkit-linear-gradient(top, #283048 0%, #859398 100%);
+  background: -o-linear-gradient(top, #283048 0%, #859398 100%);
+  background: -ms-linear-gradient(top, #283048 0%, #859398 100%);
+  background: linear-gradient(to bottom, #283048 0%, #859398 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#283048', endColorstr='#859398', GradientType=0 );
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+/* line 61, ../../resources/assets/sass/arklab/sass/about.scss */
+#ark90Cover .container {
+  color: #fafafa;
+}
+/* line 65, ../../resources/assets/sass/arklab/sass/about.scss */
+#ark90Cover h3 {
+  background: -webkit-linear-gradient(#ece9e6, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* line 72, ../../resources/assets/sass/arklab/sass/about.scss */
+#ark90Details {
+  width: 100%;
+  position: relative;
+}
+/* line 76, ../../resources/assets/sass/arklab/sass/about.scss */
+#ark90Details .container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* line 82, ../../resources/assets/sass/arklab/sass/about.scss */
+#contacts {
+  width: 100%;
+  padding: 20px 20px 20px 20px;
   position: relative;
   background: url(http://i.imgur.com/sp4pTUP.jpg) no-repeat center center fixed;
   -moz-background-size: cover;
@@ -91,9 +133,50 @@ html, body {
   background: linear-gradient(135deg, #f69001 0%, #f92073 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f69001', endColorstr='#f92073', GradientType=1 );
   background-attachment: scroll;
+  font-size: 18px;
+}
+/* line 103, ../../resources/assets/sass/arklab/sass/about.scss */
+#contacts .container {
+  color: white;
+}
+/* line 107, ../../resources/assets/sass/arklab/sass/about.scss */
+#contacts a {
+  color: #01579b;
+}
+/* line 113, ../../resources/assets/sass/arklab/sass/about.scss */
+#contacts hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cfd8dc;
+  margin: 1em 0;
+  padding: 0;
 }
 
-/* line 64, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 123, ../../resources/assets/sass/arklab/sass/about.scss */
+#arkEduCover {
+  height: 90%;
+  width: 100%;
+  position: relative;
+  background: url(/images/P1080643.JPG) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+  min-height: 627px;
+}
+/* line 135, ../../resources/assets/sass/arklab/sass/about.scss */
+#arkEduCover .container {
+  color: white;
+}
+/* line 139, ../../resources/assets/sass/arklab/sass/about.scss */
+#arkEduCover .page-mask {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 144, ../../resources/assets/sass/arklab/sass/about.scss */
 #eduCover {
   height: 100%;
   width: 100%;
@@ -108,7 +191,7 @@ html, body {
   min-height: 627px;
 }
 
-/* line 78, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 158, ../../resources/assets/sass/arklab/sass/about.scss */
 #plansCover {
   height: 100%;
   width: 100%;
@@ -130,16 +213,16 @@ html, body {
   min-height: 720px;
   background-attachment: scroll;
 }
-/* line 100, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 180, ../../resources/assets/sass/arklab/sass/about.scss */
 #plansCover .progress {
   background-color: #ef9a9a;
 }
-/* line 102, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 182, ../../resources/assets/sass/arklab/sass/about.scss */
 #plansCover .progress .determinate {
   background-color: #d32f2f;
 }
 
-/* line 107, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 187, ../../resources/assets/sass/arklab/sass/about.scss */
 #lassCover {
   height: 100%;
   width: 100%;
@@ -154,7 +237,7 @@ html, body {
   min-height: 627px;
 }
 
-/* line 120, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 200, ../../resources/assets/sass/arklab/sass/about.scss */
 #calendar {
   background-color: #283593;
   height: 100%;
@@ -174,7 +257,7 @@ html, body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a80a5', endColorstr='#3a69aa', GradientType=1 );
 }
 
-/* line 142, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 222, ../../resources/assets/sass/arklab/sass/about.scss */
 #productsCover {
   height: 300px;
   width: 100%;
@@ -188,21 +271,30 @@ html, body {
   background-attachment: scroll;
 }
 
-/* line 155, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 235, ../../resources/assets/sass/arklab/sass/about.scss */
 #flyProjectCover {
-  height: 300px;
+  height: 100%;
   width: 100%;
   position: relative;
-  background: url(/images/fly.jpg) no-repeat center center fixed;
+  background: url(http://i.imgur.com/aMpp1TD.jpg) no-repeat center center fixed;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
   color: white;
   background-attachment: scroll;
+  min-height: 627px;
+}
+/* line 247, ../../resources/assets/sass/arklab/sass/about.scss */
+#flyProjectCover .page-mask {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* line 251, ../../resources/assets/sass/arklab/sass/about.scss */
+#flyProjectCover .container {
+  color: white;
 }
 
-/* line 168, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 256, ../../resources/assets/sass/arklab/sass/about.scss */
 #envirnmentCover {
   height: calc(90% - 64px);
   width: 100%;
@@ -216,7 +308,7 @@ html, body {
   background-attachment: scroll;
 }
 
-/* line 181, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 269, ../../resources/assets/sass/arklab/sass/about.scss */
 #documentsCover {
   height: 300px;
   width: 100%;
@@ -230,13 +322,13 @@ html, body {
   background-attachment: scroll;
 }
 
-/* line 194, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 282, ../../resources/assets/sass/arklab/sass/about.scss */
 #mark {
   padding-left: 10px;
   padding-top: 10px;
 }
 
-/* line 199, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 287, ../../resources/assets/sass/arklab/sass/about.scss */
 .bottom {
   position: absolute;
   bottom: 0;
@@ -244,12 +336,12 @@ html, body {
   padding: 10px 10px 10px 10px;
 }
 
-/* line 206, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 294, ../../resources/assets/sass/arklab/sass/about.scss */
 .container {
   color: #455A64;
 }
 
-/* line 210, ../../resources/assets/sass/arklab/sass/about.scss */
+/* line 298, ../../resources/assets/sass/arklab/sass/about.scss */
 .collapsible-body {
   background-color: white;
 }

@@ -39,43 +39,24 @@
 		<div class="valign-wrapper" style="width:100%; height: 100%;">
 			<div class="container">
 				<div class="row">
-					<div class="col m3">.</div>
-					<div class="col m6 s12" >
-						<h2 class="valign center-align fadeIn blue-grey-text text-lighten-5">聯絡我們</h2>
-						<ul class="collapsible popout" data-collapsible="accordion" style="width: 100%">
-						    <li>
-						    	<div class="collapsible-header"><i class="ion-social-facebook"></i>社群</div>
-								<div class="collapsible-body">
-									<p>
-										<a href="https://www.facebook.com/ArkLab.OpenSkyler" target="_blank">Ark Lab 粉絲專頁</a> <br>
-										<a href="https://www.facebook.com/groups/1455968237985691/" target="_blank">Drone Maker 多旋翼開發討論區</a>
-									</p>
-								</div>
-						    </li>
-						    <li>
-						    	<div class="collapsible-header"><i class="ion-ios-cart"></i>購買</div>
-								<div class="collapsible-body">
-									<p>
-										<a href="http://goods.ruten.com.tw/item/show?21502259735494" target="_blank">露天拍賣 奶油蒼蠅</a> <br>
-									</p>
-								</div>
-						    </li>
-						    <li>
-						      	<div class="collapsible-header"><i class="ion-person-stalker"></i>合作</div>
-						      	<div class="collapsible-body">
-						      		<p>
-						      			各種合作請來信 <br>
-						      			contact@arklab.tw
-						      		</p>
-						      	</div>
-						    </li>
-						    <li>
-						      	<div class="collapsible-header"><i class="ion-videocamera"></i>媒體</div>
-						      	<div class="collapsible-body">
-						      		<p>媒體合作</p>
-						      	</div>
-						    </li>
-						</ul>
+					<div class="col m12 s12">
+						<h2 class="valign fadeIn blue-grey-text text-lighten-5">聯絡我們</h2>
+						<hr>
+						<h3>教育發展</h3>
+						<p>
+							若欲洽談相關課程、工作坊、講座相關事宜，歡迎來信<br>
+							<a href="mailto:sopper08@gmail.com">sopper08@gmail.com</a>
+						</p>
+						<h3>媒體關係</h3>
+						<p>
+							若欲與ArkLab 媒體聯絡人聯繫，歡迎來信<br>
+							<a href="mailto:yul156733@gmail.com">yul156733@gmail.com</a>
+						</p>
+						<h3>商業合作</h3>
+						<p>
+			      			若欲洽詢市場開發、行銷活動、廣告合作、參關訪問等，歡迎來信 <br>
+			      			<a href="mailto:redhut0000@gmail.com">redhut0000@gmail.com</a>
+			      		</p>	
 					</div>
 				</div>
 			</div>
