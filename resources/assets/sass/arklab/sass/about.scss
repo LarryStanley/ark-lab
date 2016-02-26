@@ -28,6 +28,10 @@ h* {
 	background-color: rgba(0,0,0,0.6);
 }
 
+section {
+	padding: 0 0 0 0;
+}
+
  #aboutCover {
  	height: 100%;
  	width: 100%;
@@ -67,6 +71,25 @@ h* {
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
+ }
+
+ #ark90Explode {
+
+ 	height: 100%;
+ 	width: 100%;
+ 	position: relative;
+ 	@include background-size(cover);
+
+ 	background: rgba(237,237,237,1);
+	background: -moz-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(53%, rgba(246,246,246,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 );
+
+	
  }
 
  #ark90Details {
@@ -121,7 +144,7 @@ h* {
  }
 
  #arkEduCover {
-	height: 90%;
+	height: 100%;
  	width: 100%;
 
 	position: relative;
@@ -140,6 +163,7 @@ h* {
 		background-color: rgba(0, 0, 0, 0.4)
 	}
  }
+
 
  #eduCover {
  	height: 100%;
