@@ -35,5 +35,110 @@
 			</div>
 		</div>
 	</div>
+	<div id="envirnmentCover">
+		<div class="valign-wrapper page-mask" style="width:100%;">
+			<div class="container">
+				<div class="valign fadeIn center-align">
+					<h2>環境監控</h2>
+					<p>守護咱的故鄉</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="envirnmentContent">
+		<p class="center-align">
+			為了避免不肖業者讓汙染悄悄滲入你我的生活之中，讓我們朝天空出發吧！<br>
+			飛翔於氣流間，在最高點用科學的眼睛檢測我們身邊的每個自然元素<br>
+			每滴水、每口空氣、每塊土壤，保留原始的純淨。<br>
+			監視為非作歹的人們，守護我們的環境！
+		</p>
+		<div class="row">
+			<div class="col s12">
+				<ul class="tabs">
+					<li class="tab col s4"><a href="#watch">污染監控</a></li>
+					<li class="tab col s4"><a href="#topography">地形建模</a></li>
+					<li class="tab col s4"><a href="#aerial">空拍</a></li>
+				</ul>
+			</div>
+			<div class="col s12 center-align" id="watch">
+				<p>
+					用飛行器守護河川。<br>
+					透過飛行器檢採水體，運用軟體與網路整合，<br>
+					即時回傳汙染情形，揪出不肖廠商<br>
+				</p>
+				<div class="center-align" style="width: 100%">
+					<div id="watchImage"></div>
+				</div>
+			</div>
+			<div class="col s12 center-align" id="topography">
+				<p>
+					GIS 整呈現地形風貌
+				</p>
+				<div class="center-align" style="width: 100%">
+					<div id="topographyImage"></div>
+				</div>
+			</div>
+			<div class="col s12 center-align" id="aerial">
+				<p>空拍紀錄環境</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Ndvv8zVS3bA" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<div id="aerialCover">
+		<div class="valign-wrapper page-mask" style="width:100%;">
+			<div class="container">
+				<div class="valign center-align">
+					<h2>空中攝影</h2>
+					<p>用鳥的姿態，錄下最美的時刻</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<p class="center-align">
+			地面上的攝錄已經無法滿足你的需求了嗎？讓我們換個視界來看世界！<br>
+			拉高自己你將能看見不一樣，當由高處往下看，<br>
+			你所熟悉的一切，將以鳥兒的視角重新呈現，<br>
+			也能捕捉到在平地時所看不見的風景！<br>
+			下個取景點，就決定是天空之城！
+		</p>
+		<div class="row" style="margin-top: 15px;">
+			<div class="col m4" style="margin-top: 15px;">
+				<img src="http://i.imgur.com/vUSl3dc.jpg" class="materialboxed" alt="" width="100%">
+			</div>
+			<div class="col m4" style="margin-top: 15px;">
+				<img src="http://i.imgur.com/fKq2fD3.jpg" class="materialboxed" alt="" width="100%">
+			</div>
+			<div class="col m4" style="margin-top: 15px;">
+				<img src="http://i.imgur.com/oJh2vNt.jpg" class="materialboxed" alt="" width="100%">
+			</div>
+			<div class="col m4" style="margin-top: 15px;">
+				<img src="http://i.imgur.com/ToZYff9.jpg" class="materialboxed" alt="" width="100%">
+			</div>
+			<div class="col m4" style="margin-top: 15px;">
+				<img src="http://i.imgur.com/1uLbcnG.jpg" class="materialboxed" alt="" width="100%">
+			</div>
+			<div class="col m4" style="margin-top: 15px;">
+				<img src="http://i.imgur.com/G84xx7J.jpg" class="materialboxed" alt="" width="100%">
+			</div>
+		</div>
+	</div>
+	<div id="flyShowCover">
+		<div class="valign-wrapper page-mask" style="width:100%;">
+			<div class="container">
+				<div class="valign center-align">
+					<h2>空中表演</h2>
+					<p>豈止飛行，更是藝術</p>
+				</div>
+			</div>
+		</div>
+	</div>
 	@include("footer")
+@stop
+@section("javascript")
+	<script>
+		$(document).ready(function(){
+			//$('ul.tabs').tabs();
+		});
+	</script>
 @stop

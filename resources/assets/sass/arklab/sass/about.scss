@@ -14,15 +14,15 @@ h* {
 }
 
 
- html,body {
- 	height: 100%;
- }
+html,body {
+	height: 100%;
+}
 
- .fadeIn {
+.fadeIn {
 	@include animate(fade-in, 1000ms, 1000ms);
- }
+}
 
- .page-mask {
+.page-mask {
 	height: 100%;
 	width: 100%;
 	background-color: rgba(0,0,0,0.6);
@@ -32,9 +32,9 @@ section {
 	padding: 0 0 0 0;
 }
 
- #aboutCover {
- 	height: 100%;
- 	width: 100%;
+#aboutCover {
+	height: 100%;
+	width: 100%;
 
 	position: relative;
 	background: url(http://i.imgur.com/betF4w2.jpg) no-repeat center center fixed;
@@ -42,11 +42,11 @@ section {
 	color: white;
 
 	background-attachment: scroll;
- }
+}
 
- #ark90Cover {
- 	height: 100%;
- 	width: 100%;
+#ark90Cover {
+	height: 100%;
+	width: 100%;
 
 	position: relative;
 	background: rgba(40,48,72,1);
@@ -71,16 +71,16 @@ section {
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
- }
+}
 
- #ark90Explode {
+#ark90Explode {
 
- 	height: 100%;
- 	width: 100%;
- 	position: relative;
- 	@include background-size(cover);
+	height: 100%;
+	width: 100%;
+	position: relative;
+	@include background-size(cover);
 
- 	background: rgba(237,237,237,1);
+	background: rgba(237,237,237,1);
 	background: -moz-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(53%, rgba(246,246,246,1)), color-stop(100%, rgba(255,255,255,1)));
 	background: -webkit-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
@@ -88,22 +88,20 @@ section {
 	background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
 	background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 );
+}
 
-	
- }
+#ark90Details {
+	//height: 70%;
+	width: 100%;
+	position: relative;
+	.container {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+}
 
- #ark90Details {
- 	//height: 70%;
- 	width: 100%;
- 	position: relative;
- 	.container {
- 		margin-top: 50px;
- 		margin-bottom: 50px;
- 	}
- }
-
- #contacts {
- 	width: 100%;
+#contacts {
+	width: 100%;
 
 	padding: 20px 20px 20px 20px;
 
@@ -141,11 +139,11 @@ section {
 	    margin: 1em 0;
 	    padding: 0; 
 	}
- }
+}
 
- #arkEduCover {
+#arkEduCover {
 	height: 100%;
- 	width: 100%;
+	width: 100%;
 
 	position: relative;
 	background: url(/images/P1080643.JPG) no-repeat center center fixed;
@@ -162,12 +160,12 @@ section {
 	.page-mask {
 		background-color: rgba(0, 0, 0, 0.4)
 	}
- }
+}
 
 
- #eduCover {
- 	height: 100%;
- 	width: 100%;
+#eduCover {
+	height: 100%;
+	width: 100%;
 
 	position: relative;
 	background: url(http://i.imgur.com/P6sww2r.jpg) no-repeat center center fixed;
@@ -177,11 +175,11 @@ section {
 	background-attachment: scroll;
 	min-height: 627px;
 
- }
+}
 
- #plansCover {
- 	height: 100%;
- 	width: 100%;
+#plansCover {
+	height: 100%;
+	width: 100%;
 
 	position: relative;
 	background: #455a64 no-repeat center center fixed;
@@ -210,7 +208,7 @@ section {
 }
 #lassCover {
 	height: 100%;
- 	width: 100%;
+	width: 100%;
 
 	position: relative;
 	background: url(http://i.imgur.com/9vrY7iF.jpg) no-repeat center center fixed;
@@ -221,10 +219,10 @@ section {
 	min-height: 627px;
 }
 
- #calendar {
- 	background-color: #283593;
- 	height: 100%;
- 	width: 100%;
+#calendar {
+	background-color: #283593;
+	height: 100%;
+	width: 100%;
 
 	position: relative;
 	color: white;
@@ -241,11 +239,11 @@ section {
 	background: -ms-linear-gradient(-45deg, rgba(26,128,165,1) 0%, rgba(58,105,170,1) 100%);
 	background: linear-gradient(135deg, rgba(26,128,165,1) 0%, rgba(58,105,170,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a80a5', endColorstr='#3a69aa', GradientType=1 );
- }
+}
 
- #productsCover {
- 	height: 300px;
- 	width: 100%;
+#productsCover {
+	height: 300px;
+	width: 100%;
 
 	position: relative;
 	background: url(/images/butterfly.jpg) no-repeat center center fixed;
@@ -253,12 +251,11 @@ section {
 	color: white;
 
 	background-attachment: scroll;
+}
 
- }
-
- #flyProjectCover {
- 	height: 100%;
- 	width: 100%;
+#flyProjectCover {
+	height: 100%;
+	width: 100%;
 
 	position: relative;
 	background: url(http://i.imgur.com/aMpp1TD.jpg) no-repeat center center fixed;
@@ -275,24 +272,104 @@ section {
 	.container {
 		color: white;
 	}
- }
+}
 
-  #envirnmentCover {
- 	height: calc(90% - 64px);
- 	width: 100%;
+#envirnmentCover {
+	height: 40%;
+	width: 100%;
 
 	position: relative;
-	background: url(/images/envirnment.jpg) no-repeat center center fixed;
+	background: url(http://i.imgur.com/s44GGA9.jpg) no-repeat center center fixed;
 	@include background-size(cover);
 	color: white;
 
 	background-attachment: scroll;
 
- }
+	.page-mask {
+		background-color: rgba(0, 0, 0, 0);
+	}
 
-  #documentsCover {
- 	height: 300px;
- 	width: 100%;
+	.container {
+		color: white;
+	}
+
+	p {
+		font-size: 18px;
+	}
+}
+
+#watchImage {
+	height: 400px;
+	width: 80%;
+
+	background: url(http://i.imgur.com/5eVizGR.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+	margin: 0 auto;
+}
+
+#topographyImage {
+	height: 400px;
+	width: 80%;
+
+	background: url(http://i.imgur.com/X4jbDPM.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+	margin: 0 auto;
+}
+
+#aerialCover {
+	height: 70%;
+	width: 100%;
+
+	background: url(http://i.imgur.com/r0gUOjo.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+	margin: 0 auto;
+	p {
+		font-size: 18px;
+	}
+
+	.container {
+		color: white;
+	}
+
+	.page-mask {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+}
+
+#flyShowCover {
+	height: 100%;
+	width: 100%;
+
+	background: url(http://i.imgur.com/OHaZai5.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+	p {
+		font-size: 18px;
+	}
+
+	.container {
+		color: white;
+	}
+
+	.page-mask {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+}
+
+#documentsCover {
+	height: 300px;
+	width: 100%;
 
 	position: relative;
 	background: url(/images/documents.jpg) no-repeat center center fixed;
@@ -300,26 +377,25 @@ section {
 	color: white;
 
 	background-attachment: scroll;
+}
 
- }
-
- #mark {
+#mark {
 	padding-left: 10px;
 	padding-top: 10px;
- }
+}
 
- .bottom {
- 	position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 10px 10px 10px 10px;
- }
+.bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 10px 10px 10px 10px;
+}
 
- .container {
- 	color: #455A64;
- }
+.container {
+	color: #455A64;
+}
 
- .collapsible-body {
- 	background-color: white;
- }
+.collapsible-body {
+	background-color: white;
+}
 

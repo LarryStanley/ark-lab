@@ -15,7 +15,7 @@
 	@yield("head")
 
 </head>
-<body ng-app='<?php if(!empty($ngApp)) echo $ngApp;?>' ng-controller="<?php if(!empty($ngController)) echo $ngController;?>">
+<body <?php if(!empty($ngApp)) echo "ng-app='".$ngApp."'";?> <?php if(!empty($ngController)) echo 'ng-controller="'.$ngController.'"';?>>
 	
 	@yield("body")
 
