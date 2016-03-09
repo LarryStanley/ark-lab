@@ -13,28 +13,29 @@
 					<div class="col m12  center-align" >
 						<h1 class="valign fadeIn">飛行業務</h1>
 						<p class="fadeIn">
-							飛行器讓我們以嶄新的視角，探索這片土地。<br>	
-							透過安裝不同儀器，飛行器能有許多變化。<br>
-							裝上鏡頭，我們能夠紀錄世界的美麗。<br>
-							搭配感測器，飛行器替我們監測環境，守護家園。<br>
-							使用蜂鳴器，嚇跑偷吃稻麥的鳥兒。<br>
-							你有什麼新奇的主意嗎？我們一起來發掘飛行器的新用途。<br>
+							飛行器讓我們以嶄新的視角，探索這片土地。<br class="hide-on-small-only">	
+							透過安裝不同儀器，飛行器能有許多變化。<br class="hide-on-small-only">
+							裝上鏡頭，我們能夠紀錄世界的美麗。<br class="hide-on-small-only">
+							搭配感測器，飛行器替我們監測環境，守護家園。<br class="hide-on-small-only">
+							使用蜂鳴器，嚇跑偷吃稻麥的鳥兒。<br class="hide-on-small-only">
+							你有什麼新奇的主意嗎？我們一起來發掘飛行器的新用途。<br class="hide-on-small-only">
 						</p>
-						<hr style="margin-bottom: 20px;">
+						<hr class="hide-on-small-only" style="margin-bottom: 20px;">
 					</div>
-					<div class="col m4 s12 center-align">
-						<button class="btn waves-effect light-blue darken-2">環境監控</button>
+					<div class="col m4 s12 center-align hide-on-small-only">
+						<a class="btn waves-effect light-blue darken-2" href="#envirnment" onclick="showContent('envirnment')">環境監控</a>
 					</div>
-					<div class="col m4 s12 center-align">
-						<button class="btn waves-effect cyan darken-2">攝影紀錄</button>
+					<div class="col m4 s12 center-align hide-on-small-only">
+						<a class="btn waves-effect cyan darken-2" href="#aerial" onclick="showContent('aerial')">攝影紀錄</a>
 					</div>
-					<div class="col m4 s12 center-align">
-						<button class="btn waves-effect teal darken-2">空中表演</button>
+					<div class="col m4 s12 center-align hide-on-small-only">
+						<a class="btn waves-effect teal darken-2" href="#show" onclick="showContent('flyShow')">空中表演</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<a name="envirnment"></a>
 	<div id="envirnmentCover">
 		<div class="valign-wrapper page-mask" style="width:100%;">
 			<div class="container">
@@ -57,7 +58,7 @@
 				<ul class="tabs">
 					<li class="tab col s4"><a href="#watch">污染監控</a></li>
 					<li class="tab col s4"><a href="#topography">地形建模</a></li>
-					<li class="tab col s4"><a href="#aerial">空拍</a></li>
+					<li class="tab col s4"><a href="#envirnmentAerial">空拍</a></li>
 				</ul>
 			</div>
 			<div class="col s12 center-align" id="watch">
@@ -67,7 +68,9 @@
 					即時回傳汙染情形，揪出不肖廠商<br>
 				</p>
 				<div class="center-align" style="width: 100%">
-					<div id="watchImage"></div>
+					<div class="video-container">
+						<iframe src="https://www.youtube.com/embed/-eoY66RZtfY" frameborder="0" allowfullscreen></iframe>					
+					</div>
 				</div>
 			</div>
 			<div class="col s12 center-align" id="topography">
@@ -78,12 +81,15 @@
 					<div id="topographyImage"></div>
 				</div>
 			</div>
-			<div class="col s12 center-align" id="aerial">
+			<div class="col s12 center-align" id="envirnmentAerial">
 				<p>空拍紀錄環境</p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/Ndvv8zVS3bA" frameborder="0" allowfullscreen></iframe>
+				<div class="video-container">
+					<iframe src="https://www.youtube.com/embed/Ndvv8zVS3bA" frameborder="0" allowfullscreen></iframe>					
+				</div>
 			</div>
 		</div>
 	</div>
+	<a name="aerial"></a>
 	<div id="aerialCover">
 		<div class="valign-wrapper page-mask" style="width:100%;">
 			<div class="container">
@@ -103,26 +109,27 @@
 			下個取景點，就決定是天空之城！
 		</p>
 		<div class="row" style="margin-top: 15px;">
-			<div class="col m4" style="margin-top: 15px;">
+			<div class="col m4 s6" style="margin-top: 15px;">
 				<img src="http://i.imgur.com/vUSl3dc.jpg" class="materialboxed" alt="" width="100%">
 			</div>
-			<div class="col m4" style="margin-top: 15px;">
+			<div class="col m4 s6" style="margin-top: 15px;">
 				<img src="http://i.imgur.com/fKq2fD3.jpg" class="materialboxed" alt="" width="100%">
 			</div>
-			<div class="col m4" style="margin-top: 15px;">
+			<div class="col m4 s6" style="margin-top: 15px;">
 				<img src="http://i.imgur.com/oJh2vNt.jpg" class="materialboxed" alt="" width="100%">
 			</div>
-			<div class="col m4" style="margin-top: 15px;">
+			<div class="col m4 s6" style="margin-top: 15px;">
 				<img src="http://i.imgur.com/ToZYff9.jpg" class="materialboxed" alt="" width="100%">
 			</div>
-			<div class="col m4" style="margin-top: 15px;">
+			<div class="col m4 s6" style="margin-top: 15px;">
 				<img src="http://i.imgur.com/1uLbcnG.jpg" class="materialboxed" alt="" width="100%">
 			</div>
-			<div class="col m4" style="margin-top: 15px;">
+			<div class="col m4 s6" style="margin-top: 15px;">
 				<img src="http://i.imgur.com/G84xx7J.jpg" class="materialboxed" alt="" width="100%">
 			</div>
 		</div>
 	</div>
+	<a name="show"></a>
 	<div id="flyShowCover">
 		<div class="valign-wrapper page-mask" style="width:100%;">
 			<div class="container">
@@ -133,12 +140,51 @@
 			</div>
 		</div>
 	</div>
+	<div class="container">
+		<p class="center-align">
+			萊特兄弟實現人們飛行的夢想，在空中不僅是運輸或是單純的遊玩與翱翔<br>
+			我們讓飛行器跨入展演，生命中的每一個重要時刻都能用不同的方式留下回憶。
+		</p>
+		<div class="row">
+			<div class="col m6 s6">
+				<div class="video-container">
+					<iframe src="https://www.youtube.com/embed/q9EU0_uxMuw" frameborder="0" allowfullscreen></iframe>					
+				</div>
+			</div>
+			<div class="col m6 s6">
+				<div class="video-container">
+					<iframe src="https://www.youtube.com/embed/h80WIUbyjhM" frameborder="0" allowfullscreen></iframe>					
+				</div>
+			</div>
+			<div class="col m12 s6 center-align" style="margin-top: 15px;">
+				<div class="col s12 m8 offset-m2 l6 offset-l3">
+					<div class="card-panel  grey lighten-2 z-depth-1">
+						<div class="row valign-wrapper">
+							<div class="col m12 s12 valign center-align" style="font-size: 18px">
+								若欲洽詢環境監控、攝影紀錄、空中表演等，歡迎來信<br>
+								<a href="mailto:jimmyxia0329@gmail.com" target="_blank">jimmyxia0329@gmail.com</a><br>
+								由夏專員為您服務
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	@include("footer")
 @stop
 @section("javascript")
 	<script>
 		$(document).ready(function(){
-			//$('ul.tabs').tabs();
+
 		});
+
+		function showContent(tag) {
+			$('html, body').animate({
+		        scrollTop: $("#" + tag + "Cover").offset().top
+		    }, 1500);
+		    event.preventDefault();
+		    return false;
+		}
 	</script>
 @stop

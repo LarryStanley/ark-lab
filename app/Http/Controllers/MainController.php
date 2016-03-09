@@ -29,7 +29,15 @@ class MainController extends Controller
 	}
 
 	public function plans() {
-		return view("plans", ["title" => "方舟計畫"]);
+		$data = DB::table("ark_plan")->get();
+
+		return view("plans", ["title" => "方舟計畫", "arkPlans" => $data]);
+	}
+
+	public function planDetails($url) {
+		$data = DB::table("ark_plan")->where("url", $url)->first();
+
+		return view("plansDetails", ["title" => $data->title, "plan" => $data]);
 	}
 
 	public function products() {

@@ -17,6 +17,7 @@ Route::get('/education', "MainController@education");
 Route::get('/products', "MainController@products");
 Route::get('/documents', "MainController@documents");
 Route::get('/plans', "MainController@plans");
+Route::get('/plans/{url}', "MainController@planDetails");
 Route::get('/flyProject', "MainController@flyProject");
 
 Route::get('login', 'Auth\AuthController@getLogin');
@@ -35,9 +36,6 @@ Route::get('/design', function() {
 	return view("design", ["title" => "網站規劃"]);
 });
 
-Route::get('/test', function() {
-	return view("test");
-});
 
 Route::group(['prefix' => 'api'], function() {
 	Route::group(['prefix' => 'index_block'], function() {
