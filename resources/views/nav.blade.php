@@ -1,4 +1,4 @@
-<div class="transparent" style="position: absolute; z-index: 100; width: 100%;">
+<div class="transparent navbar-fixed" style="position: absolute;">
 	<nav class="transparent">
 		<div class="nav-wrapper">
 			<div class="brand-logo fadeInFast" id="mark">

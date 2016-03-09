@@ -171,12 +171,16 @@ section {
 	width: 100%;
 
 	position: relative;
-	background: url(http://i.imgur.com/P6sww2r.jpg) no-repeat center center fixed;
+	background: url(http://i.imgur.com/r0gUOjo.jpg) no-repeat center center fixed;
 	@include background-size(cover);
 	color: white;
 
 	background-attachment: scroll;
 	min-height: 627px;
+
+	.page-mask {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
 
 }
 
@@ -311,7 +315,7 @@ section {
 	height: 400px;
 	width: 80%;
 
-	background: url(http://i.imgur.com/X4jbDPM.jpg) no-repeat center center fixed;
+	background: url(http://i.imgur.com/0NaaO2V.png) no-repeat center center fixed;
 	@include background-size(cover);
 	color: white;
 

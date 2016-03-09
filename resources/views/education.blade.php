@@ -13,19 +13,13 @@
 				<h1 class="hide">教育推廣</h1>
 				<div class="row">
 					<div class="col m12  blue-grey-text text-lighten-5 center-align" >
-						<h2 class="valign fadeIn">Ark Lab  <br class="hide-on-med-and-up"> 熱血 Maker 培訓營</h2>
+						<h2 class="valign fadeIn">Ark Lab  <br class="hide-on-med-and-up">無人機空拍體驗</h2>
 						<div id="aboutContent" style="font-size: 16px;" class="fadeIn">
 							<p>
-								童年，我們抓飛機、堆積木。<br>
-								<br>
-								長大以後，我們可以自己設計、印製零件、組裝無一無二屬於自己的玩具。<br>
-								<br>
-								這次寒假ArkLab多旋翼工坊要和少年Maker們一起回憶童年！<br>
-								將Arduino、奶油蒼蠅、TinkerCad、3D Printer結合孩子們天馬行空的想像力<br>
-								絕對能迸發出驚天動地的創意與發明！<br>
+								想進入空拍的世界嗎？想學空拍技巧嗎？快來ArkLab無人機空拍體驗！
 							</p>
 						    <div style="font-size: 14px;">
-								<a class="btn waves-effect cyan darken-2 fadeIn" target="_blank" href="http://www.accupass.com/event/register/1512281938587611384890">
+								<a class="btn waves-effect cyan darken-2 fadeIn" target="_blank" href="http://www.accupass.com/go/2016arklab_ws002">
 									立即報名
 								</a>							
 							</div>
@@ -80,7 +74,7 @@
 			</div>	
 		</div>
 	</div>
-	<a name="record"></a>
+	<!--<a name="record"></a>
 	<div id="activityRecord">
 		<div class="container">
 			<h2>活動實記</h2>
@@ -107,7 +101,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>!-->
 	@include("footer")
 
 	@section("javascript")
