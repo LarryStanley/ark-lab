@@ -1,7 +1,7 @@
 @extends("default")
 
 @section("head")
-	<link rel="stylesheet" href="/css/about.css">
+
 @stop
 
 @section("body")
@@ -35,7 +35,9 @@
 	@include("footer")
 	
 	@section("javascript")
-		
+		<script>
+			loadCSS("/css/about.css");
+		</script>
 		<script>
 			$(document).ready(function() {
 			    

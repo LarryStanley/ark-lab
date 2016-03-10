@@ -1,8 +1,7 @@
 @extends("default")
 
 @section("head")
-	<link rel="stylesheet" href="/css/about.css">
-	<link rel="stylesheet" href="/css/onepage-scroll.css">
+	
 @stop
 
 @section("body")
@@ -65,6 +64,10 @@
 	@include("footer")
 
 	@section("javascript")
+		<script>
+			loadCSS("/css/about.css");
+			loadCSS("/css/onepage-scroll.css");
+		</script>
 		<script src="/js/jquery.onepage-scroll.min.js"></script>
 		<script>
 			$(".main").onepage_scroll({
