@@ -41,7 +41,7 @@ class MainController extends Controller
 	}
 
 	public function products() {
-		return view("products", ["title" => "產品介紹"]);
+		return view("productTrailer", ["title" => "產品介紹"]);
 	}
 
 	public function flyProject() {

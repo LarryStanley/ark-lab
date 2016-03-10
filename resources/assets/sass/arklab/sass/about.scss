@@ -13,6 +13,11 @@ h* {
 	font-family: 'cwTeXHei', sans-serif;
 }
 
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(HelveticaNeue-UltraLight.otf);
+}
+
 $minHeight: 567px;
 
 html,body {
@@ -45,6 +50,28 @@ section {
 	color: white;
 
 	background-attachment: scroll;
+}
+
+#productTrailerCover {
+	height: 100%;
+	width: 100%;
+
+	min-height: $minHeight;
+
+	position: relative;
+	background: url(http://i.imgur.com/suw6KJf.jpg) no-repeat center center fixed;
+	@include background-size(cover);
+	color: white;
+
+	background-attachment: scroll;
+
+	min-height: $minHeight;
+
+	.container {
+		color: white;
+	}
+
+	
 }
 
 #ark90Cover {
