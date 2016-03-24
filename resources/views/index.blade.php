@@ -1,9 +1,12 @@
 @extends("default")
 
 @section("head")
-	<link rel="stylesheet" href="/css/main.css">
-	<link rel="stylesheet" href="/css/unslider.css">
-	<link rel="stylesheet" href="/css/unslider-dots.css">
+	<link rel="preload" href="/css/main.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/css/main.css"></noscript>
+	<link rel="preload" href="/css/unslider.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/css/unslider.css"></noscript>
+	<link rel="preload" href="/css/unslider-dots.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/css/unslider-dots.css"></noscript>
 @stop
 
 @section("body")
@@ -193,6 +196,12 @@
 @stop
 
 @section("javascript")
+	<script>
+		loadCSS("/css/main.css");
+		loadCSS("/css/unslider.css");
+		loadCSS("/css/unslider-dots.css")
+	</script>
+
 	<script src="/js/unslider-min.js"></script>
 	<script src="/js/ng-file-upload.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>

@@ -1,8 +1,7 @@
 @extends("default")
 
 @section("head")
-	<link rel="stylesheet" href="/css/about.css">
-	<link rel="stylesheet" href="/css/calendar.css">
+
 @stop
 
 @section("body")
@@ -35,6 +34,7 @@
 			</div>
 		</div>
 	</div>
+	<a name="calendar"></a>
 	<div class="container">
 		<h2>近期活動</h2>
 		<div class="row">
@@ -210,6 +210,10 @@
 	@include("footer")
 
 	@section("javascript")
+		<script>
+			loadCSS("/css/about.css");
+			loadCSS("/css/calendar.css")
+		</script>
 		<script type="text/javascript" src="/js/moment/min/moment.min.js"></script>
 		<script type="text/javascript" src="/js/angular-ui-calendar/src/calendar.js"></script>
 		<script type="text/javascript" src="/js/fullcalendar/dist/fullcalendar.min.js"></script>
