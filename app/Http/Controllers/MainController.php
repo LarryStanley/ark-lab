@@ -41,7 +41,19 @@ class MainController extends Controller
 	}
 
 	public function products() {
-		return view("productTrailer", ["title" => "產品介紹"]);
+		return view("products", ["title" => "產品介紹"]);
+	}
+
+	public function showButterfly() {
+		return view("butterfly", ["title" => "奶油蒼蠅"]);
+	}
+
+	public function showDragonfly() {
+		return view("dragonfly", ["title" => "飛龍在天"]);
+	}
+
+	public function showCrazybull() {
+		return view("crazybull", ["title" => '狂暴蠻牛']);
 	}
 
 	public function flyProject() {

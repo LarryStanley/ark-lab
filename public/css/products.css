@@ -1,0 +1,454 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(HelveticaNeue-UltraLight.otf);
+}
+/* line 18, ../../resources/assets/sass/arklab/sass/products.scss */
+html, body {
+  font-family: HelveticaNeue,'cwTeXHei', sans-serif ,"微軟正黑體", "微软雅黑", Helvetica, Arial, "メイリオ", "맑은 고딕", sans-serif;
+  height: 100%;
+  width: 100%;
+  color: #37474F;
+  background-color: #FFFFFF;
+}
+
+/* line 28, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts {
+  width: 100%;
+  height: 100%;
+  color: #424242;
+  background-color: #f5f5f5;
+}
+/* line 34, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .butterfly {
+  background-color: #fafafa;
+}
+/* line 35, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .butterfly h1 {
+  background-color: #43cea2;
+  background: #43cea2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #43cea2, #185a9d);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #43cea2, #185a9d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* line 44, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .butterfly hr {
+  border: 0;
+  height: 1px;
+  background-color: #43cea2;
+  background: #43cea2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #43cea2, #185a9d);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #43cea2, #185a9d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* line 57, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .dragonfly {
+  background-color: #f5f5f5;
+}
+/* line 58, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .dragonfly h1 {
+  background: #525252;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #525252, #3d72b4);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #525252, #3d72b4);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* line 67, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .dragonfly hr {
+  border: 0;
+  height: 1px;
+  background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #000000, #434343);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #000000, #434343);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* line 78, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .crazybull {
+  background-color: #f5f5f5;
+}
+/* line 79, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .crazybull h1 {
+  background: #fc00ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #fc00ff, #00dbde);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #fc00ff, #00dbde);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* line 87, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .crazybull hr {
+  border: 0;
+  height: 1px;
+  background: #fc00ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #fc00ff, #00dbde);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #fc00ff, #00dbde);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* line 98, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .arknano {
+  background-color: #fafafa;
+}
+/* line 99, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .arknano h1 {
+  background: #ff8732;
+  background: -moz-linear-gradient(left, #ff8732 0%, #f36f68 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #ff8732), color-stop(100%, #f36f68));
+  background: -webkit-linear-gradient(left, #ff8732 0%, #f36f68 100%);
+  background: -o-linear-gradient(left, #ff8732 0%, #f36f68 100%);
+  background: -ms-linear-gradient(left, #ff8732 0%, #f36f68 100%);
+  background: linear-gradient(to right, #ff8732 0%, #f36f68 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8732', endColorstr='#f36f68', GradientType=1 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* line 112, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts .arknano hr {
+  border: 0;
+  height: 1px;
+  background: #ff8732;
+  background: -moz-linear-gradient(left, #ff8732 0%, #f36f68 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #ff8732), color-stop(100%, #f36f68));
+  background: -webkit-linear-gradient(left, #ff8732 0%, #f36f68 100%);
+  background: -o-linear-gradient(left, #ff8732 0%, #f36f68 100%);
+  background: -ms-linear-gradient(left, #ff8732 0%, #f36f68 100%);
+  background: linear-gradient(to right, #ff8732 0%, #f36f68 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8732', endColorstr='#f36f68', GradientType=1 );
+}
+/* line 128, ../../resources/assets/sass/arklab/sass/products.scss */
+.allProducts p {
+  font-size: 20px;
+}
+@media (min-width: 1200px) {
+  /* line 133, ../../resources/assets/sass/arklab/sass/products.scss */
+  .allProducts .block {
+    height: 50%;
+    width: 50%;
+    float: left;
+  }
+  /* line 139, ../../resources/assets/sass/arklab/sass/products.scss */
+  .allProducts h1 {
+    font-size: 120px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 145, ../../resources/assets/sass/arklab/sass/products.scss */
+  .allProducts .block {
+    height: 50%;
+    width: 50%;
+    float: left;
+  }
+}
+@media (min-width: 758px) {
+  /* line 153, ../../resources/assets/sass/arklab/sass/products.scss */
+  .allProducts .block {
+    height: 50%;
+    width: 50%;
+    float: left;
+  }
+}
+@media (max-width: 768px) {
+  /* line 161, ../../resources/assets/sass/arklab/sass/products.scss */
+  .allProducts .block {
+    height: 50%;
+    width: 100%;
+    float: left;
+  }
+}
+
+/* line 169, ../../resources/assets/sass/arklab/sass/products.scss */
+.fadeIn {
+  -webkit-animation-duration: 500ms;
+  -moz-animation-duration: 500ms;
+  -o-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -o-animation-delay: 500ms;
+  animation-delay: 500ms;
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/* line 173, ../../resources/assets/sass/arklab/sass/products.scss */
+.page-mask {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 180, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .introCover {
+  height: 80%;
+  width: 100%;
+  background-color: #43cea2;
+  background: #43cea2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #43cea2, #185a9d);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #43cea2, #185a9d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: HelveticaNeue;
+  position: relative;
+  color: #fafafa;
+}
+/* line 194, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .introCover h1 {
+  font-size: 250px;
+}
+/* line 198, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .introCover p {
+  font-size: 22px;
+}
+/* line 202, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .introCover img {
+  position: absolute;
+  left: 0;
+  bottom: -250px;
+  text-align: center;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 213, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .computerCompileCover {
+  height: 75%;
+  width: 100%;
+  position: relative;
+  background: url(http://i.imgur.com/rQUzEeD.jpg) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+/* line 223, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .computerCompileCover p {
+  font-size: 22px;
+}
+/* line 228, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .preOrderButterfly {
+  height: 85%;
+  width: 100%;
+  position: relative;
+  background: url(http://i.imgur.com/gkMjndM.jpg) no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+  background-attachment: scroll;
+}
+/* line 238, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .preOrderButterfly p {
+  font-size: 22px;
+}
+/* line 242, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .preOrderButterfly h2 {
+  font-size: 72px;
+}
+/* line 247, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .stemCover {
+  height: 50%;
+  width: 100%;
+  background-color: #43cea2;
+  background: #43cea2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #43cea2, #185a9d);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #43cea2, #185a9d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: HelveticaNeue;
+  position: relative;
+  color: #fafafa;
+}
+/* line 262, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .stemCover p {
+  font-size: 22px;
+}
+/* line 267, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .detailsIntro {
+  padding-top: 280px;
+  font-size: 18px;
+}
+/* line 270, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .detailsIntro .number {
+  line-height: 70px;
+  font-size: 72px;
+  font-family: HelveticaNeue;
+}
+/* line 278, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .phoneIntro {
+  background-color: #fafafa;
+  color: #263238;
+  padding-top: 20px;
+  font-size: 18px;
+}
+/* line 285, ../../resources/assets/sass/arklab/sass/products.scss */
+.butterfly .phoneIntro .row {
+  margin-bottom: 0;
+}
+
+/* line 293, ../../resources/assets/sass/arklab/sass/products.scss */
+.dragonfly .dragonIntro {
+  background: #525252;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #525252, #3d72b4);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #525252, #3d72b4);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100%;
+  height: 95%;
+  position: relative;
+  color: white;
+}
+/* line 304, ../../resources/assets/sass/arklab/sass/products.scss */
+.dragonfly .dragonIntro h2 {
+  font-size: 72px;
+}
+/* line 308, ../../resources/assets/sass/arklab/sass/products.scss */
+.dragonfly .dragonIntro p {
+  font-size: 24px;
+}

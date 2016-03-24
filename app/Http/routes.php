@@ -15,6 +15,11 @@ Route::get('/', "MainController@index");
 Route::get('/about', "MainController@about");
 Route::get('/education', "MainController@education");
 Route::get('/products', "MainController@products");
+Route::get('/products/butterfly', "MainController@showButterfly");
+Route::get('/products/dragonfly', "MainController@showDragonfly");
+Route::get('/products/crazybull', "MainController@showCrazybull");
+
+
 Route::get('/documents', "MainController@documents");
 Route::get('/plans', "MainController@plans");
 Route::get('/plans/{url}', "MainController@planDetails");
