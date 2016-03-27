@@ -990,3 +990,17 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* line 801, ../../resources/assets/sass/arklab/sass/products.scss */
+.preOrder .buyReulst {
+  background-color: #fafafa;
+  color: #263238;
+  padding: 20px 20px 20px 20px;
+}
+/* line 807, ../../resources/assets/sass/arklab/sass/products.scss */
+.preOrder .buyResultBlock {
+  background-color: #eeeeee;
+  border-radius: 5px;
+  color: #263238;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+}

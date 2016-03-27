@@ -117,12 +117,11 @@
                     styles: [
                         {
                             styleName: "啟航版 - Arduino Nano 核心 NTD2300",
-                            id: "啟航版 - Arduino Nano核心 NTD2300"
+                            id: "Ark90-A"
                         },
                         {
                             styleName: "蛻變版 - Ark Nano 升級核心 NTD 3300",
-                            id: "蛻變版 - Ark Nano升級核心 NTD 3300"
-
+                            id: "Ark90-B"
                         }
                     ]
                 },
@@ -132,20 +131,19 @@
                     styles: [
                         {
                             styleName: "啟航版 - Arduino Nano 核心 NTD 3000",
-                            id: "啟航版 - Arduino Nano 核心"
+                            id: "Ark250-A"
                         },
                         {
                             styleName: "蛻變版-Ark Nano 升級核心 NTD 4000",
-                            id: "蛻變版 - Ark Nano升級核心 NTD 4000"
+                            id: "Ark250-B"
                         },
                         {
                             styleName: "續航版 - Ark Nano 升級核心、Ark 模組擴充包 NTD 4300",
-                            id: "續航版 - Ark Nano 升級核心、Ark 模組擴充包 NTD 4300"
-
+                            id: "Ark250-C"
                         },
                         {
                             styleName: "旗艦版 - Ark Nano升級核心、Ark模組擴充包、Wifi cam、250軸距轉90軸距機架 NTD 7000",
-                            id: "旗艦版 - Ark Nano升級核心、Ark模組擴充包、Wifi cam、250軸距轉90軸距機架 NTD 7000"
+                            id: "Ark250-D"
                         }
                     ]
                 },
@@ -155,15 +153,15 @@
                     styles: [
                         {
                             styleName: "啟航版 - Arduino Nano核心 NTD1700",
-                            id: "啟航版 - Arduino Nano核心 NTD1700"
+                            id: "ArkTurbo-A"
                         },
                         {
                             styleName: "蛻變版 - Ark Nano升級核心 NTD2700",
-                            id: "蛻變版 - Ark Nano升級核心 NTD2700"
+                            id: "ArkTurbo-B"
                         },
                         {
                         	styleName: "續航版 - Ark Nano升級核心、Ark 模組擴充包 NTD3200",
-                        	id: "續航版 - Ark Nano升級核心、Ark 模組擴充包 NTD3200"
+                        	id: "ArkTurbo-C"
                         }
                     ]
                 },
@@ -173,10 +171,9 @@
                     styles: [
                         {
                             styleName: "Ark Nano NTD1300",
-                            id: "Ark Nano NTD1300"
+                            id: "ArkNano"
                         }
                     ]
-
                 }
             }
 

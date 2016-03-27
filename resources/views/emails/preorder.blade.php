@@ -110,10 +110,10 @@
 
 				您已成功預購 ArkLab 新品  <br>
 				您購買了 <br>
-				<div style="padding: 20px 20px 20px 20px; margin: 5px 5px 5px 5px; background-color: #eceff1;"><br>
+				<div style="padding: 20px 20px 20px 20px; margin: 5px 5px 5px 5px; background-color: #eceff1;">
 					{{ $type }} <br>
 					版本：{{ $version }} X {{ $amount }}個<br>	
-					 總金額為 	<br>
+					 總金額為 	NTD {{ $price }}<br>
 				</div><br>
 				請於4/23 21:00前匯款<br>
 				您預購的新品將於4/30前送達 您的送貨地址<br>

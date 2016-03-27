@@ -85,19 +85,55 @@ class MainController extends Controller
 			"arknano" => "Ark Nano"
 		];
 
+		$price = [
+			'Ark90-A' => '2300',
+			'Ark90-B' => '3300',
+			'Ark250-A' =>'3000',		 
+			'Ark250-B' =>'4000',
+			'Ark250-C' =>'4300',		
+			'Ark250-D' =>'7000',
+			'ArkTurbo-A' =>'1700',
+			'ArkTurbo\-B' =>'2700',
+			'ArkTurbo\-C' =>'3000',
+			'ArkNano' =>'1300'
+		];
+
+		$version = [
+			'Ark90-A' => '啟航版 - Arduino Nano 核心',
+			'Ark90-B' => '蛻變版 - Ark Nano 升級核心',
+			'Ark250-A' =>'啟航版 - Arduino Nano',		 
+			'Ark250-B' =>'蛻變版 - Ark Nano 升級核心',
+			'Ark250-C' =>'續航版 - Ark Nano 升級核心、Ark 模組擴充包',		
+			'Ark250-D' =>'旗艦版 - Ark Nano升級核心、Ark模組擴充包、Wifi cam、250軸距轉90軸距機架',
+			'ArkTurbo-A' =>'啟航版 - Arduino Nano核心',
+			'ArkTurbo\-B' =>'蛻變版 - Ark Nano升級核心',
+			'ArkTurbo\-C' =>'續航版 - Ark Nano升級核心、Ark 模組擴充包',
+			'ArkNano' =>'Ark Nano'
+		];
+
 		Mail::send('emails.preorder', [
 			'type' => $type[strip_tags(Input::get('type'))],
-			'version' => strip_tags(Input::get('version')),
+			'version' => $version[strip_tags(Input::get('version'))],
 			'amount' => strip_tags(Input::get('amount')),
 			'name' => strip_tags(Input::get('name')),
 			'email' => strip_tags(Input::get('email')),
+			'price' => (int)strip_tags(Input::get('amount')) * (int)$price[strip_tags(Input::get('version'))],
 			'phone' => strip_tags(Input::get('phone')),
 			'address' => strip_tags(Input::get('address'))], function($message)
 		{
-		    $message->to('kill.xmurderer@gmail.com')->subject('ArkLab新品預購成功通知');
+		    $message->to(strip_tags(Input::get('email')))->subject('ArkLab新品預購成功通知');
 		});
 
-		return Input::get("name");
+		return view("orderfinish", [
+			"title" => "預購成功", 
+			'type' => $type[strip_tags(Input::get('type'))],
+			'version' => $version[strip_tags(Input::get('version'))],
+			'amount' => strip_tags(Input::get('amount')),
+			'price' => (int)strip_tags(Input::get('amount')) * (int)$price[strip_tags(Input::get('version'))],
+			'name' => strip_tags(Input::get('name')),
+			'email' => strip_tags(Input::get('email')),
+			'phone' => strip_tags(Input::get('phone')),
+			'address' => strip_tags(Input::get('address'))]);
 
 	}
 
