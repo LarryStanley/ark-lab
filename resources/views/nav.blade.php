@@ -1,6 +1,6 @@
-<div class="transparent navbar-fixed" style="position: absolute;">
-	<nav class="transparent">
-		<div class="nav-wrapper">
+<div class="transparent navbar-fixed" style="width: 100%; position: absolute;">
+	<nav class="transparent" style="width: 100%; position: relative;">
+		<div class="nav-wrapper" style="width: 100%; position: relative;">
 			<div class="brand-logo fadeInFast" id="mark">
 				<a href="/" id="topButton">
 					<img src="/images/mark.png" width="150px" alt="" style="margin-top: 5px;">		

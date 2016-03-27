@@ -79,13 +79,63 @@
 				</div>
 			</div>
 		</div>
+		<div class="arknanoIntro">
+			<div class="container center-align">
+				<h2>Ark Nano</h2>
+				<p>
+					核心可插拔設計兼容 <br>Arduino Nano 、Ark Nano、Ark Nano Pro <br>
+				</p>
+				<div class="row">
+					<div class="col m4">
+						<h3>Ark Nano</h3>
+						<img src="http://i.imgur.com/m9wLVpz.png" alt="" width="30%">
+					</div>
+					<div class="col m4">
+						<h3>Ark Nano Pro</h3>
+						<img src="http://i.imgur.com/T5faZF9.png" alt="" width="30%">
+					</div>
+					<div class="col m4">
+						<h3>Ark Nano Professional</h3>
+						<img src="http://i.imgur.com/z0QHZG3.png" alt="" width="30%">
+					</div>
+				</div>
+				<a href="/products/arknano">瞭解更多</a>	
+			</div>
+		</div>
 		<div class="preOrderButterfly">
 			<div class="page-mask valign-wrapper">
 				<div class="container">
 					<div class="valign center-align">
 						<h2>Be a Maker</h2>
 						<a href="/products/order" style="font-size: 22px;">立即預購</a> <br><br>
-						<a href="/products/">查看其他產品</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="otherProducts">
+			<div class="container center-align">
+				<h2>其他產品</h2>
+				<div class="row">
+					<div class="col m4 s12 dragonfly">
+						<h3>Dragonfly</h3>
+						<hr width="45%">
+						<p>更大 更好 更快</p>
+						<img src="http://i.imgur.com/3b7ssx4.png" alt="" width="35%"><br>	
+						<a href="/products/dragonfly">進一步瞭解</a>
+					</div>
+					<div class="col m4 s12 crazybull">
+						<h3>Crazybull</h3>
+						<hr width="45%">
+						<p>不只是自走車</p>
+						<img src="http://i.imgur.com/zPiB3x1.png" alt="" width="35%"><br>
+						<a href="/products/crazybull">進一步瞭解</a>
+					</div>
+					<div class="col m4 s12 arknano">
+						<h3>Ark Nano</h3>
+						<hr width="45%">
+						<p>慣性感測 · 藍芽遙控 · <span style="font-size: 18px;">Arduino</span></p>
+						<img src="http://i.imgur.com/z0QHZG3.png" alt="" width="35%"><br>
+						<a href="/products/arknano">進一步瞭解</a>
 					</div>
 				</div>
 			</div>

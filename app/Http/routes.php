@@ -18,7 +18,8 @@ Route::get('/products', "MainController@products");
 Route::get('/products/butterfly', "MainController@showButterfly");
 Route::get('/products/dragonfly', "MainController@showDragonfly");
 Route::get('/products/crazybull', "MainController@showCrazybull");
-
+Route::get('/products/arknano', "MainController@showArknano");
+Route::get('/products/preorder', "MainController@showPreorder");
 
 Route::get('/documents', "MainController@documents");
 Route::get('/plans', "MainController@plans");

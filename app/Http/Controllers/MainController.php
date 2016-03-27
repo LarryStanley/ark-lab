@@ -56,6 +56,14 @@ class MainController extends Controller
 		return view("crazybull", ["title" => '狂暴蠻牛']);
 	}
 
+	public function showArknano() {
+		return view("arknano", ["title" => 'Ark Nano']);	
+	}
+
+	public function showPreorder() {
+		return view('order', ["title" => '預購']);
+	}
+
 	public function flyProject() {
 		return view("flyProject", ["title" => "飛行業務"]);
 	}
