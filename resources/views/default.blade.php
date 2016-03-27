@@ -14,7 +14,7 @@
 	<meta name="description" content="ArkLab 多旋翼工坊 - Open Skyler 開放原始碼｜自造多旋翼 拉近天空與你我的距離">
 	<meta name="keywords" content="開放原始碼 自造多旋翼 多軸 四軸 飛行器 無人機 奶油蒼蠅 Arklab arklab arkLab ArkLab">
 	<meta property="og:description" content="ArkLab 多旋翼工坊 - Open Skyler 開放原始碼｜自造多旋翼 拉近天空與你我的距離" />
-	<meta property="og:image" content="http://arklab.tw/images/fbimage.png"/>
+	<meta property="og:image" content='<?php if(!empty($ogImage)) echo $ogImage; else echo "http://arklab.tw/images/fbimage.png";?>'>
 	<meta property="og:type" content="article" />
 
 	

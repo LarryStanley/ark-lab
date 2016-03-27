@@ -13,7 +13,7 @@
 					<h1 class="center-align">預購開始</h1>
 					<hr style="width: 50%">
 					<p class="center-align">
-						90% off 立即選取</p>
+						10% off 立即選取</p>
 
 					<form action="/products/preorder" method="POST">
 						<div class="row">
@@ -57,6 +57,10 @@
 							</div>
 						</div>
 						<h3 class="center-align">[[ order.data[order.type].styleName ]]</h3>
+						<p class="center-align">
+							[[ order.data[order.type].slogan ]]<br>
+							<a style="font-size: 16px;" href="[[ order.data[order.type].url ]]" target="_blank">瞭解更多</a>
+						</p>
 						<div class="row details">
 							<div class="input-field col l6 m6 s12">
 						    	<select ng-model="order.currentStyle" name="version" ng-options="style.styleName for style in order.data[order.type].styles track by style.id">
@@ -114,13 +118,15 @@
                 butterfly: {
                     name: "butterfly",
                     styleName: "奶油蒼蠅 Butterfly",
+                    slogan: "翻轉教育",
+                    url: "/products/butterfly",
                     styles: [
                         {
-                            styleName: "啟航版 - Arduino Nano 核心 NTD2300",
+                            styleName: "啟航版 - Arduino Nano 核心 NTD 2300 10%off",
                             id: "Ark90-A"
                         },
                         {
-                            styleName: "蛻變版 - Ark Nano 升級核心 NTD 3300",
+                            styleName: "蛻變版 - Ark Nano 升級核心 NTD 3300 10%off",
                             id: "Ark90-B"
                         }
                     ]
@@ -128,21 +134,23 @@
                 dragonfly: {
                     name: "dragonfly",
                     styleName: "飛龍在天 Dragonfly",
+                    slogan: "更大 更好 更快",
+                    url: "/products/dragonfly",
                     styles: [
                         {
-                            styleName: "啟航版 - Arduino Nano 核心 NTD 3000",
+                            styleName: "啟航版 - Arduino Nano 核心 NTD 3000 10%off",
                             id: "Ark250-A"
                         },
                         {
-                            styleName: "蛻變版-Ark Nano 升級核心 NTD 4000",
+                            styleName: "蛻變版 - Ark Nano 升級核心 NTD 4000 10%off",
                             id: "Ark250-B"
                         },
                         {
-                            styleName: "續航版 - Ark Nano 升級核心、Ark 模組擴充包 NTD 4300",
+                            styleName: "續航版 - Ark Nano 升級核心、Ark 模組擴充包 NTD 4300 10%off",
                             id: "Ark250-C"
                         },
                         {
-                            styleName: "旗艦版 - Ark Nano升級核心、Ark模組擴充包、Wifi cam、250軸距轉90軸距機架 NTD 7000",
+                            styleName: "旗艦版 - Ark Nano升級核心、Ark模組擴充包、Wifi cam、250軸距轉90軸距機架 NTD 7000 10%off",
                             id: "Ark250-D"
                         }
                     ]
@@ -150,17 +158,19 @@
                 crazybull: {
                     name: "crazybull",
                     styleName: "狂暴蠻牛 Crazybull",
+                    slogan: "不只是自走車",
+                    url: "/products/crazybull",
                     styles: [
                         {
-                            styleName: "啟航版 - Arduino Nano核心 NTD1700",
+                            styleName: "啟航版 - Arduino Nano核心 NTD1700 10%off",
                             id: "ArkTurbo-A"
                         },
                         {
-                            styleName: "蛻變版 - Ark Nano升級核心 NTD2700",
+                            styleName: "蛻變版 - Ark Nano升級核心 NTD2700 10%off",
                             id: "ArkTurbo-B"
                         },
                         {
-                        	styleName: "續航版 - Ark Nano升級核心、Ark 模組擴充包 NTD3200",
+                        	styleName: "續航版 - Ark Nano升級核心、Ark 模組擴充包 NTD3200 10%off",
                         	id: "ArkTurbo-C"
                         }
                     ]
@@ -168,14 +178,16 @@
                 arknano: {
                     name: "arknano",
                     styleName: "Ark Nano",
+                    slogan: "慣性感測 · 藍芽遙控 · Arduino",
+					url: "/products/arknano",
                     styles: [
                         {
-                            styleName: "Ark Nano NTD1300",
+                            styleName: "Ark Nano NTD1300 10%off",
                             id: "ArkNano"
                         }
                     ]
                 }
-            }
+            };
 
 			order.type = "butterfly";
 			order.currentStyle = order.data[order.type].styles[0];

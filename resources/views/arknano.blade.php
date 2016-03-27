@@ -10,7 +10,10 @@
 		<div class="intro valign-wrapper">
 			<div class="valign center-align" style="width:100%">
 				<h1>Ark Nano</h1>
-				<p>慣性感測 · 藍芽遙控 · Arduino</p>	
+				<p>
+					慣性感測 · 藍芽遙控 · Arduino <br>
+					NTD 1300 起
+				</p>	
 			</div>
 		</div>
 		<div class="container">
@@ -34,6 +37,7 @@
 						<li>九軸感測器芯片</li>
 						<li>藍芽通訊</li>
 					</ul>
+					<p class="blue-text text-darken-2">敬請期待</p>
 				</div>
 				<div class="col m4 s12 center-align">
 					<h3 style="font-size: 28px">ArkNano Professional</h3>
@@ -44,14 +48,15 @@
 						<li>九軸感測器芯片</li>
 						<li>藍芽通訊</li>
 					</ul>
+					<p class="blue-text text-darken-2">敬請期待</p>
 				</div>
 			</div>
 		</div>
 		<div class="otherProducts">
 			<h2 class="center-align">相容各種無人載具</h2>
 			<div class="container">
-				<div class="row valign-wrapper">
-					<div class="col m6 s12 center-align">
+				<div class="row">
+					<div class="col m6 s12 center-align hide-on-small-only">
 						<img src="http://i.imgur.com/bQZHfeZ.png" alt="" width="65%">
 					</div>
 					<div class="col m6 s12 valign">
@@ -68,7 +73,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row valign-wrapper">
+				<div class="row">
 					<div class="col m6 s12 valign">
 						<h3 class="center-align dragonfly">Dragonfly</h3>
 						<p>搭配與 Nano 規格相容的 Aark Nano 核心。<br>
@@ -77,16 +82,16 @@
 							大扭轉角及張力的葉扇，<br>
 							超越 ButterFly3.0 垂直升力及倍數附載。
 						</p>
-						<div class="center-align">
+						<div class="center-align hide-on-small-only">
 							<a href="/products/dragonfly">查看更多</a>								
 						</div>
 					</div>
-					<div class="col m6 s12 center-align">
+					<div class="col m6 s12 center-align hide-on-small-only">
 						<img src="http://i.imgur.com/3b7ssx4.png" alt="" width="65%">
 					</div>
 				</div>
-				<div class="row valign-wrapper">
-					<div class="col m6 s12 valing">
+				<div class="row">
+					<div class="col m6 s12 valing hide-on-small-only">
 						<img src="http://i.imgur.com/zPiB3x1.png" alt="" width="65%">
 					</div>
 					<div class="col m6 s12">
@@ -107,7 +112,7 @@
 				<div class="container">
 					<div class="valign center-align">
 						<h2>左右世界、操縱未來</h2>
-						<a href="/products/order" style="font-size: 22px;">立即預購</a> <br><br>
+						<a href="/products/preorder" style="font-size: 22px;">立即預購</a> <br><br>
 					</div>
 				</div>
 			</div>

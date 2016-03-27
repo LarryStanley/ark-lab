@@ -579,6 +579,10 @@ html, body {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	
+	p {
+		font-size: 22px;
+	}
 
 	.intro {
 		background: #fc00ff; /* fallback for old browsers */
@@ -589,13 +593,161 @@ html, body {
 		height: 75%;
 
 		color: white;
+		position: relative;
 
 		@include breakpoint($large) {
 			h1 {
 				font-size: 200px;
 			}
 		}
+
+		img {
+		    position: absolute;
+		    left: 0;
+		    bottom: -250px;
+		    text-align: center;
+		    right: 0;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
 	}
+
+	.type {
+		p {
+			font-size: 18px;
+		}
+	}
+
+	.detailsIntro {
+		padding-top: 280px;
+		font-size: 18px;
+		.number {
+			line-height: 70px;
+			font-size: 72px;
+			font-family: HelveticaNeue;
+		}
+		position: relative;
+	}
+
+	.computerCompileCover {
+		height: 75%;
+		width: 100%;
+
+		position: relative;
+		background: url(http://i.imgur.com/rQUzEeD.jpg) no-repeat center center fixed;
+		@include background-size(cover);
+		color: white;
+
+		background-attachment: scroll;	
+	}
+
+	.moduelIntro {
+		background-color: #f5f5f5;
+		width: 100%;
+		margin-bottom: 0px;
+
+		padding: 10px 0 10px 0;
+
+		.crop {
+			background-image: url('http://i.imgur.com/p9Zu2mP.png');
+			width: 200px;
+			height: 100px;
+			background-position: center;
+			/* Make the background image cover the area of the <div>, and clip the excess */
+			background-size: cover;
+		}
+	}
+
+	.preOrder {
+		height: 85%;
+		width: 100%;
+
+		position: relative;
+		background: url(http://i.imgur.com/WrDTZhv.jpg) no-repeat center center fixed;
+		@include background-size(cover);
+		color: white;
+
+		background-attachment: scroll;	
+
+		h2 {
+			font-size: 72px;
+		}
+	}
+
+	
+	.otherProducts {
+		.butterfly {
+			h3 {
+				background-color: #43cea2;
+				background: #43cea2; /* fallback for old browsers */
+				background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  		
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			hr {
+				border: 0;
+			    height: 1px;
+				background-color: #43cea2;
+				background: #43cea2; /* fallback for old browsers */
+				background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  		
+				
+			}
+		}
+
+		.dragonfly {
+			h3 {
+				background: #525252; /* fallback for old browsers */
+				background: -webkit-linear-gradient(to left, #525252 , #3d72b4); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to left, #525252 , #3d72b4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	        
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			hr {
+				border: 0;
+			    height: 1px;
+			    background: #000000; /* fallback for old browsers */
+				background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to left, #000000 , #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+		}
+
+		.arknanoIntro {
+			h3 {
+				background: rgba(255,135,50,1);
+				background: -moz-linear-gradient(left, rgba(255,135,50,1) 0%, rgba(243,111,104,1) 100%);
+				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,135,50,1)), color-stop(100%, rgba(243,111,104,1)));
+				background: -webkit-linear-gradient(left, rgba(255,135,50,1) 0%, rgba(243,111,104,1) 100%);
+				background: -o-linear-gradient(left, rgba(255,135,50,1) 0%, rgba(243,111,104,1) 100%);
+				background: -ms-linear-gradient(left, rgba(255,135,50,1) 0%, rgba(243,111,104,1) 100%);
+				background: linear-gradient(to right, rgba(255,135,50,1) 0%, rgba(243,111,104,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8732', endColorstr='#f36f68', GradientType=1 );
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			hr {
+				border: 0;
+			    height: 1px;
+			    background: rgba(255,135,50,1);
+				background: -moz-linear-gradient(left, rgba(255,135,50,1) 0%, rgba(243,111,104,1) 100%);
+				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,135,50,1)), color-stop(100%, rgba(243,111,104,1)));
+				background: -webkit-linear-gradient(left, rgba(255,135,50,1) 0%, rgba(243,111,104,1) 100%);
+				background: -o-linear-gradient(left, rgba(255,135,50,1) 0%, rgba(243,111,104,1) 100%);
+				background: -ms-linear-gradient(left, rgba(255,135,50,1) 0%, rgba(243,111,104,1) 100%);
+				background: linear-gradient(to right, rgba(255,135,50,1) 0%, rgba(243,111,104,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8732', endColorstr='#f36f68', GradientType=1 );
+			}
+
+			background-color: white;
+			padding: 0px 0px 0px 0px;
+		}
+	}
+
 }
 
 .arknano {
@@ -628,7 +780,7 @@ html, body {
 		}	
 		
 		p {
-			font-size: 36px;
+			font-size: 22px;
 		}
 	}
 
@@ -686,11 +838,12 @@ html, body {
 	width: 100%;
 	overflow: auto;
 
-	.intro {
-		background-color: #43cea2;
-		background: #43cea2; /* fallback for old browsers */
-		background: -webkit-linear-gradient(to bottom, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to bottom, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  		
+	.intro {		
+
+		background: #16A085; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #16A085 , #F4D03F); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to top, #16A085 , #F4D03F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
 		
 		@include breakpoint($large) {
 			width: 100%;

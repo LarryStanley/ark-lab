@@ -47,23 +47,23 @@ class MainController extends Controller
 	}
 
 	public function showButterfly() {
-		return view("butterfly", ["title" => "奶油蒼蠅"]);
+		return view("butterfly", ["title" => "奶油蒼蠅", "ogImage" => "http://i.imgur.com/SiZl1UF.png"]);
 	}
 
 	public function showDragonfly() {
-		return view("dragonfly", ["title" => "飛龍在天"]);
+		return view("dragonfly", ["title" => "飛龍在天", "http://i.imgur.com/MyZ42Uq.png"]);
 	}
 
 	public function showCrazybull() {
-		return view("crazybull", ["title" => '狂暴蠻牛']);
+		return view("crazybull", ["title" => '狂暴蠻牛', "ogImage" => "http://i.imgur.com/a24wgjF.png"]);
 	}
 
 	public function showArknano() {
-		return view("arknano", ["title" => 'Ark Nano']);	
+		return view("arknano", ["title" => 'Ark Nano', "ogImage" => "http://i.imgur.com/YeSSG3f.png"]);	
 	}
 
 	public function showPreorder() {
-		return view('order', ["title" => '預購']);
+		return view('order', ["title" => '預購', 'ogImage' => "http://i.imgur.com/9IIas6f.png"]);
 	}
 
 	public function postPreorder() {
@@ -74,7 +74,8 @@ class MainController extends Controller
 			 'name' => strip_tags(Input::get('name')),
 			 'email' => strip_tags(Input::get('email')),
 			 'phone' => strip_tags(Input::get('phone')),
-			 'address' => strip_tags(Input::get('address'))
+			 'address' => strip_tags(Input::get('address')),
+			 'created_at' => date('Y-m-d H:i:s')
 			]
 		);
 
@@ -93,8 +94,8 @@ class MainController extends Controller
 			'Ark250-C' =>'4300',		
 			'Ark250-D' =>'7000',
 			'ArkTurbo-A' =>'1700',
-			'ArkTurbo\-B' =>'2700',
-			'ArkTurbo\-C' =>'3000',
+			'ArkTurbo-B' =>'2700',
+			'ArkTurbo-C' =>'3000',
 			'ArkNano' =>'1300'
 		];
 
@@ -117,7 +118,7 @@ class MainController extends Controller
 			'amount' => strip_tags(Input::get('amount')),
 			'name' => strip_tags(Input::get('name')),
 			'email' => strip_tags(Input::get('email')),
-			'price' => (int)strip_tags(Input::get('amount')) * (int)$price[strip_tags(Input::get('version'))],
+			'price' => (int)strip_tags(Input::get('amount')) * (int)$price[strip_tags(Input::get('version'))] *0.9,
 			'phone' => strip_tags(Input::get('phone')),
 			'address' => strip_tags(Input::get('address'))], function($message)
 		{
@@ -129,7 +130,7 @@ class MainController extends Controller
 			'type' => $type[strip_tags(Input::get('type'))],
 			'version' => $version[strip_tags(Input::get('version'))],
 			'amount' => strip_tags(Input::get('amount')),
-			'price' => (int)strip_tags(Input::get('amount')) * (int)$price[strip_tags(Input::get('version'))],
+			'price' => (int)strip_tags(Input::get('amount')) * (int)$price[strip_tags(Input::get('version'))] *0.9,
 			'name' => strip_tags(Input::get('name')),
 			'email' => strip_tags(Input::get('email')),
 			'phone' => strip_tags(Input::get('phone')),

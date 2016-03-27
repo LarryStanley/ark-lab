@@ -11,7 +11,10 @@
 			<div class="valign-wrapper" style="height: 100%;">
 				<div class="valign center-align" style="width: 100%;">
 					<h1>Butterfly</h1>
-					<p>讓 <strong>Arduino</strong> 飛行一直都是這麼容易</p>
+					<p>
+						讓 <strong>Arduino</strong> 飛行一直都是這麼容易 <br>
+						NTD 2300 起	
+					</p>
 				</div>
 			</div>
 			<img src="http://i.imgur.com/bQZHfeZ.png" alt="" height="65%">
@@ -28,7 +31,7 @@
 					<span class="number">73</span>g
 				</div>
 				<div class="col m4 s12 center-align">
-					遙控距離<br>
+					RF遙控距離<br>
 					<span class="number">250</span>m
 				</div>
 				<div class="col m4 s12 center-align">
@@ -107,7 +110,7 @@
 				<div class="container">
 					<div class="valign center-align">
 						<h2>Be a Maker</h2>
-						<a href="/products/order" style="font-size: 22px;">立即預購</a> <br><br>
+						<a href="/products/preorder" style="font-size: 22px;">立即預購</a> <br><br>
 					</div>
 				</div>
 			</div>

@@ -10,9 +10,12 @@
 		<div class="dragonIntro valign-wrapper">
 			<div class="container">
 				<div class="center-align valign">
-					<img src="http://i.imgur.com/3b7ssx4.png" alt="" width="55%">
-					<h2>Ark - 250</h2>
-					<p>更大、更好、更快</p>
+					<img src="http://i.imgur.com/3b7ssx4.png" alt="" width="45%">
+					<h1>Dragonfly</h1>
+					<p>
+						更大、更好、更快 <br>
+						NTD 3000 起
+					</p>
 				</div>
 			</div>
 		</div>
@@ -45,31 +48,31 @@
 				<h3>可插拔模組</h3>
 				<p style="font-size: 22px">玩法更多樣了</p>
 				<div class="row center-align">
-					<div class="col m3">
-						<h5>超音波感測模組</h5>
+					<div class="col m3 s6">
+						<h5>超音波模組</h5>
 						<img src="http://i.imgur.com/uzvA3Li.png" alt="" width="70%">
 					</div>
-					<div class="col m3">
+					<div class="col m3 s6">
 						<h5>濕度感測模組</h5>
 						<img src="http://i.imgur.com/amjGkeJ.png" alt="" width="70%">
 					</div>
-					<div class="col m3">
-						<h5>紅外線收發模組</h5>
+					<div class="col m3 s6">
+						<h5>紅外線模組</h5>
 						<img src="http://i.imgur.com/bsiH0Us.png" alt="" width="70%">
 					</div>
-					<div class="col m3">
+					<div class="col m3 s6">
 						<h5>光度感測模組</h5>
 						<img src="http://i.imgur.com/7prhb7E.png" alt="" width="70%">
 					</div>
-					<div class="col m3">
+					<div class="col m3 s6">
 						<h5>聲音感測模組</h5>
 						<img src="http://i.imgur.com/hJWUxMT.png" alt="" width="70%">
 					</div>
-					<div class="col m3">
+					<div class="col m3 s6">
 						<h5>雷射模組</h5>
 						<img src="http://i.imgur.com/MRUpN0N.png" alt="" width="70%">
 					</div>
-					<div class="col m3">
+					<div class="col m3 s6">
 						<h5>伺服馬達</h5>
 						<img src="http://i.imgur.com/9gJOvVg.png" alt="" width="70%">
 					</div>
@@ -81,7 +84,7 @@
 				<div class="container">
 					<div class="valign center-align">
 						<h2>Biggest Make Perfect</h2>
-						<a href="/products/order" style="font-size: 22px;">立即預購</a> <br><br>
+						<a href="/products/preorder" style="font-size: 22px;">立即預購</a> <br><br>
 					</div>
 				</div>
 			</div>

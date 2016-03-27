@@ -11,7 +11,7 @@
 			<div class="valign center-align" style="width: 100%;">
 				<h1>即刻預購</h1>
 				<hr style="width: 40%;">	
-				<p>90% off</p>
+				<p>10% off</p>
 				<a href="/products/preorder" class="btn red darken-2">前往預購</a>
 			</div>
 		</div>
