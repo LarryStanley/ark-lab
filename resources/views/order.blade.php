@@ -59,12 +59,12 @@
 						<h3 class="center-align">[[ order.data[order.type].styleName ]]</h3>
 						<div class="row details">
 							<div class="input-field col l6 m6 s12">
-						    	<select ng-model="order.currentStyle" ng-options="style.styleName for style in order.data[order.type].styles track by style.id">
+						    	<select ng-model="order.currentStyle" name="version" ng-options="style.styleName for style in order.data[order.type].styles track by style.id">
 							    </select>
 							    <label>選擇規格</label>
 						 	</div>
 							<div class="input-field col l6 m6 s12">
-						    	<select name="count">
+						    	<select name="amount">
 									<option value="1">1</option>
 							     	<option value="2">2</option>
 							     	<option value="3">3</option>
@@ -111,78 +111,74 @@
 			var order = this;
 
 			order.data = {
-				butterfly: {
-					name: "butterfly",
-					styleName: "奶油蒼蠅 Butterfly",
-					styles: [
-						{
-							styleName: "普通版-Arduino Nano核心",
-							id: "1"
-						},
-						{
-							styleName: "蛻變版-Ark Nano升級核心",
-							id: "2"
+                butterfly: {
+                    name: "butterfly",
+                    styleName: "奶油蒼蠅 Butterfly",
+                    styles: [
+                        {
+                            styleName: "啟航版 - Arduino Nano 核心 NTD2300",
+                            id: "啟航版 - Arduino Nano核心 NTD2300"
+                        },
+                        {
+                            styleName: "蛻變版 - Ark Nano 升級核心 NTD 3300",
+                            id: "蛻變版 - Ark Nano升級核心 NTD 3300"
 
-						}
-					]
-				},
-				dragonfly: {
-					name: "dragonfly",
-					styleName: "飛龍在天 Dragonfly",
-					styles: [
-						{
-							styleName: "普通版-Arduino Nano核心",
-							id: "1"
-						},
-						{
-							styleName: "蛻變版-Ark Nano升級核心",
-							id: "2"
-						},
-						{
-							styleName: "升級版-Ark Nano升級核心、Ark模組擴充包",
-							id: "3"
+                        }
+                    ]
+                },
+                dragonfly: {
+                    name: "dragonfly",
+                    styleName: "飛龍在天 Dragonfly",
+                    styles: [
+                        {
+                            styleName: "啟航版 - Arduino Nano 核心 NTD 3000",
+                            id: "啟航版 - Arduino Nano 核心"
+                        },
+                        {
+                            styleName: "蛻變版-Ark Nano 升級核心 NTD 4000",
+                            id: "蛻變版 - Ark Nano升級核心 NTD 4000"
+                        },
+                        {
+                            styleName: "續航版 - Ark Nano 升級核心、Ark 模組擴充包 NTD 4300",
+                            id: "續航版 - Ark Nano 升級核心、Ark 模組擴充包 NTD 4300"
 
-						},
-						{
-							styleName: "旗艦版-Ark Nano升級核心、Ark模組擴充包、Wifi cam、250軸距轉90軸距機架",
-							id: "4"
-						}
-					]
-				},
-				crazybull: {
-					name: "crazybull",
-					styleName: "狂暴蠻牛 Crazybull",
-					styles: [
-						{
-							styleName: "普通版-Arduino Nano核心",
-							id:"1"
-						},
-						{
-							styleName: "蛻變版-Ark Nano升級核心、Ark模工組擴充包",
-							id:"2"
-						}
-					]
-				},
-				arknano: {
-					name: "arknano",
-					styleName: "Ark Nano",
-					styles: [
-						{
-							styleName: "Ark Nano",
-							id:"1"
-						},
-						{
-							styleName: "Ark Nano Pro",
-							id:"2"
-						},
-						{
-							styleName: "ArkNano Professional",
-							id:"3"
-						}
-					]
+                        },
+                        {
+                            styleName: "旗艦版 - Ark Nano升級核心、Ark模組擴充包、Wifi cam、250軸距轉90軸距機架 NTD 7000",
+                            id: "旗艦版 - Ark Nano升級核心、Ark模組擴充包、Wifi cam、250軸距轉90軸距機架 NTD 7000"
+                        }
+                    ]
+                },
+                crazybull: {
+                    name: "crazybull",
+                    styleName: "狂暴蠻牛 Crazybull",
+                    styles: [
+                        {
+                            styleName: "啟航版 - Arduino Nano核心 NTD1700",
+                            id: "啟航版 - Arduino Nano核心 NTD1700"
+                        },
+                        {
+                            styleName: "蛻變版 - Ark Nano升級核心 NTD2700",
+                            id: "蛻變版 - Ark Nano升級核心 NTD2700"
+                        },
+                        {
+                        	styleName: "續航版 - Ark Nano升級核心、Ark 模組擴充包 NTD3200",
+                        	id: "續航版 - Ark Nano升級核心、Ark 模組擴充包 NTD3200"
+                        }
+                    ]
+                },
+                arknano: {
+                    name: "arknano",
+                    styleName: "Ark Nano",
+                    styles: [
+                        {
+                            styleName: "Ark Nano NTD1300",
+                            id: "Ark Nano NTD1300"
+                        }
+                    ]
 
-				}
-			}
+                }
+            }
 
 			order.type = "butterfly";
 			order.currentStyle = order.data[order.type].styles[0];

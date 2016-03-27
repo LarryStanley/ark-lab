@@ -67,9 +67,34 @@ class MainController extends Controller
 	}
 
 	public function postPreorder() {
-		Mail::raw('測試使用 Laravel 5 的 Gmail 寄信服務', function($message)
+		DB::table('preorder')->insert(
+			['type' => strip_tags(Input::get('type')),
+			 'version' => strip_tags(Input::get('version')),
+			 'amount' => strip_tags(Input::get('amount')),
+			 'name' => strip_tags(Input::get('name')),
+			 'email' => strip_tags(Input::get('email')),
+			 'phone' => strip_tags(Input::get('phone')),
+			 'address' => strip_tags(Input::get('address'))
+			]
+		);
+
+		$type = [
+			"butterfly" => "奶油蒼蠅 - Butterfly",
+			"dragonfly" => "飛龍在天 - Dragonfly",
+			"crazybull" => "狂暴蠻牛 - Crazbull",
+			"arknano" => "Ark Nano"
+		];
+
+		Mail::send('emails.preorder', [
+			'type' => $type[strip_tags(Input::get('type'))],
+			'version' => strip_tags(Input::get('version')),
+			'amount' => strip_tags(Input::get('amount')),
+			'name' => strip_tags(Input::get('name')),
+			'email' => strip_tags(Input::get('email')),
+			'phone' => strip_tags(Input::get('phone')),
+			'address' => strip_tags(Input::get('address'))], function($message)
 		{
-		    $message->to('kill.xmurderer@gmail.com');
+		    $message->to('kill.xmurderer@gmail.com')->subject('ArkLab新品預購成功通知');
 		});
 
 		return Input::get("name");
