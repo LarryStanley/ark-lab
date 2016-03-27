@@ -15,7 +15,7 @@
 					<p class="center-align">
 						90% off 立即選取</p>
 
-					<form action="">
+					<form action="/products/preorder" method="POST">
 						<div class="row">
 							<div class="type">
 								<div class="col l3 m6 s6 center-align">
@@ -64,30 +64,34 @@
 							    <label>選擇規格</label>
 						 	</div>
 							<div class="input-field col l6 m6 s12">
-						    	<select>
+						    	<select name="count">
 									<option value="1">1</option>
 							     	<option value="2">2</option>
+							     	<option value="3">3</option>
+							     	<option value="4">4</option>					
+			     			     	<option value="5">5</option>
 							    </select>
 							    <label>數量</label>
 						 	</div>
 						 	<div class="input-field col l6 m6 s12">
-						    	<input placeholder="您的大名" id="" type="text" class="validate" ng-model="order.name"  required="" aria-required="true">
+						    	<input placeholder="您的大名" id="" name="name" type="text" class="validate" ng-model="order.name"  required="" aria-required="true">
 								<label for="name">姓名</label>
 						 	</div>
 						 	<div class="input-field col l6 m6 s12">
-						    	<input placeholder="您的電子信箱" id="" type="email" id="emailInput" class="validate" ng-model="order.email"  required="" aria-required="true">
+						    	<input placeholder="您的電子信箱" id="" name="email" type="email" id="emailInput" class="validate" ng-model="order.email"  required="" aria-required="true">
 								<label for="email" >Email</label>
 						 	</div>
 						 	<div class="input-field col l6 m6 s12">
-						    	<input placeholder="您的聯絡電話" id="" type="tel" id="phoneInput" class="validate"ng-model="order.phone"  required="" aria-required="true">
+						    	<input placeholder="您的聯絡電話" id="" name="phone" type="tel" id="phoneInput" class="validate"ng-model="order.phone"  required="" aria-required="true">
 								<label for="phone">電話</label>
 						 	</div>
 						 	<div class="input-field col l6 m6 s12">
-						    	<input placeholder="您的收件地址" id="" type="text" id="addressInput" class="validate" ng-model="order.address"  required="" aria-required="true">
+						    	<input placeholder="您的收件地址" id="" name="address" type="text" id="addressInput" class="validate" ng-model="order.address"  required="" aria-required="true">
 								<label for="address">收件地址</label>
 						 	</div>
 						</div>
 						<div class="center-align">
+							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 							<input type="submit" class="btn red darken-2" value="確認預購">							
 						</div>
 					</form>

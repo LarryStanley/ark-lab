@@ -9,3 +9,5 @@ sftp-config.json
 *.scssc
 
 config/database.php
+
+config/mail.php

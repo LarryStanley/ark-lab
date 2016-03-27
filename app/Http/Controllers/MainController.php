@@ -3,6 +3,8 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Http\Controllers\Controller;
 use DB;
+use Input;
+use Mail;
 
 class MainController extends Controller
 {
@@ -62,6 +64,16 @@ class MainController extends Controller
 
 	public function showPreorder() {
 		return view('order', ["title" => '預購']);
+	}
+
+	public function postPreorder() {
+		Mail::raw('測試使用 Laravel 5 的 Gmail 寄信服務', function($message)
+		{
+		    $message->to('kill.xmurderer@gmail.com');
+		});
+
+		return Input::get("name");
+
 	}
 
 	public function flyProject() {
