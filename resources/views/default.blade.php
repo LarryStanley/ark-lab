@@ -8,9 +8,9 @@
 	<title><?php if(!empty($title)) echo $title." - ";?>ArkLab 多旋翼工坊</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta property="og:title" content="ArkLab 多旋翼工坊 - Open Skyler" />
-	<meta property="og:site_name" content="ArkLab 多旋翼工坊"/>
-	<meta property="og:url" content="http://arklab.tw"/>
+	<meta property="og:title" content="<?php if(!empty($title)) echo $title." - ";?>ArkLab 多旋翼工坊 - Open Skyler" />
+	<meta property="og:site_name" content="<?php if(!empty($title)) echo $title." - ";?> ArkLab 多旋翼工坊"/>
+	<meta property="og:url" content="<?php echo Request::url(); ?>"/>
 	<meta name="description" content="ArkLab 多旋翼工坊 - Open Skyler 開放原始碼｜自造多旋翼 拉近天空與你我的距離">
 	<meta name="keywords" content="開放原始碼 自造多旋翼 多軸 四軸 飛行器 無人機 奶油蒼蠅 Arklab arklab arkLab ArkLab">
 	<meta property="og:description" content="ArkLab 多旋翼工坊 - Open Skyler 開放原始碼｜自造多旋翼 拉近天空與你我的距離" />
