@@ -121,6 +121,12 @@
 				<div style="padding: 20px 20px 20px 20px; margin: 5px 5px 5px 5px; background-color: #eceff1;">
 					{{ $address }}					
 				</div>
+				<?php
+					if ($flyer == 1)
+						echo "您有參與「奶油蒼蠅五折舊換新，送愛到偏鄉計畫」<br> 請於 4/15 日前寄回奶油蒼蠅 2.0 至<br>桃園市桃園區樹林四街九十七巷11號<br>謝謝您的參與！！<br>";
+					if ($flyer == 1 && $type == "奶油蒼蠅 - Butterfly")
+						echo "參與活動後可享奶油蒼蠅五折，折扣後的價錢為<br>NTD".$price/0.9*0.5;
+				?>
 				<br>
 				匯款資訊： <br>
 				戶名：航見科技有限公司<br>

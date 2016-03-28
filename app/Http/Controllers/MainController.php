@@ -67,6 +67,10 @@ class MainController extends Controller
 	}
 
 	public function postPreorder() {
+		$flyer = 0;
+		if(Input::get('flyer'))
+			$flyer = 1;
+
 		DB::table('preorder')->insert(
 			['type' => strip_tags(Input::get('type')),
 			 'version' => strip_tags(Input::get('version')),
@@ -75,7 +79,8 @@ class MainController extends Controller
 			 'email' => strip_tags(Input::get('email')),
 			 'phone' => strip_tags(Input::get('phone')),
 			 'address' => strip_tags(Input::get('address')),
-			 'created_at' => date('Y-m-d H:i:s')
+			 'created_at' => date('Y-m-d H:i:s'),
+			 'flyer' => $flyer
 			]
 		);
 
@@ -107,8 +112,8 @@ class MainController extends Controller
 			'Ark250-C' =>'續航版 - Ark Nano 升級核心、Ark 模組擴充包',		
 			'Ark250-D' =>'旗艦版 - Ark Nano升級核心、Ark模組擴充包、Wifi cam、250軸距轉90軸距機架',
 			'ArkTurbo-A' =>'啟航版 - Arduino Nano核心',
-			'ArkTurbo\-B' =>'蛻變版 - Ark Nano升級核心',
-			'ArkTurbo\-C' =>'續航版 - Ark Nano升級核心、Ark 模組擴充包',
+			'ArkTurbo-B' =>'蛻變版 - Ark Nano升級核心',
+			'ArkTurbo-C' =>'續航版 - Ark Nano升級核心、Ark 模組擴充包',
 			'ArkNano' =>'Ark Nano'
 		];
 
@@ -120,6 +125,7 @@ class MainController extends Controller
 			'email' => strip_tags(Input::get('email')),
 			'price' => (int)strip_tags(Input::get('amount')) * (int)$price[strip_tags(Input::get('version'))] *0.9,
 			'phone' => strip_tags(Input::get('phone')),
+			'flyer' => $flyer,
 			'address' => strip_tags(Input::get('address'))], function($message)
 		{
 		    $message->to(strip_tags(Input::get('email')))->subject('ArkLab新品預購成功通知');
@@ -134,6 +140,7 @@ class MainController extends Controller
 			'name' => strip_tags(Input::get('name')),
 			'email' => strip_tags(Input::get('email')),
 			'phone' => strip_tags(Input::get('phone')),
+			'flyer' => $flyer,
 			'address' => strip_tags(Input::get('address'))]);
 
 	}

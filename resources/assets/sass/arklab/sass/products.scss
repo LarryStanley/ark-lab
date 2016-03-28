@@ -22,7 +22,7 @@ $fence-sm: 'max-width' 768px;
 }
 
 html, body {
-	font-family: 'cwTeXHei', sans-serif ,"微軟正黑體", "微软雅黑", Helvetica, Arial, "メイリオ", "맑은 고딕", sans-serif;
+	font-family: "微軟正黑體", "微软雅黑", Helvetica, Arial;
 	height: 100%;
 	width: 100%;
 
@@ -37,6 +37,10 @@ html, body {
   }
 }
 
+#mark {
+  padding-left: 10px;
+  padding-top: 10px;
+}
 
 .allProducts {
 	width: 100%;
@@ -962,6 +966,7 @@ html, body {
 	}
 	
 	.buyReulst {
+		font-family: "微軟正黑體", "微软雅黑", Helvetica, Arial;
 		background-color:#fafafa;
 	    color: #263238;
 	    padding: 20px 20px 20px 20px;

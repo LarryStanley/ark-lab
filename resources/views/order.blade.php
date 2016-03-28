@@ -93,6 +93,13 @@
 						    	<input placeholder="您的收件地址" id="" name="address" type="text" id="addressInput" class="validate" ng-model="order.address"  required="" aria-required="true">
 								<label for="address">收件地址</label>
 						 	</div>
+						 	<div class="input-field col l6 m6 s12">
+						 		<p>
+							    	<input type="checkbox" id="flyer" class="filled-in" name="flyer"/ value="1">
+									<label for="flyer">我是飛客，我會參與奶油蒼蠅五折舊換新，送愛到偏鄉計畫</label>
+							    </p>
+							    <p style="font-size:14px;">※持有奶油蒼蠅2.0的飛客，可參與舊換新<br>送愛心計畫 以五折取得最新奶油蒼蠅3.0 <br>(此辦法僅適用於購買奶油蒼蠅)</p>	
+						 	</div>
 						</div>
 						<div class="center-align">
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
