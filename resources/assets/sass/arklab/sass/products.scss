@@ -156,6 +156,10 @@ html, body {
 			}
 		}
 
+		@include breakpoint($fence-sm) {
+			height: 80%;
+		}
+
 		h1 {
 			background-color: #43cea2;
 			background: #43cea2; /* fallback for old browsers */
@@ -318,6 +322,10 @@ html, body {
 	.stemCover {
 		height: 50%;
 		width: 100%;
+
+		@include breakpoint($fence-sm) {
+			height: 80%;
+		}
 
 		background-color: #43cea2;
 
@@ -884,6 +892,8 @@ html, body {
 		    }
 
 		    margin-top: 10px;
+		    border: 1px solid;
+		    border-color: rgba(0, 0, 0, 0);
 		}
 
 		.type input[type="radio"]:checked + label { 

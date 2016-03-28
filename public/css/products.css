@@ -297,7 +297,13 @@ h6 {
     font-size: 48px;
   }
 }
-/* line 159, ../../resources/assets/sass/arklab/sass/products.scss */
+@media (max-width: 768px) {
+  /* line 146, ../../resources/assets/sass/arklab/sass/products.scss */
+  .allProducts .preOrderBlock {
+    height: 80%;
+  }
+}
+/* line 163, ../../resources/assets/sass/arklab/sass/products.scss */
 .allProducts .preOrderBlock h1 {
   background-color: #43cea2;
   background: #43cea2;
@@ -309,7 +315,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 169, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 173, ../../resources/assets/sass/arklab/sass/products.scss */
 .allProducts .preOrderBlock hr {
   border: 0;
   height: 1px;
@@ -322,20 +328,20 @@ h6 {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 @media (min-width: 1200px) {
-  /* line 182, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 186, ../../resources/assets/sass/arklab/sass/products.scss */
   .allProducts .block {
     height: 50%;
     width: 50%;
     float: left;
     min-height: 600px;
   }
-  /* line 189, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 193, ../../resources/assets/sass/arklab/sass/products.scss */
   .allProducts h1 {
     font-size: 100px;
   }
 }
 @media (min-width: 992px) {
-  /* line 195, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 199, ../../resources/assets/sass/arklab/sass/products.scss */
   .allProducts .block {
     height: 50%;
     width: 50%;
@@ -344,7 +350,7 @@ h6 {
   }
 }
 @media (min-width: 758px) {
-  /* line 204, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 208, ../../resources/assets/sass/arklab/sass/products.scss */
   .allProducts .block {
     height: 50%;
     width: 50%;
@@ -353,7 +359,7 @@ h6 {
   }
 }
 @media (max-width: 768px) {
-  /* line 213, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 217, ../../resources/assets/sass/arklab/sass/products.scss */
   .allProducts .block {
     height: 50%;
     width: 100%;
@@ -362,7 +368,7 @@ h6 {
   }
 }
 
-/* line 222, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 226, ../../resources/assets/sass/arklab/sass/products.scss */
 .fadeIn {
   -webkit-animation-duration: 500ms;
   -moz-animation-duration: 500ms;
@@ -382,24 +388,24 @@ h6 {
   animation-name: fadeIn;
 }
 
-/* line 226, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 230, ../../resources/assets/sass/arklab/sass/products.scss */
 .page-mask {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* line 232, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 236, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly {
   position: relative;
   width: 100%;
   height: 100%;
 }
-/* line 237, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 241, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly p {
   font-size: 22px;
 }
-/* line 241, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 245, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .introCover {
   height: 80%;
   width: 100%;
@@ -415,30 +421,30 @@ h6 {
   color: #fafafa;
 }
 @media (min-width: 1200px) {
-  /* line 256, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 260, ../../resources/assets/sass/arklab/sass/products.scss */
   .butterfly .introCover h1 {
     font-size: 250px;
   }
 }
 @media (min-width: 992px) {
-  /* line 262, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 266, ../../resources/assets/sass/arklab/sass/products.scss */
   .butterfly .introCover h1 {
     font-size: 200px;
   }
 }
 @media (min-width: 758px) {
-  /* line 268, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 272, ../../resources/assets/sass/arklab/sass/products.scss */
   .butterfly .introCover h1 {
     font-size: 200px;
   }
 }
 @media (max-width: 768px) {
-  /* line 274, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 278, ../../resources/assets/sass/arklab/sass/products.scss */
   .butterfly .introCover h1 {
     font-size: 72px;
   }
 }
-/* line 279, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 283, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .introCover img {
   position: absolute;
   left: 0;
@@ -448,7 +454,7 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 290, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 294, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .computerCompileCover {
   height: 75%;
   width: 100%;
@@ -461,7 +467,7 @@ h6 {
   color: white;
   background-attachment: scroll;
 }
-/* line 302, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 306, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .preOrderButterfly {
   height: 85%;
   width: 100%;
@@ -474,11 +480,11 @@ h6 {
   color: white;
   background-attachment: scroll;
 }
-/* line 313, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 317, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .preOrderButterfly h2 {
   font-size: 72px;
 }
-/* line 318, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 322, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .stemCover {
   height: 50%;
   width: 100%;
@@ -493,19 +499,25 @@ h6 {
   position: relative;
   color: #fafafa;
 }
-/* line 334, ../../resources/assets/sass/arklab/sass/products.scss */
+@media (max-width: 768px) {
+  /* line 322, ../../resources/assets/sass/arklab/sass/products.scss */
+  .butterfly .stemCover {
+    height: 80%;
+  }
+}
+/* line 342, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .detailsIntro {
   padding-top: 280px;
   font-size: 18px;
   position: relative;
 }
-/* line 337, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 345, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .detailsIntro .number {
   line-height: 70px;
   font-size: 72px;
   font-family: HelveticaNeue;
 }
-/* line 346, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 354, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .phoneIntro {
   background-color: #fafafa;
   color: #263238;
@@ -513,18 +525,18 @@ h6 {
   font-size: 18px;
   position: relative;
 }
-/* line 353, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 361, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .phoneIntro .row {
   margin-bottom: 0;
 }
-/* line 358, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 366, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .arknanoIntro {
   background-color: #f5f5f5;
   margin-bottom: 0px;
   padding-bottom: 15px;
   padding-top: 15px;
 }
-/* line 367, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 375, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .otherProducts .dragonfly h3 {
   background: #525252;
   /* fallback for old browsers */
@@ -535,7 +547,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 376, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 384, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .otherProducts .dragonfly hr {
   border: 0;
   height: 1px;
@@ -546,7 +558,7 @@ h6 {
   background: linear-gradient(to left, #000000, #434343);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-/* line 386, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 394, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .otherProducts .crazybull h3 {
   background: #fc00ff;
   /* fallback for old browsers */
@@ -557,7 +569,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 394, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 402, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .otherProducts .crazybull hr {
   border: 0;
   height: 1px;
@@ -568,12 +580,12 @@ h6 {
   background: linear-gradient(to left, #fc00ff, #00dbde);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-/* line 404, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 412, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .otherProducts .arknano {
   background-color: white;
   padding: 0px 0px 0px 0px;
 }
-/* line 405, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 413, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .otherProducts .arknano h3 {
   background: #ff8732;
   background: -moz-linear-gradient(left, #ff8732 0%, #f36f68 100%);
@@ -586,7 +598,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 418, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 426, ../../resources/assets/sass/arklab/sass/products.scss */
 .butterfly .otherProducts .arknano hr {
   border: 0;
   height: 1px;
@@ -600,27 +612,27 @@ h6 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8732', endColorstr='#f36f68', GradientType=1 );
 }
 
-/* line 437, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 445, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly {
   position: relative;
   width: 100%;
   height: 100%;
 }
-/* line 442, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 450, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly p {
   font-size: 22px;
 }
-/* line 446, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 454, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .detailsIntro {
   position: relative;
 }
-/* line 447, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 455, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .detailsIntro .number {
   line-height: 70px;
   font-size: 72px;
   font-family: HelveticaNeue;
 }
-/* line 455, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 463, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .dragonIntro {
   background: #525252;
   /* fallback for old browsers */
@@ -633,18 +645,18 @@ h6 {
   position: relative;
   color: white;
 }
-/* line 466, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 474, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .dragonIntro h2 {
   font-size: 72px;
 }
-/* line 471, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 479, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .moduelIntro {
   background-color: #f5f5f5;
   width: 100%;
   margin-bottom: 0px;
   padding: 10px 0 10px 0;
 }
-/* line 478, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 486, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .moduelIntro .crop {
   background-image: url("http://i.imgur.com/p9Zu2mP.png");
   width: 200px;
@@ -653,7 +665,7 @@ h6 {
   /* Make the background image cover the area of the <div>, and clip the excess */
   background-size: cover;
 }
-/* line 488, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 496, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .preOrder {
   height: 85%;
   width: 100%;
@@ -666,11 +678,11 @@ h6 {
   color: white;
   background-attachment: scroll;
 }
-/* line 499, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 507, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .preOrder h2 {
   font-size: 72px;
 }
-/* line 506, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 514, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .otherProducts .butterfly h3 {
   background-color: #43cea2;
   background: #43cea2;
@@ -682,7 +694,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 515, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 523, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .otherProducts .butterfly hr {
   border: 0;
   height: 1px;
@@ -694,7 +706,7 @@ h6 {
   background: linear-gradient(to left, #43cea2, #185a9d);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-/* line 527, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 535, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .otherProducts .crazybull h3 {
   background: #fc00ff;
   /* fallback for old browsers */
@@ -705,7 +717,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 535, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 543, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .otherProducts .crazybull hr {
   border: 0;
   height: 1px;
@@ -716,12 +728,12 @@ h6 {
   background: linear-gradient(to left, #fc00ff, #00dbde);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-/* line 545, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 553, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .otherProducts .arknano {
   background-color: white;
   padding: 0px 0px 0px 0px;
 }
-/* line 546, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 554, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .otherProducts .arknano h3 {
   background: #ff8732;
   background: -moz-linear-gradient(left, #ff8732 0%, #f36f68 100%);
@@ -734,7 +746,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 559, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 567, ../../resources/assets/sass/arklab/sass/products.scss */
 .dragonfly .otherProducts .arknano hr {
   border: 0;
   height: 1px;
@@ -748,17 +760,17 @@ h6 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8732', endColorstr='#f36f68', GradientType=1 );
 }
 
-/* line 578, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 586, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull {
   position: relative;
   width: 100%;
   height: 100%;
 }
-/* line 583, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 591, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull p {
   font-size: 22px;
 }
-/* line 587, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 595, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .intro {
   background: #fc00ff;
   /* fallback for old browsers */
@@ -772,12 +784,12 @@ h6 {
   position: relative;
 }
 @media (min-width: 1200px) {
-  /* line 599, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 607, ../../resources/assets/sass/arklab/sass/products.scss */
   .crazybull .intro h1 {
     font-size: 200px;
   }
 }
-/* line 604, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 612, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .intro img {
   position: absolute;
   left: 0;
@@ -787,23 +799,23 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 616, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 624, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .type p {
   font-size: 18px;
 }
-/* line 621, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 629, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .detailsIntro {
   padding-top: 280px;
   font-size: 18px;
   position: relative;
 }
-/* line 624, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 632, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .detailsIntro .number {
   line-height: 70px;
   font-size: 72px;
   font-family: HelveticaNeue;
 }
-/* line 632, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 640, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .computerCompileCover {
   height: 75%;
   width: 100%;
@@ -816,14 +828,14 @@ h6 {
   color: white;
   background-attachment: scroll;
 }
-/* line 644, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 652, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .moduelIntro {
   background-color: #f5f5f5;
   width: 100%;
   margin-bottom: 0px;
   padding: 10px 0 10px 0;
 }
-/* line 651, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 659, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .moduelIntro .crop {
   background-image: url("http://i.imgur.com/p9Zu2mP.png");
   width: 200px;
@@ -832,7 +844,7 @@ h6 {
   /* Make the background image cover the area of the <div>, and clip the excess */
   background-size: cover;
 }
-/* line 661, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 669, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .preOrder {
   height: 85%;
   width: 100%;
@@ -845,11 +857,11 @@ h6 {
   color: white;
   background-attachment: scroll;
 }
-/* line 672, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 680, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .preOrder h2 {
   font-size: 72px;
 }
-/* line 680, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 688, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .otherProducts .butterfly h3 {
   background-color: #43cea2;
   background: #43cea2;
@@ -861,7 +873,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 689, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 697, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .otherProducts .butterfly hr {
   border: 0;
   height: 1px;
@@ -873,7 +885,7 @@ h6 {
   background: linear-gradient(to left, #43cea2, #185a9d);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-/* line 701, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 709, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .otherProducts .dragonfly h3 {
   background: #525252;
   /* fallback for old browsers */
@@ -884,7 +896,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 710, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 718, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .otherProducts .dragonfly hr {
   border: 0;
   height: 1px;
@@ -895,12 +907,12 @@ h6 {
   background: linear-gradient(to left, #000000, #434343);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-/* line 719, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 727, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .otherProducts .arknanoIntro {
   background-color: white;
   padding: 0px 0px 0px 0px;
 }
-/* line 720, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 728, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .otherProducts .arknanoIntro h3 {
   background: #ff8732;
   background: -moz-linear-gradient(left, #ff8732 0%, #f36f68 100%);
@@ -913,7 +925,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 733, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 741, ../../resources/assets/sass/arklab/sass/products.scss */
 .crazybull .otherProducts .arknanoIntro hr {
   border: 0;
   height: 1px;
@@ -927,17 +939,17 @@ h6 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8732', endColorstr='#f36f68', GradientType=1 );
 }
 
-/* line 753, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 761, ../../resources/assets/sass/arklab/sass/products.scss */
 .arknano {
   position: relative;
   width: 100%;
   height: 100%;
 }
-/* line 758, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 766, ../../resources/assets/sass/arklab/sass/products.scss */
 .arknano p {
   font-size: 18px;
 }
-/* line 762, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 770, ../../resources/assets/sass/arklab/sass/products.scss */
 .arknano .intro {
   background: #ff8732;
   background: -moz-linear-gradient(left, #ff8732 0%, #f36f68 100%);
@@ -951,21 +963,21 @@ h6 {
   color: white;
 }
 @media (min-width: 1200px) {
-  /* line 777, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 785, ../../resources/assets/sass/arklab/sass/products.scss */
   .arknano .intro h1 {
     font-size: 200px;
   }
 }
-/* line 782, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 790, ../../resources/assets/sass/arklab/sass/products.scss */
 .arknano .intro p {
   font-size: 22px;
 }
-/* line 787, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 795, ../../resources/assets/sass/arklab/sass/products.scss */
 .arknano .otherProducts {
   background-color: #fafafa;
   padding: 10px 0 10px 0;
 }
-/* line 791, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 799, ../../resources/assets/sass/arklab/sass/products.scss */
 .arknano .otherProducts .butterfly {
   background-color: #43cea2;
   background: #43cea2;
@@ -977,7 +989,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 800, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 808, ../../resources/assets/sass/arklab/sass/products.scss */
 .arknano .otherProducts .dragonfly {
   background: #525252;
   /* fallback for old browsers */
@@ -988,7 +1000,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 809, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 817, ../../resources/assets/sass/arklab/sass/products.scss */
 .arknano .otherProducts .crazybull {
   background: #fc00ff;
   /* fallback for old browsers */
@@ -999,7 +1011,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 818, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 826, ../../resources/assets/sass/arklab/sass/products.scss */
 .arknano .preOrder {
   height: 65%;
   width: 100%;
@@ -1012,19 +1024,19 @@ h6 {
   color: white;
   background-attachment: scroll;
 }
-/* line 829, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 837, ../../resources/assets/sass/arklab/sass/products.scss */
 .arknano .preOrder .page-mask {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* line 835, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 843, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder {
   position: relative;
   height: 100%;
   width: 100%;
   overflow: auto;
 }
-/* line 841, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 849, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro {
   background: #16A085;
   /* fallback for old browsers */
@@ -1039,20 +1051,20 @@ h6 {
   overflow: auto;
 }
 @media (min-width: 1200px) {
-  /* line 841, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 849, ../../resources/assets/sass/arklab/sass/products.scss */
   .preOrder .intro {
     width: 100%;
   }
 }
-/* line 859, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 867, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro p {
   font-size: 22px;
 }
-/* line 863, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 871, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro .type input[type="radio"] {
   display: none;
 }
-/* line 867, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 875, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro .type label {
   background-color: #e0e0e0;
   padding: 20px 10px 10px 10px;
@@ -1065,38 +1077,40 @@ h6 {
   width: 180px;
   height: 180px;
   margin-top: 10px;
+  border: 1px solid;
+  border-color: transparent;
 }
 @media (max-width: 768px) {
-  /* line 867, ../../resources/assets/sass/arklab/sass/products.scss */
+  /* line 875, ../../resources/assets/sass/arklab/sass/products.scss */
   .preOrder .intro .type label {
     width: 120px;
     height: 120px;
   }
 }
-/* line 889, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 899, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro .type input[type="radio"]:checked + label {
   background-color: #ffffff;
   border: 1px solid;
   border-color: #0288d1;
 }
-/* line 895, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 905, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro .type input[type="radio"]:checked + label:before {
   display: none;
 }
-/* line 899, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 909, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro .type input[type="radio"]:checked + label:after {
   display: none;
 }
-/* line 903, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 913, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro .type input[type="radio"] + label:before, .preOrder .intro [type="radio"] + label:after {
   display: none;
 }
-/* line 908, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 918, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro .details label {
   font-size: 14px;
   color: #eeeeee;
 }
-/* line 914, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 924, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro .butterflyText {
   background-color: #43cea2;
   background: #43cea2;
@@ -1108,7 +1122,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 923, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 933, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro .dragonflyText {
   background: #525252;
   /* fallback for old browsers */
@@ -1119,7 +1133,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 932, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 942, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro .crazybullText {
   background: #fc00ff;
   /* fallback for old browsers */
@@ -1130,7 +1144,7 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 940, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 950, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .intro .arknanoText {
   background: #ff8732;
   background: -moz-linear-gradient(left, #ff8732 0%, #f36f68 100%);
@@ -1143,13 +1157,13 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 954, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 964, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .buyReulst {
   background-color: #fafafa;
   color: #263238;
   padding: 20px 20px 20px 20px;
 }
-/* line 960, ../../resources/assets/sass/arklab/sass/products.scss */
+/* line 970, ../../resources/assets/sass/arklab/sass/products.scss */
 .preOrder .buyResultBlock {
   background-color: #eeeeee;
   border-radius: 5px;

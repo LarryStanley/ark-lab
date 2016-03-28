@@ -21,7 +21,7 @@
 								<div class="col l3 m6 s6 center-align">
 									<input type="radio" id="butterflyRadio" ng-model="order.type" value="butterfly" name="type">
 								    <label for="butterflyRadio">
-										<img src="http://i.imgur.com/bQZHfeZ.png" alt="" width="75%">
+										<img src="http://i.imgur.com/bQZHfeZ.png" alt="" width="70%">
 								    	<div class="butterflyText">
 								    		Butterfly
 								    	</div>
@@ -30,7 +30,7 @@
 								<div class="col l3 m6 s6 center-align">
 									<input type="radio" id="dragonflyRadio" ng-model="order.type" value="dragonfly" name="type" checked>
 								    <label for="dragonflyRadio">
-								    	<img src="http://i.imgur.com/3b7ssx4.png" alt="" width="75%">
+								    	<img src="http://i.imgur.com/3b7ssx4.png" alt="" width="70%">
 								    	<div class="dragonflyText">
 									    	Dragonfly
 								    	</div>
