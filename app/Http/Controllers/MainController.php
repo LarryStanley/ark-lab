@@ -51,7 +51,7 @@ class MainController extends Controller
 	}
 
 	public function showDragonfly() {
-		return view("dragonfly", ["title" => "飛龍在天", "http://i.imgur.com/MyZ42Uq.png"]);
+		return view("dragonfly", ["title" => "飛龍在天", "ogImage" => "http://i.imgur.com/MyZ42Uq.png"]);
 	}
 
 	public function showCrazybull() {
