@@ -14,7 +14,7 @@
 				</div>
 				<div class="row">
 					<div class="col m7 s12">
-						<p>{!! nl2br(e($plan->content)) !!}</p>
+						<p>{!! html_entity_decode(nl2br(e($plan->content))) !!}</p>
 					</div>
 					<div class="col m5 s12">
 						<h5>完成進度</h5>
