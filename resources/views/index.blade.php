@@ -37,7 +37,7 @@
 		</nav>
 	</div>
 	<div class="slider">
-		<ul style="height: 100% !important; position: relative;">
+		<!--<ul style="height: 100% !important; position: relative;">
 			@foreach($sliders as $slider)
 			<li style="background: url({{ $slider->image }}) no-repeat center center fixed; background-size: cover; height: 100% !important; position: relative; ">
 				<div class="center">
@@ -53,7 +53,17 @@
 		</ul>
  			@if(Auth::check())
 				<button data-target='editBlockModal' class='editButton waves-effect waves-light btn modal-trigger cyan darken-2' ng-click="index.showSliderEditor()">編輯橫幅</button>
-			@endif
+			@endif !-->
+		<ul style="position: relative; height: 100% !important; width: 100%; left: 0px; margin-top: 0;" class="unslider-wrap unslider-carousel">
+						<li style="position: relative; height: 100% !important; width: 100%; background: url(&quot;http://i.imgur.com/tuixvZE.jpg&quot;) 50% 50% / cover no-repeat fixed;" class="unslider-active">
+				<div class="center">
+					<h2>Ark Lab 多旋翼工坊</h2>
+					<hr>
+					<p style="font-size: 24px">開放原始碼｜自造多旋翼<br>
+拉近天空與你我的距離</p>
+									</div>
+			</li>
+					</ul>
 	</div>
 	<div class="block">
 		@foreach($blocks as $block)
@@ -209,7 +219,7 @@
 	<script src="/js/sortable.js"></script>
 	<script src="/js/index.js"></script>
 	<script>
-		jQuery(document).ready(function($) {
+		/*jQuery(document).ready(function($) {
 			$('.slider').unslider({
 				nav: false,
 				arrows: {
@@ -219,6 +229,6 @@
 				}
 
 			});
-		})
+		})*/
 	</script>
 @stop

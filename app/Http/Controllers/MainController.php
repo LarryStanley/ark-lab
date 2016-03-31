@@ -39,7 +39,7 @@ class MainController extends Controller
 	public function planDetails($url) {
 		$data = DB::table("ark_plan")->where("url", $url)->first();
 
-		return view("plansDetails", ["title" => $data->title, "plan" => $data]);
+		return view("plansDetails", ["title" => $data->title, "plan" => $data, "ogImage" => $data->image]);
 	}
 
 	public function products() {
