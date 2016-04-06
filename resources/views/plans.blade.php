@@ -37,7 +37,7 @@
 						</div>
 						<div class="card-reveal">
 							<span class="card-title grey-text text-darken-4">{{ $plan->title }}<i class="material-icons right">close</i></span>
-							<p>{{ $plan->content }}
+							<p>{!! html_entity_decode(nl2br(e($plan->content))) !!}
 							</p>
 						</div>
 					</div>
