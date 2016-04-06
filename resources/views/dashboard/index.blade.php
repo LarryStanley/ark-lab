@@ -31,7 +31,7 @@
 									</li>
 									<li>Email: <a href="mailto:{{ $order->email }}">{{ $order->email }}</a></li>
 									<li>聯絡電話: {{ $order->phone }}</li>
-									<li>寄送地址: {{ $order->address }}</li>
+									<li>寄送地址: <a href="http://maps.google.com/?q={{ $order->address }}" target="_blank">{{ $order->address }}</a></li>
 									<li>訂購時間: {{ $order->created_at }}</li>
 								</ul>
 				            </div>
