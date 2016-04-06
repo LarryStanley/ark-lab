@@ -2,7 +2,7 @@
 @section("head")
     <style>
         html,body {
-            background-color: #F44336;
+            background-color: #FFFFFF;
         }
 
         .center {
@@ -27,12 +27,12 @@
                 <div class="card-title">你準備起飛了嗎？</div>
                 {!! csrf_field() !!}
 
-                <div>
+                <div style="text-align: left">
                     Email
                     <input type="email" name="email" autocomplete="off"  value="{{ old('email') }}">
                 </div>
 
-                <div>
+                <div style="text-align: left">
                     密碼
                     <input type="password" autocomplete="off"  name="password" id="password">
                 </div>

@@ -29,6 +29,7 @@ Route::get('/plans/{url}', "MainController@planDetails");
 Route::get('/flyProject', "MainController@flyProject");
 
 Route::get('login', 'Auth\AuthController@getLogin');
+Route::get('logout', 'Auth\AuthController@getLogout');
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
@@ -37,13 +38,17 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('/home', function() {
-	return redirect('/');
+	return redirect('/dashboard');
 });
 
 Route::get('/design', function() {
 	return view("design", ["title" => "網站規劃"]);
 });
 
+
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
+	Route::get('/', 'AdminController@index');
+});
 
 Route::group(['prefix' => 'api'], function() {
 	Route::group(['prefix' => 'index_block'], function() {

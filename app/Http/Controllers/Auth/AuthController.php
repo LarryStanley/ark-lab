@@ -63,7 +63,7 @@ class AuthController extends Controller
         ]);
     }
 
-    protected $redirectPath = '/';
+    protected $redirectPath = '/dashboard';
     protected $loginPath = '/auth/login';
 
 }
