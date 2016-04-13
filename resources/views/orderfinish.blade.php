@@ -48,7 +48,7 @@
 								如有任何相關問題 請洽付服務專線：<br>
 								夏傳傑 <br>
 								Mobile:0986008010 <br>
-								mail: <a href="mailto:rjimmyxia0329@gmail.com">rjimmyxia0329@gmail.com</a><br>
+								mail: <a href="mailto:jimmyxia0329@gmail.com">jimmyxia0329@gmail.com</a><br>
 								<div class="right-align" style="margin-top: 40px;">
 									<img src="/images/mark.png" alt="" width="150px">									
 								</div>

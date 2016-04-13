@@ -137,7 +137,7 @@
 				如有任何相關問題 請洽付服務專線：<br>
 				夏傳傑 <br>
 				Mobile:0986008010 <br>
-				mail: <a href="mailto:rjimmyxia0329@gmail.com">jimmyxia0329@gmail.com</a>	  
+				mail: <a href="mailto:jimmyxia0329@gmail.com">jimmyxia0329@gmail.com</a>	  
 		<br><br>
 
 			</div>
