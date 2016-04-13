@@ -46,9 +46,9 @@
 								</div>
 								您可於 {{ $email }} 收取確認信 <br>
 								如有任何相關問題 請洽付服務專線：<br>
-								Peter <br>
-								Mobile:0911-023-345  <br>
-								mail: <a href="mailto:redhut0000@gmail.com">redhut0000@gmail.com</a><br>
+								夏傳傑 <br>
+								Mobile:0986008010 <br>
+								mail: <a href="mailto:rjimmyxia0329@gmail.com">rjimmyxia0329@gmail.com</a><br>
 								<div class="right-align" style="margin-top: 40px;">
 									<img src="/images/mark.png" alt="" width="150px">									
 								</div>

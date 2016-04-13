@@ -135,9 +135,9 @@
 				1090-940-006596<br><br>
 				
 				如有任何相關問題 請洽付服務專線：<br>
-				Peter <br>
-				Mobile:0911-023-345  <br>
-				mail: <a href="mailto:redhut0000@gmail.com">redhut0000@gmail.com</a>	  
+				夏傳傑 <br>
+				Mobile:0986008010 <br>
+				mail: <a href="mailto:rjimmyxia0329@gmail.com">jimmyxia0329@gmail.com</a>	  
 		<br><br>
 
 			</div>
