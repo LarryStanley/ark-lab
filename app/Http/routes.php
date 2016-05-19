@@ -21,7 +21,9 @@ Route::get('/products/crazybull', "MainController@showCrazybull");
 Route::get('/products/arknano', "MainController@showArknano");
 //Route::get('/products/preorder', "MainController@showPreorder");
 //Route::post('/products/preorder', "MainController@postPreorder");
-
+Route::get('/trade-love', function() {
+	return view("trade-love", ["title" => "換換愛 X 大專生洄游農村"]);
+});
 
 Route::get('/documents', "MainController@documents");
 Route::get('/plans', "MainController@plans");
@@ -34,8 +36,8 @@ Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-//Route::get('auth/register', 'Auth\AuthController@getRegister');
-//Route::post('auth/register', 'Auth\AuthController@postRegister');
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 Route::get('/home', function() {
 	return redirect('/dashboard');
@@ -48,6 +50,8 @@ Route::get('/design', function() {
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 	Route::get('/', 'AdminController@index');
+	Route::get('/order', 'AdminController@showOrder');
+	Route::post('/newOrder', 'AdminController@postNewOrder');
 });
 
 Route::group(['prefix' => 'api'], function() {
