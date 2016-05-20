@@ -50,8 +50,22 @@ Route::get('/design', function() {
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 	Route::get('/', 'AdminController@index');
-	Route::get('/order', 'AdminController@showOrder');
-	Route::post('/newOrder', 'AdminController@postNewOrder');
+	Route::get('/source', function() {
+		return view("dashboard/source", ["title" => "開源資料"]);
+	});
+
+	Route::get('/history', 'CustomerController@buyHistory');
+
+	Route::post('/new-buy', 'CustomerController@newBuy');
+
+	//admin function
+
+	Route::get('/new-order', function() {
+		return view("dashboard/new-order", ["title" => "新增出貨"]);
+	});
+	Route::post('/new-order', 'AdminController@newOrder');
+	Route::get('/orders', 'AdminController@showOrders');
+
 });
 
 Route::group(['prefix' => 'api'], function() {
