@@ -15,8 +15,12 @@ class AdminController extends Controller
 		return view('dashboard/index', ["preOrderData" => $data]);
 	}
 
-	public function showOrder() {
-		return view('dashboard/order', ["ngApp" => 'orderApp', 'ngController' => 'OrderController as order']);
+	public function showNewOrderCategory() {
+		return view('dashboard/new-order-category', ["title" => "出貨分流"]);
+	}
+
+	public function showNewOrder() {
+		return view("dashboard/new-order", ["title" => "新增出貨"]);
 	}
 
 	public function newOrder() {

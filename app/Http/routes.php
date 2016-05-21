@@ -60,11 +60,12 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 
 	//admin function
 
-	Route::get('/new-order', function() {
-		return view("dashboard/new-order", ["title" => "新增出貨"]);
+	Route::group(['middleware' => 'worker'], function() {
+		Route::get('/new-order-category', 'AdminController@showNewOrderCategory');
+		Route::get('/new-order', 'AdminController@showNewOrder');
+		Route::post('/new-order', 'AdminController@newOrder');
+		Route::get('/orders', 'AdminController@showOrders');
 	});
-	Route::post('/new-order', 'AdminController@newOrder');
-	Route::get('/orders', 'AdminController@showOrders');
 
 });
 

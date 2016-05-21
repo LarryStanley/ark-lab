@@ -75,7 +75,7 @@
 			</div>
 		</a>
 		@endforeach
-		@if(Auth::check())
+		@if(Auth::user()->role('admin'))
 			<button data-target='editBlockModal' class='editButton waves-effect waves-light btn modal-trigger red darken-2' ng-click="index.showBlockEditor()">編輯區塊</button>
 		@endif
 	</div>
@@ -104,7 +104,7 @@
 	  </div>
 	</footer>!-->
 	
-	@if(Auth::check())
+	@if(Auth::user()->role('admin'))
 		<div id="editBlockModal" class="modal modal-fixed-footer" style="width: 90%;">
 		    <div class="modal-content">
 		      <h4>編輯區塊</h4>

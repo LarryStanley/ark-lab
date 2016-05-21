@@ -31,6 +31,22 @@
 						    <input type="number" name="number" placeholder="輸入出貨數量" value="1">
 						</div>
 					</div>
+					<div class="two fields">
+						<div class="field">
+							<label for="">出貨種類</label>
+							<select name="" id="" class="ui fluid dropdown">
+								<option value="經銷">經銷</option>
+								<option value="自銷">自銷</option>
+							</select>
+						</div>
+						<div class="field">
+							<label for="">出貨單位</label>
+							<select name="" id="" class="ui fluid dropdown">
+								<option value="露天">露天</option>
+								<option value="上課用">上課用</option>
+							</select>
+						</div>
+					</div>
 					<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 					<button class="ui button" type="submit">送出</button>
 				</form>
