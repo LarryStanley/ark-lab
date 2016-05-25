@@ -30,6 +30,10 @@ Route::get('/plans', "MainController@plans");
 Route::get('/plans/{url}', "MainController@planDetails");
 Route::get('/flyProject', "MainController@flyProject");
 
+Route::get('/sources', function() {
+	return redirect("https://goo.gl/xCHPkD");
+});
+
 Route::get('login', 'Auth\AuthController@getLogin');
 Route::get('logout', 'Auth\AuthController@getLogout');
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -58,15 +62,12 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 
 	Route::post('/new-buy', 'CustomerController@newBuy');
 
-	//admin function
-
-	Route::group(['middleware' => 'worker'], function() {
+	Route::group(["prefix" => "order", 'middleware' => 'worker'], function() {
 		Route::get('/new-order-category', 'AdminController@showNewOrderCategory');
 		Route::get('/new-order', 'AdminController@showNewOrder');
 		Route::post('/new-order', 'AdminController@newOrder');
 		Route::get('/orders', 'AdminController@showOrders');
 	});
-
 });
 
 Route::group(['prefix' => 'api'], function() {

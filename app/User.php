@@ -47,4 +47,14 @@ class User extends Model implements AuthenticatableContract,
 
         return true;
     }
+
+    public function userName($id) {
+         $userData = DB::table("users")->where("id", $id)->first();
+        
+        if (empty($userData)) {
+            return "Null";
+        }
+
+        return $userData->name;
+    }
 }

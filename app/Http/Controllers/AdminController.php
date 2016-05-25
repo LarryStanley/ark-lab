@@ -28,28 +28,26 @@ class AdminController extends Controller
 		$results = [];
 
 		for ($i=0; $i < Input::get("number"); $i++) { 
-			$randomString = substr(str_shuffle("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 8);
+			$englishString = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 2);
+			$numberString = substr(str_shuffle("0123456789"), 0, 6);
 			DB::table("orders")->insert([
 				'type'			=> Input::get('productType'),
 				'shipped_time'	=> date('Y-m-d H:i:s'),
-				'order_number'	=> $randomString,
+				'order_number'	=> $englishString.$numberString,
 				'register'		=> false,
 				'user_id'		=> -1,
 				'created_at'	=> date('Y-m-d H:i:s'),
 				'updated_at'	=> date('Y-m-d H:i:s'),
 				'recorder_id'	=> Auth::user()->id
 			]);
-			array_push($results, $randomString);
+			array_push($results, $englishString.$numberString);
 		}
 
 		return response()->json($results);
 	}
 
 	public function showOrders() {
-		$data = DB::table("orders")
-					->leftJoin('users', 'orders.user_id', '=', 'users.id')
-					->select('orders.*', 'users.name')
-					->get();
+		$data = DB::table("orders")->get();
 
 		//return response()->json($data);
 		return view('/dashboard/orders', ['title' => '出貨記錄', 'data' => $data]);
