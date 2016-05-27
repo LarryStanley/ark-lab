@@ -71,9 +71,6 @@
 			</div>
 		</a>
 		@endforeach
-		@if(Auth::user()->role('admin'))
-			<button data-target='editBlockModal' class='editButton waves-effect waves-light btn modal-trigger red darken-2' ng-click="index.showBlockEditor()">編輯區塊</button>
-		@endif
 	</div>
 	<!--<footer class="page-footer blue-grey darken-1" style="margin-top: 0; position: absolute; top: 100%; width: 100%">
 	  <div class="container">
@@ -99,105 +96,6 @@
 	    </div>
 	  </div>
 	</footer>!-->
-	
-	@if(Auth::user()->role('admin'))
-		<div id="editBlockModal" class="modal modal-fixed-footer" style="width: 90%;">
-		    <div class="modal-content">
-		      <h4>編輯區塊</h4>
-		      <hr>	
-		      <table class="highlight beSorted">
-		      	<thead>
-		      		<tr>
-		      			<td>標題</td>
-		      			<td>說明文字</td>
-		      			<td>背景圖片</td>
-		      			<td>連結</td>
-		      			<td>刪除</td>
-		      		</tr>
-		      	</thead>
-		      	<tbody ui-sortable ng-model="index.blocks">
-	      			<tr ng-repeat="(key,block) in index.blocks" >
-	      				<td>
-							<input placeholder="標題" type="text" class="validate" ng-model="block.title" style="width:100px;">
-	      				</td>
-	      				<td>
-				         	<textarea row="2" ng-model="block.illustration" class="materialize-textarea"></textarea>
-	      				</td>
-	      				<td>
-	      					<img src="[[ block.image ]]" alt="" style="height: 100px">
-	      				</td>
-	      				<td>
-							<input placeholder="連結" type="text" class="validate" ng-model="block.link" style="width:100px;"><br>
-	      					<a href="[[ block.link ]]" target="_blank">預覽連結</a>
-	      				</td>
-	      				<td>
-	      					<button class="btn-floating waves-effect waves-light red darken-2" ng-click="index.deleteBlock(key)">
-		      					<i class="ion-ios-trash-outline"></i>
-		      				</button>
-		      			</td>
-	      			</tr>
-		      	</tbody>
-		      </table>
-		      <h5>新增區塊</h5>
-  		      <hr>
-		      <form ng-submit="index.newBlock()" method="POST" enctype="multipart/form-data" id="blockForm">
-		      	<div class="row">
-		      		<div class="col m4 s12 input-field">
-						<input name="title" id="blockNewTitle" placeholder="標題" type="text" class="validate" ng-model="index.newTitle" >
-		      		</div>
-		      		<div class="col m4 s12 input-field">
-						<textarea row="2" placeholder="說明文字" class="materialize-textarea" type="text" class="validate" ng-model="index.newIllustration" ></textarea>
-		      		</div>
-		      		<div class="col m4 s12 input-field">
-						<input placeholder="連結" type="text" class="validate" ng-model="index.newLink"><br>
-		      		</div>
-		      		<div class="col m8 s12 input-field">
-			      		<h6>背景圖片</h6>
-		      			<div class="row">
-		      				<div class="col m4 s12">
-			      				<button class="btn waves-effect cyan darken-2" type="file" ngf-select="uploadFiles($file, $invalidFiles)" accept="image/*" ngf-max-height="6000" ngf-max-size="10MB">
-							    	選擇檔案
-							    </button>
-		      				</div>
-		      				<div class="col m4 s12">
-		      					<div style="font:smaller; display: inline-block;">[[f.name]] [[errFile.name]] [[errFile.$error]] [[errFile.$errorParam]]
-							    	<div class="progress" ng-show="f.progress >= 0">
-										<div class="determinate" style="width:[[f.progress]]%"></div>
-							        </div>
-							  	</div>     
-		      				</div>
-							[[errorMsg]]
-							<div class="col m12 s12">
-								<div class="preview fadeIn">
-									<div class="preloader-wrapper small active" id="previewLoading" style="display:none">
-									    <div class="spinner-layer spinner-green-only">
-									    	<div class="circle-clipper left">
-										        <div class="circle"></div>
-										    </div>
-										    <div class="gap-patch">
-										        <div class="circle"></div>
-									      	</div>
-									      	<div class="circle-clipper right">
-									        	<div class="circle"></div>
-									      	</div>
-									    </div>
-									  </div>
-									<img src="[[ index.imageName ]]" alt="" style="height: 100px; display: none">
-								</div>
-							</div>
-		      			</div>
-		      		</div>
-	      		    {!! csrf_field() !!}
-				    <button class="btn red darken-2 waves-effect" type="submit" style="float: right" >新增</button>
-		      	</div>
-		      </form>
-		    </div>
-		    <div class="modal-footer">
-		      <a href="#!" class="modal-action waves-effect waves-green btn-flat" ng-click="index.saveBlock()" onclick="Materialize.toast('儲存中', 4000)">確定</a>
-		      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="index.cancelBlock()">取消</a>
-		    </div>
-	  </div>
-  	@endif
           
 @stop
 
