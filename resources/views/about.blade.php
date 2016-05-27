@@ -1,6 +1,7 @@
 @extends("default")
 
 @section("head")
+	<link rel="stylesheet" href="/css/about.css">
 @stop
 
 @section("body")
@@ -64,9 +65,6 @@
 	@include("footer")
 	
 	@section("javascript")
-		<script>
-			loadCSS("/css/about.css");
-		</script>
 		<script src="/js/ng-file-upload.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
