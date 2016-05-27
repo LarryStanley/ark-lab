@@ -17,6 +17,9 @@
 	<meta property="og:image" content='<?php if(!empty($ogImage)) echo $ogImage; else echo "http://arklab.tw/images/fbimage.png";?>'>
 	<meta property="og:type" content="article" />
 
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.4/css/materialize.min.css">
 	
 	@yield("head")
 
@@ -24,13 +27,6 @@
 <body <?php if(!empty($ngApp)) echo "ng-app='".$ngApp."'";?> <?php if(!empty($ngController)) echo 'ng-controller="'.$ngController.'"';?>>
 	
 	@yield("body")
-
-	<script>
-		!function(e){"use strict";var n=function(n,t,o){function i(e){return a.body?e():void setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
-		loadCSS('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
-		loadCSS('http://fonts.googleapis.com/icon?family=Material+Icons');
-		loadCSS('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.4/css/materialize.min.css');
-	</script>
 
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
