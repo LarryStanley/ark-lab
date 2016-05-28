@@ -12,7 +12,7 @@
 				<h1>即刻預購</h1>
 				<hr style="width: 40%;">	
 				<p>10% off</p>
-				<a href="/products/preorder" class="btn red darken-2">前往預購</a>
+				<a href="http://class.ruten.com.tw/user/index00.php?s=dreamwalker1226" class="btn red darken-2">前往預購</a>
 			</div>
 		</div>
 		<div class="butterfly valign-wrapper block">

@@ -84,7 +84,7 @@
 				<div class="container">
 					<div class="valign center-align">
 						<h2>Biggest Make Perfect</h2>
-						<a href="/products/preorder" style="font-size: 22px;">立即預購</a> <br><br>
+						<a href="http://class.ruten.com.tw/user/index00.php?s=dreamwalker1226" style="font-size: 22px;">立即預購</a> <br><br>
 					</div>
 				</div>
 			</div>
