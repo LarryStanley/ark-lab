@@ -8,14 +8,14 @@
 		@include("dashboard/menu")
 		<div class="ui grid">
 			<div class="four wide column">
-				@include("dashboard/orderMenu")
+				@include("dashboard/orders/orderMenu")
 			</div>
 			<div class="twelve wide stretched column">
 				<p>新增出貨種類</p>
 				<div class="ui top attached tabular menu">
 					<a class="item active" data-tab="sell">經銷</a>
 					<a class="item" data-tab="self">自銷</a>
-
+					
 				</div>
 				<div class="ui bottom attached tab segment active" data-tab="sell">
 					<form action="/dashboard/new-order" class="ui form" method="POST" id="newOrderForm">
@@ -28,7 +28,12 @@
 							</div>
 							<div class="field">
 								<label>日期</label>
-								<input type="text" >
+								<div class="ui calendar" id="dateInput">
+								    <div class="ui input left icon">
+								    	<i class="calendar icon"></i>
+								    	<input type="text" placeholder="Date/Time">
+								    </div>
+								</div>
 							</div>
 						</div>
 						
@@ -79,6 +84,10 @@
 				}
 			});
 			event.preventDefault();
+		});
+
+		$("#dateInput").calendar({
+			type: 'date'
 		});
 	 });
 	</script>

@@ -11,9 +11,8 @@
 	</a>
 	@if(Auth::user()->role('worker'))
 	<a href="/dashboard/order/new-order-category" class="item" id="order">管理出貨</a>
-	@endif
-	@if(Auth::user()->role('admin'))
-	<a href="" class="item">更改權限</a>
+	<a href="/dashboard/business/new-business" class="item" id="business">管理業務</a>
+
 	@endif
 	<div class="right menu">
 		<a class="ui item" href="/auth/logout">

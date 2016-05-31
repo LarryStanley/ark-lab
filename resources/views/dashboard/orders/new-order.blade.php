@@ -8,7 +8,7 @@
 		@include("dashboard/menu")
 		<div class="ui grid">
 			<div class="four wide column">
-				@include("dashboard/orderMenu")
+				@include("dashboard/orders/orderMenu")
 			</div>
 			<div class="twelve wide stretched column">
 				<div class="ui segments">
