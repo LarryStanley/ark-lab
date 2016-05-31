@@ -71,10 +71,13 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 		Route::post('/new-unit', 'AdminController@addNewUnit');
 		Route::delete('/delete-unit', 'AdminController@deleteUnit');
 		Route::get('/products', 'AdminController@showProducts');
+		Route::post('/products/updateStock', 'AdminController@updateStock');
+		Route::post('/products/new-product', 'AdminController@newProduct');
 	});
 
 	Route::group(["prefix" => "business", 'middleware' => 'worker'], function() {
 		Route::get('/new-business', 'AdminController@showNewBusiness');
+		Route::post('/new-business', 'AdminController@postNewBusiness');
 	});
 });
 

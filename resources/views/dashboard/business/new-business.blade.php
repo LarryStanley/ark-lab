@@ -12,7 +12,7 @@
 			</div>
 			<div class="twelve wide stretched column">
 				<div class="ui segment">
-					<form action="" class="ui form">
+					<form action="/dashboard/business/new-business" method="POST" class="ui form">
 						<div class="two fields">
 							<div class="field">
 								<label>訂單編號</label>
@@ -120,6 +120,31 @@
 							<label>講師安排</label>
 							<input type="text" placeholder="講師安排">
 						</div>
+						<h4 class="ui dividing header">訂單內容</h4>
+						<div class="ui segment">
+							<div class="ui dividing">清單</div>
+							<div id="productResults" class="ui relaxed divided list">
+							</div>						
+						</div>
+						<div class="fields">
+							<div class="ten wide field">
+								<label for="">商品內容</label>
+								<select name="" id="productType" class="ui dropdown">
+									@foreach($products as $product)
+										<option value="{{ $product->id }}">{{ $product->name }}</option>
+									@endforeach
+								</select>
+							</div>
+							<div class="four wide field">
+								<label for="">數量</label>
+								<div class="ui action input">
+									<input type="number" placeholder="數量" value="1" id="productAmount">
+									<button class="ui button" id="addProduct">
+										<i class="icon add"></i>
+									</button>
+								</div>
+							</div>
+						</div>
 						<input type="submit" class="ui button primary" value="新增">
 					</form>
 				</div>
@@ -138,7 +163,54 @@
 		$('.ui.checkbox').checkbox();
 
 		$(".date").calendar({
-			type: 'date'
+			type: 'date',
+			monthFirst: false,
+			formatter: {
+			date: function (date, settings) {
+				if (!date) return '';
+			  		var day = date.getDate();
+			  		var month = date.getMonth() + 1;
+					var year = date.getFullYear();
+					return year + '-' + month + '-' + day;
+				}
+			}
+		});
+
+		var productCount = 0;
+		var productResults = [];
+
+		$("#addProduct").click(function() {
+			productResults.push({
+				id: productCount,
+				productId: $("#productType").val(),
+				amount: $("#productAmount").val()
+			});
+
+			$("#productResults").append(
+				'<div class="item" id="'+ productCount +'Item">\
+					<div class="content">\
+						<div class="header">'+ $("#productType option:selected").text() +'</div>\
+						<div class="description"> <div class="ui label large">'+ $("#productAmount").val() +'個   <i class="delete icon deleteProduct" id="' + productCount + 'Label" value="' + productCount + '"></i></div><br />\
+						</div>\
+					</div>\
+				</div>');
+
+			$("#" + productCount + "Label").click(function() {
+				$("#" + $(this).attr("value") + "Item").remove();
+				var id = parseInt($(this).attr("value"));
+
+				$.each(productResults, function(key, value) {
+					if (value.id == id){
+						productResults.splice(key, 1);
+						return false;
+					}
+				});
+
+				return false;
+			});
+
+			productCount++;
+			return false;
 		});
 	 });
 	</script>

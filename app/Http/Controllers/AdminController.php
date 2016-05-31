@@ -11,6 +11,10 @@ use App\Sell_Units;
 class AdminController extends Controller
 {
 
+	public function index() {
+		return view('dashboard/index', ["title" => "總覽"]);
+	}
+
 	public function showNewOrderCategory() {
 		return view('dashboard/orders/new-order-category', ["title" => "出貨分流"]);
 	}
@@ -55,6 +59,28 @@ class AdminController extends Controller
 		return view('/dashboard/orders/products', ['title' => '庫存商品管理', 'products' => $products]);
 	}
 
+	public function updateStock() {
+
+		$product = DB::table("products")->where("id", Input::get("id"))->first();
+		DB::table("products")
+			->where("id", Input::get("id"))
+			->update([ "stock" 		=> $product->stock + Input::get("stock"),
+					   "updated_at" => date('Y-m-d H:i:s'),
+					   "updated_by" => Auth::user()->id]);
+
+		return redirect('/dashboard/order/products');
+	}
+
+	public function newProduct() {
+		DB::table("products")
+			->insert([ "stock" 		=> 0,
+					   "updated_at" => date('Y-m-d H:i:s'),
+					   "updated_by" => Auth::user()->id,
+					   "name"		=> Input::get("name")]);
+
+		return redirect('/dashboard/order/products');
+	}
+
 	public function showSellUnits() {
 		//$types = DB::table("sell_units_type")->get();
 		$types = Sell_Units::unit_list();
@@ -81,7 +107,11 @@ class AdminController extends Controller
 	public function showNewBusiness() {
 
 		$unitList = DB::table("sell_units")->get();
+		$products = DB::table("products")->get();
 
-		return view("/dashboard/business/new-business", ["title" => "新增業務", "sell_units" => $unitList]);
+		return view("/dashboard/business/new-business", 
+			["title" => "新增業務", 
+			 "sell_units" => $unitList,
+			 "products" => $products]);
 	}
 }
