@@ -16,14 +16,14 @@
 						<div class="two fields">
 							<div class="field">
 								<label>訂單編號</label>
-								<input type="text">
+								<input type="text" name="serial">
 							</div>
 							<div class="field">
 								<label>訂單日期</label>
 								<div class="ui calendar date">
 								    <div class="ui input left icon">
 								    	<i class="calendar icon"></i>
-								    	<input type="text" placeholder="訂單日期">
+								    	<input type="text" placeholder="訂單日期" >
 								    </div>
 								</div>
 							</div>

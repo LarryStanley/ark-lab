@@ -18,8 +18,8 @@
 					<div class="ui attached segment">
 						@foreach($type->list as $unit)
 						<div class="ui label" id="unit{{ $unit->id }}Label">
+							<i class="setting icon" id="unit{{ $unit->id }}"></i>	
 							{{$unit->unit_name}}	
-							 <i class="delete icon" id="unit{{ $unit->id }}"></i>	
 							 <div class="ui modal" id="unit{{ $unit->id }}Modal">
 								<div class="header">刪除銷售單位</div>
 								<div class="content">
@@ -47,9 +47,9 @@
 							<form  action="/dashboard/order/new-unit" id="addSellForm" method="POST" class="ui form" action="/dashboard/order/new-unit">
 								<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 								<div class="field">
-									<label>銷售種類</label>
 									<div class="two fields">
 										<div class="field">
+											<label>銷售種類</label>
 											<select name="type" id="" class="ui dropdown">
 												@foreach($types as $type)
 												<option value="{{$type->id}}">{{ $type->type_name }}</option>
@@ -57,10 +57,49 @@
 											</select>
 										</div>
 										<div class="field">
+											<label for="">單位名稱</label>
 											<div class="ui input" id="newUnit">
 												<input name="unit" type="text" placeholder="名稱">
 											</div>
 										</div>									
+									</div>
+									<div class="two fields">
+										<div class="field">
+											<label for="">聯絡電話</label>
+											<div class="ui input">
+												<input type="text" placeholder="電話">
+											</div>
+										</div>
+										<div class="field">
+											<label for="">聯絡地址</label>
+											<div class="ui input">
+												<input type="text" placeholder="地址">
+											</div>
+										</div>
+									</div>
+									<div class="two fields">
+										<div class="field">
+											<label for="">窗口姓名</label>
+											<div class="ui input">
+												<input type="text" placeholder="姓名">
+											</div>
+										</div>
+										<div class="field">
+											<label for="">統一編號</label>
+											<div class="ui input">
+												<input type="number" placeholder="統一編號">
+											</div>
+										</div>
+									</div>
+									<div class="field">
+										<label for="">聯絡 Email</label>
+										<div class="ui input">
+											<input type="email" placeholder="email">
+										</div>
+									</div>
+									<div class="field">
+										<label for="">備註</label>
+										<textarea name="" id="" rows="3"></textarea>
 									</div>
 								</div>
 							</form>
@@ -92,7 +131,7 @@
 		$("#units").addClass("active");
 		$("#order").addClass("active");
 
-		$(".delete").click(function() {
+		$(".setting").click(function() {
 			$("#" + $(this).attr("id") + "Modal").modal('show');
 		});
 
