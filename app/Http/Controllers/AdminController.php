@@ -89,10 +89,20 @@ class AdminController extends Controller
 	}
 
 	public function addNewUnit() {
-		DB::table("sell_units")->insert([
-				"unit_type_id" => Input::get("type"),
-				"unit_name" => Input::get("unit")
-			]);
+
+		$data = [];
+
+		foreach (Input::all() as $key => $value) {
+			if ($value == "") {
+				$data[$key] = null;
+			} else {
+				$data[$key] = $value;
+			}
+		}
+
+		unset($data["_token"]);
+
+		DB::table("sell_units")->insert($data);
 
 		return redirect('/dashboard/order/units');
 	}

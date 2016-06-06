@@ -17,7 +17,15 @@
 					</div>
 					<div class="ui attached segment">
 						@foreach($type->list as $unit)
-						<div class="ui label" id="unit{{ $unit->id }}Label">
+						<div class="ui label" id="unit{{ $unit->id }}Label" 
+					data-variation="wide"
+						data-title="{{$unit->unit_name}}" 
+						 data-html="<ul><li>聯絡電話：{{ $unit->phone_number or '暫無' }}</li>
+										<li>窗口姓名：{{ $unit->contact_name or '暫無' }}</li>
+										<li>統一編號：{{ $unit->uniform_number or '暫無' }}</li>
+										<li>地址：{{ $unit->address or '暫無' }}</li>
+										<li>email： {{ $unit->email or '暫無' }}</li>
+										<li>備註：{{ $unit->note or '無' }}</li></ul>">
 							<i class="setting icon" id="unit{{ $unit->id }}"></i>	
 							{{$unit->unit_name}}	
 							 <div class="ui modal" id="unit{{ $unit->id }}Modal">
@@ -50,7 +58,7 @@
 									<div class="two fields">
 										<div class="field">
 											<label>銷售種類</label>
-											<select name="type" id="" class="ui dropdown">
+											<select name="unit_type_id" id="" class="ui dropdown">
 												@foreach($types as $type)
 												<option value="{{$type->id}}">{{ $type->type_name }}</option>
 												@endforeach
@@ -59,7 +67,7 @@
 										<div class="field">
 											<label for="">單位名稱</label>
 											<div class="ui input" id="newUnit">
-												<input name="unit" type="text" placeholder="名稱">
+												<input name="unit_name" type="text" placeholder="名稱">
 											</div>
 										</div>									
 									</div>
@@ -67,13 +75,13 @@
 										<div class="field">
 											<label for="">聯絡電話</label>
 											<div class="ui input">
-												<input type="text" placeholder="電話">
+												<input type="text" placeholder="電話" name="phone_number">
 											</div>
 										</div>
 										<div class="field">
 											<label for="">聯絡地址</label>
 											<div class="ui input">
-												<input type="text" placeholder="地址">
+												<input type="text" placeholder="地址" name="address">
 											</div>
 										</div>
 									</div>
@@ -81,25 +89,25 @@
 										<div class="field">
 											<label for="">窗口姓名</label>
 											<div class="ui input">
-												<input type="text" placeholder="姓名">
+												<input type="text" placeholder="姓名" name="contact_name">
 											</div>
 										</div>
 										<div class="field">
 											<label for="">統一編號</label>
 											<div class="ui input">
-												<input type="number" placeholder="統一編號">
+												<input type="number" placeholder="統一編號" name="uniform_number">
 											</div>
 										</div>
 									</div>
 									<div class="field">
 										<label for="">聯絡 Email</label>
 										<div class="ui input">
-											<input type="email" placeholder="email">
+											<input type="email" placeholder="email" name="email">
 										</div>
 									</div>
 									<div class="field">
 										<label for="">備註</label>
-										<textarea name="" id="" rows="3"></textarea>
+										<textarea name="note" rows="3"></textarea>
 									</div>
 								</div>
 							</form>
@@ -133,6 +141,16 @@
 
 		$(".setting").click(function() {
 			$("#" + $(this).attr("id") + "Modal").modal('show');
+		});
+
+		$('.label').popup({
+  			inline   : true,
+		    hoverable: true,
+		    position : 'bottom left',
+		    delay: {
+		    	show: 300,
+		    	hide: 500
+		    }
 		});
 
 		$(".deleteUnit").click(function() {
