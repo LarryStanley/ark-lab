@@ -107,6 +107,25 @@ class AdminController extends Controller
 		return redirect('/dashboard/order/units');
 	}
 
+	public function updateUnit() {
+		$data = [];
+
+		foreach (Input::all() as $key => $value) {
+			if ($value == "") {
+				$data[$key] = null;
+			} else {
+				$data[$key] = $value;
+			}
+		}
+
+		unset($data["_token"]);
+		unset($data["id"]);
+
+		DB::table("sell_units")->where("id", Input::get("id"))->update($data);
+
+		return redirect('/dashboard/order/units');
+	}
+
 	public function deleteUnit() {
 		DB::table('sell_units')->where("id", Input::get('id'))->delete();
 

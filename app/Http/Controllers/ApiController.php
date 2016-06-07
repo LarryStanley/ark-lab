@@ -121,4 +121,16 @@ class ApiController extends Controller
 		//	return "file not receive";
 		
 	}
+
+	public function showAllUnits() {
+		$data = DB::table("sell_units")->get();
+
+		return response()->json($data);
+	}
+
+	public function getSingleUnit($id) {
+		$data = DB::table("sell_units")->where("id", $id)->first();
+
+		return response()->json($data);
+	}
 }

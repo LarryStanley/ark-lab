@@ -19,8 +19,6 @@ Route::get('/products/butterfly', "MainController@showButterfly");
 Route::get('/products/dragonfly', "MainController@showDragonfly");
 Route::get('/products/crazybull', "MainController@showCrazybull");
 Route::get('/products/arknano', "MainController@showArknano");
-//Route::get('/products/preorder', "MainController@showPreorder");
-//Route::post('/products/preorder', "MainController@postPreorder");
 Route::get('/trade-love', function() {
 	return view("trade-love", ["title" => "換換愛 X 大專生洄游農村"]);
 });
@@ -51,7 +49,6 @@ Route::get('/design', function() {
 	return view("design", ["title" => "網站規劃"]);
 });
 
-
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 	Route::get('/', 'AdminController@index');
 	Route::get('/source', function() {
@@ -63,13 +60,17 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 	Route::post('/new-buy', 'CustomerController@newBuy');
 
 	Route::group(["prefix" => "order", 'middleware' => 'worker'], function() {
+		
 		Route::get('/new-order-category', 'AdminController@showNewOrderCategory');
 		Route::get('/new-order', 'AdminController@showNewOrder');
 		Route::post('/new-order', 'AdminController@newOrder');
 		Route::get('/orders', 'AdminController@showOrders');
+		
 		Route::get('/units', 'AdminController@showSellUnits');
 		Route::post('/new-unit', 'AdminController@addNewUnit');
+		Route::post('/update-unit', 'AdminController@updateUnit');
 		Route::delete('/delete-unit', 'AdminController@deleteUnit');
+		
 		Route::get('/products', 'AdminController@showProducts');
 		Route::post('/products/updateStock', 'AdminController@updateStock');
 		Route::post('/products/new-product', 'AdminController@newProduct');
@@ -86,6 +87,7 @@ Route::group(['prefix' => 'api'], function() {
 		Route::get("/", "ApiController@index_block");
 		Route::post('/save', "ApiController@index_block_save");
 	});
+
 	Route::get("/index_slider", "ApiController@index_slider");
 	Route::post("/index_slider/save", "ApiController@index_slider_save");
 
@@ -96,4 +98,9 @@ Route::group(['prefix' => 'api'], function() {
 	Route::get('/activity_record', "ApiController@show_activity_record");
 
 	Route::post('/upload_image', "ApiController@upload_image");
+
+	Route::group(["prefix" => 'units', 'middleware' => 'worker'], function() {
+		Route::get('/', "ApiController@showAllUnits");
+		Route::get('/{id}', "ApiController@getSingleUnit");
+	});
 });
