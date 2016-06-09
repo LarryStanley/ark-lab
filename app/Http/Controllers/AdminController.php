@@ -7,6 +7,7 @@ use Auth;
 use Input;
 use Mail;
 use App\Sell_Units;
+use App\Materials_type;
 
 class AdminController extends Controller
 {
@@ -20,7 +21,10 @@ class AdminController extends Controller
 	}
 
 	public function showNewOrder() {
-		return view("dashboard/orders/new-order", ["title" => "新增出貨"]);
+		$units = DB::table("sell_units")->get();
+		$products = DB::table("products")->get();
+
+		return view("dashboard/orders/new-order", ["title" => "新增出貨", "units" => $units, "products" => $products]);
 	}
 
 	public function newOrder() {
@@ -132,6 +136,39 @@ class AdminController extends Controller
 		return "success";
 	}
 
+	public function showMaterials() {
+		$materials = Materials_type::all();
+
+		return view("/dashboard/orders/materials", ["title" => "原物料管理", "materials" => $materials]);
+	}
+
+	public function updateMaterialStock() {
+		$material = DB::table("materials")->where("id", Input::get("id"))->first();
+		DB::table("materials")
+			->where("id", Input::get("id"))
+			->update([ "stock" 		=> $material->stock + Input::get("stock"),
+					   "updated_at" => date('Y-m-d H:i:s'),
+					   "updated_by" => Auth::user()->id]);
+
+		return redirect('/dashboard/order/materials');
+	}
+
+	public function materialDelete() {
+		DB::table("materials")->where("id", Input::get("id"))->delete();
+
+		return redirect('/dashboard/order/materials');
+	}
+
+	public function newMaterials() {
+		DB::table("materials")
+			->insert([ "stock" 				=> 0,
+					   "updated_at" 		=> date('Y-m-d H:i:s'),
+					   "updated_by" 		=> Auth::user()->id,
+					   "name"				=> Input::get("name"),
+					   "materials_type_id"	=> Input::get("materials_type_id")]);
+
+		return redirect('/dashboard/order/materials');
+	}
 
 	public function showNewBusiness() {
 

@@ -50,7 +50,7 @@
 									</div>
 								</div>
 								<div class="extra">
-									{{ Auth::user()->userName( $product->updated_by ) }} 於 {{ $product->updated_at }} 更新
+									{{ App\User::find( $product->updated_by )->name }} 於 {{ $product->updated_at }} 更新
 								</div>
 							</div>
 						</div>

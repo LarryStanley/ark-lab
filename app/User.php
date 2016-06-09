@@ -49,7 +49,7 @@ class User extends Model implements AuthenticatableContract,
     }
 
     public function userName($id) {
-         $userData = DB::table("users")->where("id", $id)->first();
+         $userData = $this::find($id);
         
         if (empty($userData)) {
             return "Null";

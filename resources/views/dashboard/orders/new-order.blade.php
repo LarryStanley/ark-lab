@@ -19,16 +19,9 @@
 								<div class="field">
 									<label>產品型號</label>
 									<select name="productType" id="" class="ui fluid dropdown" style="width:100%;">
-										<option value="Ark90-A">Butterfly 啟航版 - Arduino Nano 核心</option>
-										<option value="Ark90-B">Butterfly 蛻變版 - Ark Nano 升級核心</option>	
-										<option value="Ark250-A">Dragonfly 啟航版 - Arduino Nano 核心</option>
-										<option value="Ark250-B">Dragonfly 蛻變版 - Ark Nano 升級核心</option>
-										<option value="Ark250-C">Dragonfly 續航版 - Ark Nano 升級核心</option>
-										<option value="Ark250-D">Dragonfly 旗艦版 - Ark Nano升級核心</option>
-										<option value="ArkTurbo-A">Crazybull 啟航版 - Arduino Nano核心</option>
-										<option value="ArkTurbo-B">Crazybull 蛻變版 - Ark Nano升級核心</option>
-										<option value="ArkTurbo-C">Crazybull 續航版 - Ark Nano升級核心、Ark 模組擴充包</option>	
-										<option value="ArkNano">Ark Nano</option>
+										@foreach($products as $product)
+										<option value="{{ $product->id }}">{{ $product->name }}</option>
+										@endforeach
 									</select>
 								</div>
 								<div class="field">
@@ -38,17 +31,11 @@
 							</div>
 							<div class="two fields">
 								<div class="field">
-									<label for="">出貨種類</label>
-									<select name="" id="" class="ui fluid dropdown">
-										<option value="經銷">經銷</option>
-										<option value="自銷">自銷</option>
-									</select>
-								</div>
-								<div class="field">
 									<label for="">出貨單位</label>
 									<select name="" id="" class="ui fluid dropdown">
-										<option value="露天">露天</option>
-										<option value="上課用">上課用</option>
+										@foreach($units as $unit)
+											<option value="{{ $unit->id }}">{{ $unit->unit_name }}</option>
+										@endforeach
 									</select>
 								</div>
 							</div>

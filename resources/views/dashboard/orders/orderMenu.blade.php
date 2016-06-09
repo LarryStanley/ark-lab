@@ -14,4 +14,7 @@
 	<a href="/dashboard/order/products" class="item" id="products">
 		庫存商品管理
 	</a>
+	<a href="/dashboard/order/materials" class="item" id="materials">
+		原物料管理
+	</a>
 </div>

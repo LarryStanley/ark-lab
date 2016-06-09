@@ -74,6 +74,11 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 		Route::get('/products', 'AdminController@showProducts');
 		Route::post('/products/updateStock', 'AdminController@updateStock');
 		Route::post('/products/new-product', 'AdminController@newProduct');
+
+		Route::get('/materials', 'AdminController@showMaterials');
+		Route::post('/materials/updateStock', 'AdminController@updateMaterialStock');
+		Route::post("/materials/delete", "AdminController@materialDelete");
+		Route::post("/materials/newMaterials", "AdminController@newMaterials");
 	});
 
 	Route::group(["prefix" => "business", 'middleware' => 'worker'], function() {
@@ -102,5 +107,10 @@ Route::group(['prefix' => 'api'], function() {
 	Route::group(["prefix" => 'units', 'middleware' => 'worker'], function() {
 		Route::get('/', "ApiController@showAllUnits");
 		Route::get('/{id}', "ApiController@getSingleUnit");
+	});
+
+	Route::group(["prefix" => "materials", 'middleware' => 'worker'], function() {
+		Route::get("/{id}", "ApiController@getMaterialState");
+		Route::get('/type/{id}', "ApiController@getMaterialType");
 	});
 });

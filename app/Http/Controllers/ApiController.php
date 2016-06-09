@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 use DB;
 use Request;
 use Input;
+use App\Materials;
+use App\Materials_type;
 
 class ApiController extends Controller
 {
@@ -132,5 +134,17 @@ class ApiController extends Controller
 		$data = DB::table("sell_units")->where("id", $id)->first();
 
 		return response()->json($data);
+	}
+
+	public function getMaterialState($id) {
+		$data = Materials::find($id);
+
+		return $data;
+	}
+
+	public function getMaterialType($id) {
+		$data = Materials_type::find($id);
+
+		return $data;
 	}
 }
