@@ -45,7 +45,7 @@
 						<h3>教育發展</h3>
 						<p>
 							若欲洽談相關課程、工作坊、講座相關事宜，歡迎來信<br>
-							<a href="mailto:sopper08@gmail.com">sopper08@gmail.com</a>
+							<a href="mailto:remonmarlboro@gmail.com">remonmarlboro@gmail.com</a>
 						</p>
 						<h3>媒體關係</h3>
 						<p>
@@ -55,7 +55,7 @@
 						<h3>商業合作</h3>
 						<p>
 			      			若欲洽詢市場開發、行銷活動、廣告合作、參關訪問等，歡迎來信 <br>
-			      			<a href="mailto:redhut0000@gmail.com">redhut0000@gmail.com</a>
+			      			<a href="mailto:remonmarlboro@gmail.com">remonmarlboro@gmail.com</a>
 			      		</p>	
 					</div>
 				</div>
