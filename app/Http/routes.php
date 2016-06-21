@@ -56,7 +56,6 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 	});
 
 	Route::get('/history', 'CustomerController@buyHistory');
-
 	Route::post('/new-buy', 'CustomerController@newBuy');
 
 	Route::group(["prefix" => "order", 'middleware' => 'worker'], function() {
