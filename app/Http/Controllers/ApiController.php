@@ -7,6 +7,8 @@ use Request;
 use Input;
 use App\Materials;
 use App\Materials_type;
+use App\Products;
+use App\Products_content;
 
 class ApiController extends Controller
 {
@@ -146,5 +148,35 @@ class ApiController extends Controller
 		$data = Materials_type::find($id);
 
 		return $data;
+	}
+
+	public function getProduct($id) {
+		$product = Products::find($id);
+		$content = Products::find($id)->content;
+
+		foreach ($content as $key => $value) {
+			$content[$key]->count = (int)$value->count;
+			$content[$key]->name = $value->material->name;
+		}
+
+		$product->content = $content;
+
+		return response()->json($product);
+	}
+
+	public function predictStock($id) {
+		$product = Products::find($id);
+		$content = Products::find($id)->content;
+
+		$mini = 100000;
+		foreach ($content as $key => $value) {
+			$count = (int)$value->count;
+			$material = $value->material;
+			if ($mini > (int)$material->stock/$count)
+				$mini = floor((int)$material->stock/$count);
+			
+		}
+
+		return response()->json(["max_count" => $mini]);
 	}
 }

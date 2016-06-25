@@ -60,7 +60,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 
 	Route::group(["prefix" => "order", 'middleware' => 'worker'], function() {
 		
-		Route::get('/new-order-category', 'AdminController@showNewOrderCategory');
+		Route::get('/', "AdminController@showNewOrder");
 		Route::get('/new-order', 'AdminController@showNewOrder');
 		Route::post('/new-order', 'AdminController@newOrder');
 		Route::get('/orders', 'AdminController@showOrders');
@@ -73,11 +73,14 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 		Route::get('/products', 'AdminController@showProducts');
 		Route::post('/products/updateStock', 'AdminController@updateStock');
 		Route::post('/products/new-product', 'AdminController@newProduct');
+		Route::post('/products/updateProductContent', 'AdminController@updateProductContent');
 
 		Route::get('/materials', 'AdminController@showMaterials');
 		Route::post('/materials/updateStock', 'AdminController@updateMaterialStock');
 		Route::post("/materials/delete", "AdminController@materialDelete");
 		Route::post("/materials/newMaterials", "AdminController@newMaterials");
+		Route::post("/materials/newCategory", "AdminController@newMaterialCategory");
+		Route::post("/materials/category/delete", "AdminController@materialCategoryDelete");
 	});
 
 	Route::group(["prefix" => "business", 'middleware' => 'worker'], function() {
@@ -111,5 +114,10 @@ Route::group(['prefix' => 'api'], function() {
 	Route::group(["prefix" => "materials", 'middleware' => 'worker'], function() {
 		Route::get("/{id}", "ApiController@getMaterialState");
 		Route::get('/type/{id}', "ApiController@getMaterialType");
+	});
+
+	Route::group(["prefix" => "products", "middleware" => "worker"], function() {
+		Route::get('/{id}', "ApiController@getProduct");
+		Route::get('/predictStock/{id}', "ApiController@predictStock");
 	});
 });

@@ -8,6 +8,8 @@ use Input;
 use Mail;
 use App\Sell_Units;
 use App\Materials_type;
+use Request;
+use App\Products_content;
 
 class AdminController extends Controller
 {
@@ -59,8 +61,28 @@ class AdminController extends Controller
 
 	public function showProducts() {
 		$products = DB::table("products")->get();
+		$materials = Materials_type::all();
 
-		return view('/dashboard/orders/products', ['title' => '庫存商品管理', 'products' => $products]);
+		return view('/dashboard/orders/products', ['title'			=> '庫存商品管理', 
+												   'products'	 	=> $products, 
+												   'materials' 		=> $materials,
+												   'ngApp'			=> 'productsApp',
+												   'ngController'	=> 'ProductsController as products']);
+	}
+
+	public function updateProductContent(Request $request) {
+
+		DB::table("products_content")->where("product_id", Input::get("productId"))->delete();
+
+		foreach (Input::get("content") as $key => $value) {
+			DB::table("products_content")->insert([
+					'material_id'	=> $value["id"],
+					'product_id'	=> Input::get("productId"),
+					'count'			=> $value["count"]
+				]);
+		}
+
+		return response()->json(["state" => "success"]);	
 	}
 
 	public function updateStock() {
@@ -150,11 +172,19 @@ class AdminController extends Controller
 					   "updated_at" => date('Y-m-d H:i:s'),
 					   "updated_by" => Auth::user()->id]);
 
-		return redirect('/dashboard/order/materials');
+		$data = DB::table("materials")->where("id" , Input::get("id"))->first();
+
+		return response()->json($data);
 	}
 
 	public function materialDelete() {
 		DB::table("materials")->where("id", Input::get("id"))->delete();
+
+		return redirect('/dashboard/order/materials');
+	}
+
+	public function materialCategoryDelete() {
+		DB::table("materials_type")->where("id", Input::get("id"))->delete();
 
 		return redirect('/dashboard/order/materials');
 	}
@@ -166,6 +196,13 @@ class AdminController extends Controller
 					   "updated_by" 		=> Auth::user()->id,
 					   "name"				=> Input::get("name"),
 					   "materials_type_id"	=> Input::get("materials_type_id")]);
+
+		return redirect('/dashboard/order/materials');
+	}
+
+	public function newMaterialCategory() {
+		DB::table("materials_type")
+			->insert(["name" => Input::get("name")]);
 
 		return redirect('/dashboard/order/materials');
 	}

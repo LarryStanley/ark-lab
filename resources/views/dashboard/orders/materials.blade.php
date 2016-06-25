@@ -48,9 +48,11 @@
 				    		</div>
 				    	</div>
 				    	<button class="blue ui button small newMaterial" value="{{ $type->id }}">新增 {{ $type->name }} 的內容</button>
+						<button class="ui button right floated mini red deleteMaterialCategoryButton" value="{{ $type->id }}">刪除{{ $type->name }}</button>
 				  	</div>
 				  	@endforeach
 				</div>
+				<button class="blue ui button small" id="newMaterialCategory" style="margin-top:10px">新增原物料種類</button>
 			</div>
 		</div>
 	</div>
@@ -70,6 +72,27 @@
 		</div>
 		<div class="actions">
 			<div class="ui red button" id="deleteMaterialButton">
+				刪除
+			</div>
+			<div class="ui cancel button">取消</div>
+		</div>
+	</div>
+
+	<div class="ui modal" id="deleteMaterialCategoryModal">
+		<div class="header">確認刪除？</div>
+		<div class="content">
+			你確認要刪除
+			<div class="label ui" id="deleteMaterialCategoryName">
+				
+			</div>
+			？
+			<form action="/dashboard/order/materials/category/delete" id="deleteMaterialCategoryForm" method="POST">
+				<input type="hidden" name="id">
+				<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
+			</form>
+		</div>
+		<div class="actions">
+			<div class="ui red button" id="deleteMaterialCategoryButton">
 				刪除
 			</div>
 			<div class="ui cancel button">取消</div>
@@ -103,7 +126,25 @@
 		</div>
 	</div>
 
+	<div class="ui modal" id="newCategoryModal">
+		<div class="header">新增種類</div>
+		<div class="content">
+			<form action="/dashboard/order/materials/newCategory" method="POST" class="ui form" id="newCategoryForm">
+				<label for="">原物料名稱</label>
+				<input type="text" name="name">
+				<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
+			</form>
+		</div>
+		<div class="actions">
+			<div class="ui primary button">新增</div>
+			<div class="ui cancel button">取消</div>
+		</div>
+	</div>
+
 	<div class="ui modal" id="newMaterialStockModal">
+		<div class="ui inverted dimmer" >
+			<div class="ui text loader">新增中...</div>
+		</div>
 		<div class="header">新增庫存</div>
 		<div class="content">
 			新增
@@ -144,9 +185,33 @@
 					$("#materialName").html(result.name);
 					$("#currentStock").html(result.stock);
 					$("#newMaterialForm input[name='id']").val(result.id);
+					$("#newMaterialForm input[name='stock']").val("0");
 					$("#newMaterialStockModal").modal('show');
 				}
 			});
+		});
+
+		$("#newMaterialForm").submit(function(e) {
+			$("#newMaterialStockModal .dimmer").addClass("active");
+			var postData = $(this).serializeArray();
+		    var formURL = $(this).attr("action");
+		    $.ajax({
+		        url : formURL,
+		        type: "POST",
+		        data : postData,
+		        success:function(data, textStatus, jqXHR) {
+    				$("#newMaterialStockModal .dimmer").removeClass("active");
+		        	$("#newMaterialStockModal").modal("hide");
+		        	$("a[value='"+ data.id +"']").html('<i class="add icon"></i>' + data.stock);
+		        },
+		        error: function(jqXHR, textStatus, errorThrown) {
+		        }
+		    });
+		    e.preventDefault(); //STOP default action
+		});
+
+		$("#newMaterialStockModal .actions .primary").click(function() {
+			$("#newMaterialForm").submit();
 		});
 
 		$(".deleteMaterialButton").click(function() {
@@ -159,9 +224,32 @@
 				}
 			})
 		});
+
+		$(".deleteMaterialCategoryButton").click(function() {
+			$.ajax({
+				url: '/api/materials/type/' + $(this).attr("value"),
+				success: function(result) {
+					$("#deleteMaterialCategoryName").html(result.name);
+					$("#deleteMaterialCategoryForm input[name='id']").val(result.id);
+					$("#deleteMaterialCategoryModal").modal('show');
+				}
+			})
+		});
 		
 		$("#deleteMaterialButton").click(function() {
 			$("#deleteMaterialForm").submit();
+		});
+
+		$("#deleteMaterialCategoryButton").click(function() {
+			$("#deleteMaterialCategoryForm").submit();
+		});
+
+		$("#newMaterialCategory").click(function() {
+			$("#newCategoryModal").modal("show");
+		});
+
+		$("#newCategoryModal .primary .button").click(function() {
+			$("#newCategoryForm").submit();
 		});
 
 		$(".newMaterial").click(function() {

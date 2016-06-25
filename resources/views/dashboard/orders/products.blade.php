@@ -16,6 +16,7 @@
 						<div class="item">
 							<div class="content">
 								<h3 class="header">{{ $product->name }}</h3>
+								<button class="ui button right floated icon mini editButton" ng-click="products.showEditModal({{ $product->id }})"><i class="setting icon"></i></button>
 								<div class="description">
 									<span>庫存數量：
 									</span>
@@ -78,11 +79,66 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="ui modal" id="editProductContent">
+		<div class="ui inverted dimmer">
+			<div class="ui text loader">儲存中...</div>
+		</div>
+		<div class="header">編輯商品內容</div>
+		<div class="content">
+			<div class="form ui" id="contentForm">
+				<div class="fields" ng-repeat="(index,content) in products.currentProductContent">
+					<div class="twelve wide field">
+						<div class="ui disabled input">
+							<input type="text" ng-model="content.name">
+						</div>
+					</div>
+					<div class="three wide field">
+						<div class="ui right labeled input">
+							<input type="number" ng-model="content.count">
+							<div class="ui basic label">
+								個
+							</div>							
+						</div>
+					</div>
+					<div class="one wide field">
+						<button class="red button ui icon" ng-click="products.removeContent(index)"><i class="remove icon"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="form ui" id="addContentForm">
+				<div class="fields">
+					<div class="twelve wide field">
+						<label>新增內容物</label>
+						<select name="content" id="" class="ui dropdown" ng-model="products.newProductContentId">
+							@foreach($materials as $type)
+								@foreach($type->materials as $material)
+								<option value="{{ $material->id }}" class="item">{{$material->name}}</option>
+							@endforeach
+							@endforeach
+						</select>
+					</div>
+					<div class="four wide field">
+						<label for="">數量</label>
+						<div class="action ui input">
+							<input type="number" value="1" name="count" ng-model="products.newProductContentCount">
+							<button class="ui button addContentButton" ng-click="products.addProductContent()">新增</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="actions">
+			<div class="ui primary button" ng-click="products.saveProductContent()">儲存</div>
+			<div class="ui cancel button">取消</div>
+		</div>
+	</div>
 @stop
 
 @section("javascript")
 	<script>
 	 $(document).ready(function() {
+
 		$("#order").addClass("active");
 		$("#products").addClass("active");
 		$('select.dropdown').dropdown();
@@ -101,5 +157,68 @@
 			$("#newProductModal").modal("show");
 		});
 	 });
+
+	 angular.module('productsApp', [])
+	 	.controller('ProductsController', function($scope) {
+	 		var products = this;
+	 		products.currentProductContent = [];
+	 		products.newProductContentCount = 1;
+
+	 		products.showEditModal = function(id) {
+		 		products.currentProductId = id;
+		 		$.getJSON('/api/products/' + id, function(result) {
+		 			products.currentProductContent = result.content;
+		 			$scope.$apply();
+		 			$("#editProductContent").modal("show");
+		 		});
+	 		}
+
+	 		products.addProductContent = function() {
+	 			var exist = false;
+	 			angular.forEach(products.currentProductContent, function(value, key) {
+	 				if (value.id == products.newProductContentId) {
+	 					exist = true;
+	 					return false;
+	 				}
+	 			});
+
+	 			if (!exist) {
+		 			products.currentProductContent.push({
+		 				id: products.newProductContentId,
+		 				name: $("select[name='content'] option:selected").text(),
+		 				count: products.newProductContentCount
+		 			});
+	 			}
+	 		}
+
+	 		products.removeContent = function(index) {
+	 			products.currentProductContent.splice(index, 1);
+	 		}
+
+	 		products.saveProductContent = function() {
+	 			$("#editProductContent .dimmer").addClass("active");
+	 			var postData = {
+	 				productId : products.currentProductId,
+	 				content: products.currentProductContent,
+	 				_token: $("input[name='_token']").val()
+	 			};
+
+	 			if (products.currentProductContent.length > 0){
+		 			$.ajax({
+						url: '/dashboard/order/products/updateProductContent',
+						type: 'POST',
+						data: postData,
+						dataType: 'json',
+						success: function(result) {
+				 			$("#editProductContent .dimmer").removeClass("active");
+				 			$("#editProductContent").modal("hide");
+						}
+					});
+	 			}
+	 		}
+
+	 	}).config(function($interpolateProvider){
+			$interpolateProvider.startSymbol('[[').endSymbol(']]');
+		});;
 	</script>
 @stop

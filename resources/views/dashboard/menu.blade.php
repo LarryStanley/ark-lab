@@ -10,7 +10,7 @@
 		購買紀錄
 	</a>
 	@if(Auth::user()->role('worker'))
-	<a href="/dashboard/order/new-order-category" class="item" id="order">管理出貨</a>
+	<a href="/dashboard/order" class="item" id="order">管理出貨</a>
 	<a href="/dashboard/business/new-business" class="item" id="business">管理業務</a>
 
 	@endif
