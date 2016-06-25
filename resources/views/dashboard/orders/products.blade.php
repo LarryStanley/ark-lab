@@ -176,7 +176,7 @@
 	 		products.addProductContent = function() {
 	 			var exist = false;
 	 			angular.forEach(products.currentProductContent, function(value, key) {
-	 				if (value.id == products.newProductContentId) {
+	 				if (value.material_id == products.newProductContentId) {
 	 					exist = true;
 	 					return false;
 	 				}
@@ -184,7 +184,7 @@
 
 	 			if (!exist) {
 		 			products.currentProductContent.push({
-		 				id: products.newProductContentId,
+		 				material_id: products.newProductContentId,
 		 				name: $("select[name='content'] option:selected").text(),
 		 				count: products.newProductContentCount
 		 			});

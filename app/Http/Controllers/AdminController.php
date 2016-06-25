@@ -76,7 +76,7 @@ class AdminController extends Controller
 
 		foreach (Input::get("content") as $key => $value) {
 			DB::table("products_content")->insert([
-					'material_id'	=> $value["id"],
+					'material_id'	=> $value["material_id"],
 					'product_id'	=> Input::get("productId"),
 					'count'			=> $value["count"]
 				]);
