@@ -13,7 +13,9 @@
 
 Route::get('/', "MainController@index");
 Route::get('/about', "MainController@about");
-Route::get('/education', "MainController@education");
+Route::get('/education', function() {
+	return view("flyingCamp", ["title" => "Arklab X 資策會飛客嘉年華"]);
+});
 Route::get('/products', "MainController@products");
 Route::get('/products/butterfly', "MainController@showButterfly");
 Route::get('/products/dragonfly', "MainController@showDragonfly");
