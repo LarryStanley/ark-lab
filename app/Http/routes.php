@@ -23,6 +23,10 @@ Route::get('/trade-love', function() {
 	return view("trade-love", ["title" => "換換愛 X 大專生洄游農村"]);
 });
 
+Route::get('/fly-camp', function() {
+	return view("flyingCamp", ["title" => "Arklab X 資策會飛客嘉年華"]);
+});
+
 Route::get('/documents', "MainController@documents");
 Route::get('/plans', "MainController@plans");
 Route::get('/plans/{url}', "MainController@planDetails");
