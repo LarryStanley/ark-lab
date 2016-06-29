@@ -154,7 +154,7 @@
 			<p><strong>工作坊：空總TAF園區魅客空間(台北市大安區建國南路一段177號)</strong></p>
 
 			<div style="text-align:center">
-				<a target="_blank" href="http://chungli2.iiiedu.org.tw/chungli/index.php/weekend/quadcopter" class="ui orange button">立即報名</a>				
+				<a target="_blank" href="http://www.accupass.com/go/flyer07" class="ui orange button">立即報名</a>				
 			</div>
 		</div>
 	</div>
