@@ -38,6 +38,6 @@ return [
     'facebook' => [
         'client_id'     => '101556683601278',
         'client_secret' => '3fcba04d7c449dcece5c6361f3fc26a3',
-        'redirect'      => 'http://arklab.tw/dashboard',
+        'redirect'      => 'http://arklab.tw/login/facebook/callback',
     ],
 ];

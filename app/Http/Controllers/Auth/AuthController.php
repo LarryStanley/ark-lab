@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use \Socialite;
 
 class AuthController extends Controller
 {
@@ -28,9 +29,9 @@ class AuthController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Socialite $socialite)
     {
-        $this->middleware('guest', ['except' => 'getLogout']);
+        $this->socialite = $socialite;
     }
 
     /**
@@ -61,6 +62,19 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function getSocialAuth()
+    {
+       return \Socialite::with('facebook')->redirect();
+    }
+
+
+    public function getSocialAuthCallback()
+    {
+        $user = \Socialite::with('facebook')->user();
+
+        dd($user);
     }
 
     protected $redirectPath = '/dashboard';

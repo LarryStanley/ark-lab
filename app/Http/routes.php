@@ -47,6 +47,16 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
+Route::get("/login/facebook", [
+	'uses' => 'Auth\AuthController@getSocialAuth',
+    'as'   => 'auth.getSocialAuth'
+]);
+
+Route::get('/login/facebook/callback', [
+	'uses' => 'Auth\AuthController@getSocialAuthCallback',
+	'as'   => 'auth.getSocialAuthCallback'
+]);
+
 Route::get('/home', function() {
 	return redirect('/dashboard');
 });
