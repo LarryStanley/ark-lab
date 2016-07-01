@@ -84,6 +84,7 @@ class AuthController extends Controller
         }
         $user = User::where('provider_user_id',$providerData->id)
                     ->where('provider', 'facebook')
+                    ->orWhere('email', $providerData->email)
                     ->first();
 
         if (!$user) {
