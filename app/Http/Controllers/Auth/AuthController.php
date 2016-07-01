@@ -85,7 +85,7 @@ class AuthController extends Controller
         $user = User::whereEmail($providerData->email)->first();
 
         if (!$user) {
-            $user = User::cereate([
+            $user = User::create([
                 'email' => $providerData->email,
                 'name' => $providerData->name,
                 'provider' => "facebook",
