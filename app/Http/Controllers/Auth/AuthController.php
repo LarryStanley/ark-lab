@@ -82,7 +82,9 @@ class AuthController extends Controller
         } catch(Exception $e) {
             return redirect('/login/facebook');
         }
-        $user = User::whereEmail($providerData->email)->first();
+        $user = User::where('provider_user_id',$providerData->id)
+                    ->where('provider', 'facebook')
+                    ->first();
 
         if (!$user) {
             $user = User::create([
@@ -91,13 +93,13 @@ class AuthController extends Controller
                 'provider' => "facebook",
                 'provider_user_id' => $providerData->id,
             ]);
-        } else {
-            Auth::login($user, true);
 
-            return redirect('/dashboard');
+
         }
 
-        dd($user);
+        Auth::login($user, true);
+
+        return redirect('/dashboard');
     }
 
 }
