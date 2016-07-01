@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use \Socialite;
+use Auth;
 
 class AuthController extends Controller
 {
@@ -29,6 +30,10 @@ class AuthController extends Controller
      *
      * @return void
      */
+
+    protected $redirectPath = '/dashboard';
+    protected $loginPath = '/auth/login';
+
     public function __construct(Socialite $socialite)
     {
         $this->socialite = $socialite;
@@ -72,12 +77,27 @@ class AuthController extends Controller
 
     public function getSocialAuthCallback()
     {
-        $user = \Socialite::with('facebook')->user();
+        try {
+            $providerData = \Socialite::with('facebook')->user();
+        } catch(Exception $e) {
+            return redirect('/login/facebook');
+        }
+        $user = User::whereEmail($providerData->email)->first();
+
+        if (!$user) {
+            $user = User::cereate([
+                'email' => $providerData->email,
+                'name' => $providerData->name,
+                'provider' => "facebook",
+                'provider_user_id' => $providerData->id,
+            ]);
+        } else {
+            Auth::login($user, true);
+
+            return redirect('/dashboard');
+        }
 
         dd($user);
     }
-
-    protected $redirectPath = '/dashboard';
-    protected $loginPath = '/auth/login';
 
 }
