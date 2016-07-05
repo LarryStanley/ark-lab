@@ -8,30 +8,14 @@
 		@include("dashboard/menu")
 		<div class="ui segment">
 			<div class="ui items">
-				@foreach($history as $order)
+			@foreach($history as $order)
 			  <div class="item">
-			    <div class="image">
-			    		@if ($order->type == 'Ark90-B' || $order->type == 'Ark90-A')
-			    			<img src="/images/90-1.png" alt="" style="height: auto; width: 70%;">
-						@elseif ($order->type == 'Ark250-B' || $order->type == 'Ark250-A' || $order->type == 'Ark250-C' || $order->type == 'Ark250-D')
-			    			<img src="/images/250-2.png" alt="" style="height: auto; width: 70%;">
-						@elseif ($order->type == 'ArkTurbo-B' || $order->type == 'ArkTurbo-A' || $order->type == 'ArkTurbo-C')
-			    			<img src="/images/turbo-2.png" alt="" style="height: auto; width: 70%;">
-						@elseif ($order->type == 'ArkNano')
-			    			<img src="/images/nano-3.png" alt="" style="height: auto; width: 70%;">
-			    		@endif
-			    </div>
+			    <!--<div class="image">
+			    		
+			    </div>!-->
 			    <div class="content">
 			    	<a class="header" href="/dashboard/source">
-			    		@if ($order->type == 'Ark90-B' || $order->type == 'Ark90-A')
-			    			奶油蒼蠅 Butterfly
-						@elseif ($order->type == 'Ark250-B' || $order->type == 'Ark250-A' || $order->type == 'Ark250-C' || $order->type == 'Ark250-D')
-							飛龍在天 Dragonfly
-						@elseif ($order->type == 'ArkTurbo-B' || $order->type == 'ArkTurbo-A' || $order->type == 'ArkTurbo-C')
-							狂暴蠻牛 Crazybull
-						@elseif ($order->type == 'ArkNano')
-							ArkNano
-			    		@endif
+			    		{{ $order->product->name }}
 			    	</a>
 				    <div class="meta">
 						<span>序號：{{$order->order_number}}</span>
@@ -45,6 +29,9 @@
 			    </div>
 			  </div>
 			  @endforeach
+			  @if(count($history) == 0)
+			  	目前還沒有購買紀錄
+			  @endif
 			</div>
 		</div>
 		<div class="ui segment">
@@ -68,6 +55,8 @@
 				    <div class="ui cancel button">取消</div>
 				</div>
 			</div>
+			<div class="ui divider"></div>
+			<a href="/sources" target="_blank">下載資料包</a>
 		</div>
 	</div>
 @stop

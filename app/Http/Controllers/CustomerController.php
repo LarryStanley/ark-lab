@@ -6,6 +6,7 @@ use DB;
 use Auth;
 use Input;
 use Mail;
+use App\Order;
 
 class CustomerController extends Controller
 {
@@ -33,7 +34,7 @@ class CustomerController extends Controller
 	}
 
 	public function buyHistory() {
-		$history = DB::table("orders")->where("user_id", Auth::user()->id)->get();
+		$history = Order::where("user_id", Auth::user()->id)->get();
 
 		return view("dashboard/history", ["title" => "購買紀錄", 'history' => $history]);
 	}

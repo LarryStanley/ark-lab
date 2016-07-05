@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ChangeEmailToNull extends Migration
+class ChangeOrderName extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,8 @@ class ChangeEmailToNull extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('type')()->change();
-
+        Schema::table('orders', function (Blueprint $table) {
+            $table->renameColumn("type", "products_id")->change();
         });
     }
 
@@ -25,7 +24,7 @@ class ChangeEmailToNull extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('orders', function (Blueprint $table) {
             //
         });
     }
