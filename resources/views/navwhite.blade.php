@@ -13,6 +13,7 @@
 				<li><a href="/products" name="products" class="grey-text text-darken-3" id="productsButton">產品介紹</a></li>
 				<li><a href="/flyProject" name="flyProject" class="grey-text text-darken-3" id="flyProjectButton">飛行業務</a></li>
 				<li><a href="/plans" name="plans" class="grey-text text-darken-3" id="plansButton">方舟計畫</a></li>
+				<li><a href="/login" name="login" class="grey-text text-darken-3" id="loginButton">登入</a></li>
 			</ul>
 			<ul class="side-nav" id="mobile-bar">
 		       	<li><a href="/about" name="about" id="aboutButton">關於我們</a></li>
@@ -20,6 +21,7 @@
 				<li><a href="/products" name="products" id="productsButton">產品介紹</a></li>
 				<li><a href="/flyProject" name="flyProject" id="flyProjectButton">飛行業務</a></li>
 				<li><a href="/plans" name="plans" id="plansButton">方舟計畫</a></li>
+				<li><a href="/login" name="login"  id="loginButton">登入</a></li>
 		    </ul>
 		</div>
 	</nav>
