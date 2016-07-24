@@ -91,20 +91,33 @@
 			}
 		}
 
-		h3 {
-			color: #D32F2F;
-		}
-	
-		h4 {
-			color: #455A64;
-		}
-
-
 	</style>
 @stop
 @section("body")
 <div class="cover">
 	<div class="mask">
+		<div class="ui secondary pointing menu" style="color:white">
+			<div class="right menu">
+				<a class="ui item" href="about" style="color:white">
+					<h3>關於我們</h3>
+				</a>
+				<a class="ui item active" href="education" style="color:white">
+					<h3>教育推廣</h3>
+				</a>
+				<a class="ui item" href="products" style="color:white">
+					<h3>產品介紹</h3>
+				</a>
+				<a class="ui item active" href="flyProject" style="color:white">
+					<h3>飛行業務</h3>
+				</a>
+				<a class="ui item " href="plans" style="color:white">
+					<h3>方舟計畫</h3>
+				</a>
+				<a class="ui item" href="login" style="color:white">
+					<h3>登入</h3>
+				</a>
+			</div>
+		</div>
 		<div class="center">
 			<img src="/images/mark.png" alt="" width="150px">
 			<h1>資策會飛客嘉年華</h1>
